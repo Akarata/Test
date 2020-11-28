@@ -1,28 +1,46 @@
+# Akarata_Project Userbot
 
-# CAT USERBOT
+<p align="center">
+<a href="https://github.com/Akarata/Project_Akarata/actions" > <img src="https://img.shields.io/github/workflow/status/Akarata/Project_Akarata/AkaChecker/master?label=Build&style=flat-square&logo=github-actions&logoColor=white&color=F10070" alt="FailedChecker" /></a>
+    <a href="https://github.com/Akarata/Project_Akarata/actions?query=workflow%3APyLint"> <img src="https://img.shields.io/github/workflow/status/Akarata/Project_Akarata/PyLint/master?label=PyLint&style=flat-square&logo=github-actions&logoColor=white&color=F10070" alt="Pylint" /></a><br>
+    <a href="https://github.com/Akarata/Project_Akarata/commits/master"><img src="https://img.shields.io/github/last-commit/Akarata/Project_Akarata/master?label=Last%20Commit&style=flat-square&logo=github&color=F10070" alt="Commit" /></a>
+    <a href="https://github.com/Akarata/Project_Akarata/graphs/contributors"><img src="https://img.shields.io/github/contributors-anon/Akarata/Project_Akarata?label=Contributors&style=flat-square&logo=github&color=F10070" alt="Contributors" /></a>
+    <a href="https://github.com/Akarata/Project_Akarata/watchers"><img src="https://img.shields.io/github/watchers/Akarata/Project_Akarata?label=Watch&style=flat-square&logo=github&color=F10070" alt="Watch" /></a>
+    <a href="https://github.com/Akarata/Project_Akarata/stargazers"><img src="https://img.shields.io/github/stars/Akarata/Project_Akarata?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
+    <a href="https://github.com/Akarata/Project_Akarata/network/members"><img src="https://img.shields.io/github/forks/Akarata/Project_Akarata?label=Fork&style=flat-square&logo=github&color=F10070" alt="Fork" /></a>
+    <a href="https://www.codacy.com/gh/Akarata/Project_Akarata/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Akarata/Project_Akarata&amp;utmcampaign=Badge_Grade"><img src="https://img.shields.io/codacy/grade/a3a19d2b551641039ec7edc3aa7b8c5d?style=flat-square&logo=codacy&color=F10070" alt="codacy badge"/></a>
+    <a href="https://hub.docker.com/repository/docker/akarata/project"> <img src="https://img.shields.io/docker/image-size/akarata/project/latest?label=Docker%20Size&style=flat-square&logo=docker&logoColor=white&color=F10070" alt="Docker Image" /></a><br>
+    <a href="https://hub.docker.com/repository/docker/akarata/project/tags"> <img src="https://img.shields.io/docker/v/akarata/project/latest?label=Docker%20Version&style=flat-square&logo=docker&logoColor=white&color=F10070" alt="Docker Version" /></a><br>
+</p>
+
+[![ logo](https://telegra.ph/file/3e712650d6b40736f6a71.jpg)](https://heroku.com/deploy)
+
+
+```
+#include <std/disclaimer.h>
+/**
+    Your Telegram account may get banned.
+    I am not responsible for any improper use of this bot
+    This bot is intended for the purpose of having fun with memes,
+    as well as efficiently managing groups.
+    You ended up spamming groups, getting reported left and right,
+    and you ended up in a Finale Battle with Telegram and at the end
+    Telegram Team deleted your account?
+    And after that, then you pointed your fingers at us
+    for getting your acoount deleted?
+    I will be rolling on the floor laughing at you.
+/**
+```
+Based on [Catuserbot](https://github.com/sandy1709/catuserbot)
 
 ### The Easy Way to deploy the bot
 Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from [Bot Father](https://t.me/botfather) and then Generate stringsession by clicking on run.on.repl.it button below and then click on deploy to heroku . Before clicking on deploy to heroku just click on fork and star just below
 
-[![Get string session](https://repl.it/badge/github/sandy1709/sandeep1709)](https://generatestringsession.sandeep1709.repl.run/)
+[![Get string session](https://repl.it/badge/github/Akarata/Project_Akarata)](https://repl.it/@Akarata/generatestringsessions/)
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Jisan09/catuserbot)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Akarata/Project_Akarata)
 <p align="center">
-  <a href="https://github.com/Jisan09/catuserbot/fork">
-    <img src="https://img.shields.io/github/forks/Jisan09/catuserbot?label=Fork&style=social">
-    
-  </a>
-  <a href="https://github.com/Jisan09/catuserbot">
-    <img src="https://img.shields.io/github/stars/Jisan09/catuserbot?style=social">
-  </a>
-</p>
-
-
-[![catuserbot logo](https://telegra.ph/file/7e1e89621fabbf02596f8.jpg)](https://heroku.com/deploy)
-
-
-### Join [here](https://t.me/catuserbot17) for updates and tuts and [here](https://t.me/catuserbot_support) for discussion and bugs
-
+  
 ### The Normal Way
 
 An example `local_config.py` file could be:
@@ -58,3 +76,16 @@ Fortunately there are no Mandatory vars for the UniBorg Support Config.
     - `APP_ID`:   You can get this value from https://my.telegram.org
     - `API_HASH`:   You can get this value from https://my.telegram.org
 - The userbot will not work without setting the mandatory vars.
+
+## Credits
+Thanks to :
+*   [RaphielGang](https://github.com/RaphielGang) - Telegram-Paperplane
+*   [sandeep.n](https://github.com/sandy1709) - Catuserbot
+*   [Md Jisan](https://github.com/Jisan09) - Catuserbot
+*   [Alfiananda](https://github.com/alfianandaa) - ProjectAlf
+*   [Mr.Miss](https://github.com/keselekpermen69) - UserButt
+*   [AdekMaulana](https://github.com/adekmaulana) - ProjectBish
+*   [MoveAngel](https://github.com/MoveAngel) - One4uBot
+*   [AidilAryanto](https://github.com/aidilaryanto) - ProjectDils 
+*   [AnggaR69s](https://github.com/GengKapak/DCLXVI) - DCLXVI
+
