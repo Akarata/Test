@@ -13,13 +13,14 @@ from os import environ, execle, path, remove
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
+from .. import CMD_HELP
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
-from . import CMD_HELP, runcmd
+from . import runcmd
 
-HEROKU_APP_NAME = Config.HEROKU_APP_NAME or None
-HEROKU_API_KEY = Config.HEROKU_API_KEY or None
-UPSTREAM_REPO_BRANCH = Config.UPSTREAM_REPO_BRANCH
-UPSTREAM_REPO_URL = Config.UPSTREAM_REPO_URL
+HEROKU_APP_NAME = Var.HEROKU_APP_NAME
+HEROKU_API_KEY = Var.HEROKU_API_KEY
+UPSTREAM_REPO_BRANCH = "master"
+UPSTREAM_REPO_URL = "https://github.com/Akarata/Project_Akarata"
 
 requirements_path = path.join(
     path.dirname(path.dirname(path.dirname(__file__))), "requirements.txt"
@@ -31,19 +32,19 @@ async def gen_chlog(repo, diff):
     d_form = "%d/%m/%y"
     for c in repo.iter_commits(diff):
         ch_log += (
-            f"  • {c.summary} ({c.committed_datetime.strftime(d_form)}) <{c.author}>\n"
+            f"•[{c.committed_datetime.strftime(d_form)}]: "
+            f"{c.summary} <{c.author}>\n"
         )
     return ch_log
 
 
 async def print_changelogs(event, ac_br, changelog):
-    changelog_str = (
-        f"**New UPDATE available for [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`"
-    )
+    changelog_str = f"**Update baru tersedia untuk AkaProject [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`"
     if len(changelog_str) > 4096:
         await event.edit("`Changelog is too big, view the file to see it.`")
-        with open("output.txt", "w+") as file:
-            file.write(changelog_str)
+        file = open("output.txt", "w+")
+        file.write(changelog_str)
+        file.close()
         await event.client.send_file(
             event.chat_id,
             "output.txt",
@@ -82,7 +83,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         heroku_applications = heroku.apps()
         if HEROKU_APP_NAME is None:
             await event.edit(
-                "`[HEROKU]`\n`Please set up the` **HEROKU_APP_NAME** `Var`"
+                "`[HEROKU]`\n`Please set up the` **HEROKU_APP_NAME** `variable"
                 " to be able to deploy your userbot...`"
             )
             repo.__del__()
@@ -121,10 +122,11 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             await asyncio.sleep(5)
             return await event.delete()
-        await event.edit("`Successfully deployed!\n" "Restarting, please wait...`")
+        else:
+            await event.edit("`Successfully deployed!\n" "Restarting, please wait...`")
     else:
         await event.edit(
-            "`[HEROKU]`\n" "`Please set up`  **HEROKU_API_KEY**  ` Var...`"
+            "`[HEROKU]`\n" "`Please set up`  **HEROKU_API_KEY**  `variable...`"
         )
     return
 
@@ -136,7 +138,8 @@ async def update(event, repo, ups_rem, ac_br):
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
     await event.edit(
-        "`Successfully Updated!\n" "Bot is restarting... Wait for a minute!`"
+        "`AkaProject berhasil diupdate!\n"
+        "Sedang memulai ulang... Harap tunggu beberapa saat!`"
     )
     # Spin a new instance of bot
     args = [sys.executable, "-m", "userbot"]
@@ -149,11 +152,11 @@ async def update(event, repo, ups_rem, ac_br):
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     conf = event.pattern_match.group(1).strip()
-    event = await edit_or_reply(event, "`Checking for updates, please wait....`")
+    event = await edit_or_reply(
+        event, "`Sedang mengecek pembaharuan, Harap tunggu beberapa saat....`"
+    )
     off_repo = UPSTREAM_REPO_URL
     force_update = False
-    # if HEROKU_API_KEY or HEROKU_APP_NAME is None:
-    # return await edit_or_reply(event, "`Set the required vars first to update the bot`")
     try:
         txt = "`Oops.. Updater cannot continue due to "
         txt += "some problems occured`\n\n**LOGTRACE:**\n"
@@ -196,18 +199,18 @@ async def upstream(event):
     ups_rem = repo.remote("upstream")
     ups_rem.fetch(ac_br)
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
-    # Special case for deploy
+    """ - Special case for deploy - """
     if conf == "deploy":
         await event.edit("`Deploying userbot, please wait....`")
         await deploy(event, repo, ups_rem, ac_br, txt)
         return
     if changelog == "" and not force_update:
         await event.edit(
-            "\n`CATUSERBOT is`  **up-to-date**  `with`  "
-            f"**{UPSTREAM_REPO_BRANCH}**\n"
+            "\n`Akarata_Project  sudah`  **diperbarui**  `oleh`  "
+            f"**[{UPSTREAM_REPO_BRANCH}]**\n"
         )
         return repo.__del__()
-    if conf == "" and not force_update:
+    if conf == "" and force_update is False:
         await print_changelogs(event, ac_br, changelog)
         await event.delete()
         return await event.respond(
@@ -219,7 +222,7 @@ async def upstream(event):
             "`Force-Syncing to latest stable userbot code, please wait...`"
         )
     if conf == "now":
-        await event.edit("`Updating userbot, please wait....`")
+        await event.edit("`Sedang mengupdate AkaProject, tunggu beberapa saat....`")
         await update(event, repo, ups_rem, ac_br)
     return
 
@@ -264,17 +267,17 @@ async def upstream(event):
 
 CMD_HELP.update(
     {
-        "updater": "__**PLUGIN NAME :** Updater__\
-        \n\n📌** CMD ➥** `.update`\
-        \n**Usage :** Checks if the main userbot repository has any updates\
-        \nand shows a changelog if so.\
-        \n\n📌** CMD ➥** `.update now`\
-        \n**USAGE   ➥  **Update your userbot,\
-        \nif there are any updates in your userbot repository.if you restart these goes back to last time when you deployed\
-        \n\n📌** CMD ➥** `.update deploy`\
-        \n**USAGE   ➥  **Deploy your userbot.So even you restart it doesnt go back to previous version\
-        \n\n📌** CMD ➥** `.goodcat`\
-        \n**USAGE   ➥  **Swich to jisan's unoffical repo to official cat repo.\
+        "updater": "__**Nama Plugin :** Updater__\
+        \n\n✅** CMD ➥** `.update`\
+        \n**Digunakan :** untuk mengecek  jika ada userbot ada update terbaru\
+        \ndan menunjukan changelog.\
+        \n\n✅** CMD ➥** `.update now`\
+        \n**Digunakan   ➥  **Untuk mengupdate userbot,\
+        \njika ada pembaruan dalam repositori userbot kamu. jika kamu memulai ulang, ini kembali ke waktu terakhir saat kamu menerapkan\
+        \n\n✅** CMD ➥** `.update deploy`\
+        \n**Digunakan   ➥  **untuk men Deploy userbot kamu\
+        \n\n✅** CMD ➥** `.goodcat`\
+        \n**Digunakan   ➥  **Swich to jisan's unoffical repo to official cat repo.\
         \nThis will triggered deploy always, even no updates."
     }
 )
