@@ -17,8 +17,8 @@ from .. import CMD_HELP
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from . import runcmd
 
-HEROKU_APP_NAME = Var.HEROKU_APP_NAME
-HEROKU_API_KEY = Var.HEROKU_API_KEY
+HEROKU_APP_NAME = Config.HEROKU_APP_NAME
+HEROKU_API_KEY = Config.HEROKU_API_KEY
 UPSTREAM_REPO_BRANCH = "master"
 UPSTREAM_REPO_URL = "https://github.com/Akarata/Project_Akarata"
 
