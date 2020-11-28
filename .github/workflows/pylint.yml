@@ -29,8 +29,7 @@ jobs:
         with:
           commit_message: 'pylint: auto fixes'
           commit_options: '--no-verify'
-          repository: .
-          repository: .
+          repository: .          
           commit_user_name: Akarata
           commit_user_email: 70458149+Akarata@users.noreply.github.com
           commit_author: Akarata <70458149+Akarata@users.noreply.github.com>
