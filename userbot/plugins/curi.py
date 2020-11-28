@@ -23,7 +23,7 @@ from userbot import CMD_HELP, bot
 from userbot.events import register
 
 KANGING_STR = [
-    "Stiker lu bagus,gw colong yak...",
+    "Stiker lu bagus,gw curi yak...",
     "Mantau stiker lu...",
     "Ett bagi duaa...",
     "Izin curi stiker lu bruh...",
