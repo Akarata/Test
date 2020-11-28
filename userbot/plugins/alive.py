@@ -4,11 +4,14 @@ from platform import python_version
 from telethon import version
 
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
-from . import CMD_HELP, StartTime, catdef, catversion, hmention, mention, reply_id
+from . import CMD_HELP, StartTime, catdef, catversion, hmention, mention
 
 CAT_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✘   I'm Alive,  Master   ✘"
-EMOJI = Config.CUSTOM_ALIVE_EMOJI
+JISAN = (
+    str(Config.CUSTOM_ALIVE_TEXT)
+    if Config.CUSTOM_ALIVE_TEXT
+    else "✘   I'm Alive,  Master   ✘"
+)
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="alive$"))
@@ -16,25 +19,28 @@ EMOJI = Config.CUSTOM_ALIVE_EMOJI
 async def amireallyalive(alive):
     if alive.fwd_from:
         return
-    reply_to_id = await reply_id(alive)
+    reply_to_id = alive.message
     uptime = await catdef.get_readable_time((time.time() - StartTime))
     _, check_sgnirts = check_data_base_heal_th()
+    if alive.reply_to_msg_id:
+        reply_to_id = await alive.get_reply_message()
     if CAT_IMG:
-        cat_caption = f"<b>{CUSTOM_ALIVE_TEXT}</b>\n\n"
-        cat_caption += f"<b> ✘   [   👤   ]    My Master : {hmention}</b>\n"
-        cat_caption += f"<b> ✘   [   🕒   ]    Uptime :</b> <code>{uptime}</code>\n"
+        cat_caption = f"<b>{JISAN}</b>\n\n"
+        cat_caption += f"<b> ✘   [   👤   ]  ➥  My Master : {hmention}</b>\n"
+        cat_caption += f"<b> ✘   [   🕒   ]  ➥  Uptime :</b> <code>{uptime}</code>\n"
         cat_caption += (
-            f"<b> ✘   [   🐍   ]    Python :</b> <code>{python_version()}</code>\n"
+            f"<b> ✘   [   🐍   ]  ➥  Python :</b> <code>{python_version()}</code>\n"
         )
-        cat_caption += f"<b> ✘   [   ⚙️   ]    Telethon :</b> <code>{version.__version__}</code>\n"
+        cat_caption += f"<b> ✘   [   ⚙️   ]  ➥  Telethon :</b> <code>{version.__version__}</code>\n"
         cat_caption += (
-            f"<b> ✘   [   🤖   ]    Aka Version :</b> <code>{catversion}</code>\n"
+            f"<b> ✘   [   🤖   ]  ➥  Akarata_Project :</b> <code>{catversion}</code>\n"
         )
         cat_caption += (
-            f"<b> ✘   [   💻   ]    Database :</b> <code>{check_sgnirts}</code>\n\n"
-        )        
-        
-            await alive.client.send_file(
+            f"<b> ✘   [   💻   ]  ➥  Database :</b> <code>{check_sgnirts}</code>\n\n"
+        )
+        cat_caption += "   ✘   <a href = https://github.com/Akarata><b>Click here if you want to know about Me</b></a>   ✘ "
+
+        await alive.client.send_file(
             alive.chat_id,
             CAT_IMG,
             caption=cat_caption,
@@ -47,14 +53,14 @@ async def amireallyalive(alive):
     else:
         await edit_or_reply(
             alive,
-            f"<b>{CUSTOM_ALIVE_TEXT}</b>\n\n"
-            f"<b>{EMOJI} Master : {hmention}</b>\n"
-            f"<b>{EMOJI} Uptime :</b> <code>{uptime}</code>\n"
-            f"<b>{EMOJI} Python Version :</b> <code>{python_version()}</code>\n"
-            f"<b>{EMOJI} Telethon version :</b> <code>{version.__version__}</code>\n"
-            f"<b>{EMOJI} Catuserbot Version :</b> <code>{catversion}</code>\n"
-            f"<b>{EMOJI} Database :</b> <code>{check_sgnirts}</code>\n\n"
-            "    <a href = https://github.com/sandy1709/catuserbot><b>GoodCat</b></a> | <a href = https://github.com/Jisan09/catuserbot><b>BadCat</b></a> | <a href = https://t.me/catuserbot_support><b>Support</b></a>",
+            f"<b>{JISAN}</b>\n\n"
+            f"<b> »» [👤] ➥ My Master : {hmention}</b>\n"
+            f"<b> »» [🕒] ➥ Uptime :</b> <code>{uptime}</code>\n"
+            f"<b> »» [🐍] ➥ Python :</b> <code>{python_version()}</code>\n"
+            f"<b> »» [⚙️] ➥ Telethon :</b> <code>{version.__version__}</code>\n"
+            f"<b> »» [🤖] ➥ Bot :</b> <code>{catversion}</code>\n"
+            f"<b> »» [💻] ➥ Database :</b> <code>{check_sgnirts}</code>\n\n"
+            "    | <a href = https://github.com/bapakbapak><b>Dame_Project</b></a> | ",
             parse_mode="html",
         )
 
@@ -64,8 +70,10 @@ async def amireallyalive(alive):
 async def amireallyalive(alive):
     if alive.fwd_from:
         return
-    tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
-    reply_to_id = await reply_id(alive)
+    tgbotusername = Var.TG_BOT_USER_NAME_BF_HER
+    reply_to_id = alive.message
+    if alive.reply_to_msg_id:
+        reply_to_id = await alive.get_reply_message()
     cat_caption = f"**Catuserbot is Up and Running**\n"
     cat_caption += f"**  -Master :** {mention}\n"
     cat_caption += f"**  -Python Version :** `{python_version()}\n`"
@@ -91,7 +99,7 @@ def check_data_base_heal_th():
     # https://stackoverflow.com/a/41961968
     is_database_working = False
     output = "No Database is set"
-    if not Config.DB_URI:
+    if not Var.DB_URI:
         return is_database_working, output
     from userbot.plugins.sql_helper import SESSION
 
