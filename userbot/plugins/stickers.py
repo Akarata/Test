@@ -26,23 +26,23 @@ from .. import CMD_HELP
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 
 KANGING_STR = [
-    "Using Witchery to kang this sticker...",
-    "Plagiarising hehe...",
-    "Inviting this sticker over to my pack...",
-    "Kanging this sticker...",
-    "Hey that's a nice sticker!\nMind if I kang?!..",
-    "hehe me stel ur stikér\nhehe.",
-    "Ay look over there (☉｡☉)!→\nWhile I kang this...",
-    "Roses are red violets are blue, kanging this sticker so my pacc looks cool",
-    "Imprisoning this sticker...",
-    "Mr.Steal Your Sticker is stealing this sticker... ",
+    "Stiker lu bagus,gw curi yak...",
+    "Mantau stiker lu...",
+    "Ett bagi duaa...",
+    "Izin curi stiker lu bruh...",
+    "Bagus banget!\nBoleh gua colong?!..",
+    "Ku kang ya stikermu.",
+    "Eh coba lihat stiker lu (☉｡☉)!→\nTapi boong...",
+    "Ett bagi dua",
+    "Mengclone stiker ini \nMuehehe...",
+    "Bruh stiker lu bagus bagus,minta ya... ",
 ]
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="kang ?(.*)"))
-@bot.on(sudo_cmd(pattern="kang ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="curi ?(.*)"))
+@bot.on(sudo_cmd(pattern="curi ?(.*)", allow_sudo=True))
 async def kang(args):
     user = await args.client.get_me()
     if not user.username:
@@ -86,10 +86,10 @@ async def kang(args):
             is_anim = True
             photo = 1
         else:
-            await edit_delete(args, "`Unsupported File!`")
+            await edit_delete(args, "`File ga support`")
             return
     else:
-        await edit_delete(args, "`I can't kang that...`")
+        await edit_delete(args, "`Itu gabisa di curi...`")
         return
     if photo:
         splat = args.text.split()
@@ -114,8 +114,8 @@ async def kang(args):
         if Config.CUSTOM_STICKER_PACKNAME:
             packnick = f"{Config.CUSTOM_STICKER_PACKNAME} Vol.{pack}"
         else:
-            packnick = f"@{user.username} Vol.{pack}"
-        packname = f"{user.username}_{pack}"
+            packnick = f"@{user.username}'s kang pack Vol.{pack}"
+        packname = f"_by_{user.username}_{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
         if is_anim:
