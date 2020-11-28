@@ -31,14 +31,16 @@ async def amireallyalive(alive):
         cat_caption += (
             f"<b> ✘   [   🐍   ]    Python :</b> <code>{python_version()}</code>\n"
         )
-        cat_caption += f"<b> ✘   [   ⚙️   ]    Telethon :</b> <code>{version.__version__}</code>\n"
+        cat_caption += (
+            f"<b> ✘   [   ⚙️   ]    Telethon :</b> <code>{version.__version__}</code>\n"
+        )
         cat_caption += (
             f"<b> ✘   [   🤖   ]    Akarata_Project :</b> <code>{catversion}</code>\n"
         )
         cat_caption += (
             f"<b> ✘   [   💻   ]    Database :</b> <code>{check_sgnirts}</code>\n\n"
         )
-        
+
         await alive.client.send_file(
             alive.chat_id,
             CAT_IMG,
