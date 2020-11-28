@@ -1,4 +1,4 @@
-# Afk plugin from catuserbot ported from uniborg
+# Afk plugin from Akarata ported from uniborg
 import asyncio
 from datetime import datetime
 
@@ -108,7 +108,7 @@ async def on_afk(event):
         msg = None
         message_to_reply = (
             f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}` **yang lalu**"
-            + f"\n\n**Karena** : {reason}"
+            + f"\n\n**Karena  Aku** : {reason}"
             if reason
             else f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}` **yang lalu** \n**Karena : **`Sibuk`"
         )
