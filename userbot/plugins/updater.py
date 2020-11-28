@@ -277,7 +277,7 @@ CMD_HELP.update(
         \n**Digunakan   ➥  **Untuk mengupdate userbot,\
         \njika ada pembaruan dalam repositori userbot kamu. jika kamu memulai ulang, ini kembali ke waktu terakhir saat kamu menerapkan\
         \n\n✅** CMD ➥** `.update deploy`\
-        \n**Digunakan   ➥  **untuk men Deploy userbot kamu\
+        \n**Digunakan   ➥  **untuk menDeploy userbot kamu\
         \n\n✅** CMD ➥** `.goodcat`\
         \n**Digunakan   ➥  **Swich to jisan's unoffical repo to official cat repo.\
         \nThis will triggered deploy always, even no updates."
