@@ -1,9 +1,10 @@
-# Heroku manager for your catuserbot
-
-# CC- @refundisillegal\nSyntax:-\n.get var NAME\n.del var NAME\n.set var NAME
+"""CC- @refundisillegal\nSyntax:-\n.get var NAME\n.del var NAME\n.set var NAME"""
 
 # Copyright (C) 2020 Adek Maulana.
 # All rights reserved.
+"""
+   Heroku manager for your userbot
+"""
 
 import asyncio
 import math
@@ -32,8 +33,8 @@ async def variable(var):
     Manage most of ConfigVars setting, set new var, get current var,
     or delete var...
     """
-    if Config.HEROKU_APP_NAME is not None:
-        app = Heroku.app(Config.HEROKU_APP_NAME)
+    if Var.HEROKU_APP_NAME is not None:
+        app = Heroku.app(Var.HEROKU_APP_NAME)
     else:
         return await edit_or_reply(
             var, "`[HEROKU]:" "\nPlease setup your` **HEROKU_APP_NAME**"
@@ -111,7 +112,7 @@ async def dyno_usage(dyno):
     """
     Get your account Dyno Usage
     """
-    dyno = await edit_or_reply(dyno, "`Processing...`")
+    dyno = await edit_or_reply(dyno, "`Tunggu beberapa saat...`")
     useragent = (
         "Mozilla/5.0 (Linux; Android 10; SM-G975F) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -120,7 +121,7 @@ async def dyno_usage(dyno):
     user_id = Heroku.account().id
     headers = {
         "User-Agent": useragent,
-        "Authorization": f"Bearer {Config.HEROKU_API_KEY}",
+        "Authorization": f"Bearer {Var.HEROKU_API_KEY}",
         "Accept": "application/vnd.heroku+json; version=3.account-quotas",
     }
     path = "/accounts/" + user_id + "/actions/get-quota"
@@ -133,13 +134,13 @@ async def dyno_usage(dyno):
     quota = result["account_quota"]
     quota_used = result["quota_used"]
 
-    # - Used -
+    """ - Used - """
     remaining_quota = quota - quota_used
     percentage = math.floor(remaining_quota / quota * 100)
     minutes_remaining = remaining_quota / 60
     hours = math.floor(minutes_remaining / 60)
     minutes = math.floor(minutes_remaining % 60)
-    # - Current -
+    """ - Current - """
     App = result["apps"]
     try:
         App[0]["quota_used"]
@@ -153,13 +154,13 @@ async def dyno_usage(dyno):
     AppMinutes = math.floor(AppQuotaUsed % 60)
     await asyncio.sleep(1.5)
     return await dyno.edit(
-        "**Dyno Usage**:\n\n"
-        f" -> `Dyno usage for`  **{Config.HEROKU_APP_NAME}**:\n"
-        f"     •  `{AppHours}`**h**  `{AppMinutes}`**m**  "
+        "**Penggunaan Dyno**:\n\n"
+        f"✘   `Dyno yang di gunakan oleh`  **{Var.HEROKU_APP_NAME}**:\n"
+        f"     •  `{AppHours}`**jam**  `{AppMinutes}`**menit**  "
         f"**|**  [`{AppPercentage}`**%**]"
         "\n\n"
-        " -> `Dyno hours quota remaining this month`:\n"
-        f"     •  `{hours}`**h**  `{minutes}`**m**  "
+        "✘   `Kuota dyno yang tersisa bulan ini`:\n"
+        f"     •  `{hours}`**jam**  `{minutes}`**menit**  "
         f"**|**  [`{percentage}`**%**]"
     )
 
@@ -202,17 +203,17 @@ def prettyjson(obj, indent=2, maxlinelength=80):
 CMD_HELP.update(
     {
         "heroku": "__**PLUGIN NAME :** Heroku__\
-  \n\n📌** CMD ➥** `.usage`\
-  \n**USAGE   ➥  **Check your heroku dyno hours status.\
-  \n\n📌** CMD ➥** `.set var` <NEW VAR> <VALUE>\
-  \n**USAGE   ➥  **Add new variable or update existing value variable\
-  \n\n📌** CMD ➥** `.get var` or `.get var <VAR>`\
-  \n**USAGE   ➥  **Get your existing varibles & valus of that\
-  \n\n📌** CMD ➥** `.del var` <VAR>\
-  \n**USAGE   ➥  **Delete existing variable\
-  \n\n📌** CMD ➥** `.herokulogs`\
-  \n**USAGE   ➥  **Sends you recent 100 lines of logs in heroku\
-  \n\n\n**!!! WARNING !!!, After adding or deleting variable the bot will restarted**\
-  \n**Don't use .get var in public groups.This returns all of your private information, please be cautious...**"
+  \n\n✅** CMD ➥** `.usage`\
+  \n**Digunakan   ➥  **Mengecek penggunaan dyno bulan ini.\
+  \n\n✅** CMD ➥** `.set var` <NEW VAR> <VALUE>\
+  \n**Digunakan   ➥  **Tambahkan variabel baru atau perbarui variabel nilai yang ada\
+  \n\n✅** CMD ➥** `.get var` or `.get var <VAR>`\
+  \n**Digunakan   ➥  **Dapatkan variabel dan nilai yang ada\
+  \n\n✅** CMD ➥** `.del var` <VAR>\
+  \n**Digunakan   ➥  **Menghapus Var\
+  \n\n✅** CMD ➥** `.herokulogs`\
+  \n**Digunakan   ➥  **Mengirimi Anda 100 baris log terbaru di heroku\
+  \n\n\n!!! PERINGATAN !!!, Setelah menambah atau menghapus variabel, bot akan dimulai ulang** \
+   \n **Jangan gunakan .get var dalam grup publik. Ini mengembalikan semua informasi pribadi Anda, harap berhati-hati ...** "
     }
 )
