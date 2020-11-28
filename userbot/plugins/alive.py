@@ -7,8 +7,8 @@ from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from . import CMD_HELP, StartTime, catdef, catversion, hmention, mention, reply_id
 
 CAT_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✮ MY BOT IS RUNNING SUCCESFULLY ✮"
-EMOJI = Config.CUSTOM_ALIVE_EMOJI or "✧✧"
+CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✘   I'm Alive,  Master   ✘"
+EMOJI = Config.CUSTOM_ALIVE_EMOJI
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="alive$"))
@@ -21,20 +21,20 @@ async def amireallyalive(alive):
     _, check_sgnirts = check_data_base_heal_th()
     if CAT_IMG:
         cat_caption = f"<b>{CUSTOM_ALIVE_TEXT}</b>\n\n"
-        cat_caption += f"<b>{EMOJI} Master : {hmention}</b>\n"
-        cat_caption += f"<b>{EMOJI} Uptime :</b> <code>{uptime}</code>\n"
+        cat_caption += f"<b> ✘   [   👤   ]    My Master : {hmention}</b>\n"
+        cat_caption += f"<b> ✘   [   🕒   ]    Uptime :</b> <code>{uptime}</code>\n"
         cat_caption += (
-            f"<b>{EMOJI} Python Version :</b> <code>{python_version()}</code>\n"
+            f"<b> ✘   [   🐍   ]    Python :</b> <code>{python_version()}</code>\n"
+        )
+        cat_caption += f"<b> ✘   [   ⚙️   ]    Telethon :</b> <code>{version.__version__}</code>\n"
+        cat_caption += (
+            f"<b> ✘   [   🤖   ]    Aka Version :</b> <code>{catversion}</code>\n"
         )
         cat_caption += (
-            f"<b>{EMOJI} Telethon version :</b> <code>{version.__version__}</code>\n"
-        )
-        cat_caption += (
-            f"<b>{EMOJI} Catuserbot Version :</b> <code>{catversion}</code>\n"
-        )
-        cat_caption += f"<b>{EMOJI} Database :</b> <code>{check_sgnirts}</code>\n\n"
-        cat_caption += "    <a href = https://github.com/sandy1709/catuserbot><b>GoodCat</b></a> | <a href = https://github.com/Jisan09/catuserbot><b>BadCat</b></a> | <a href = https://t.me/catuserbot_support><b>Support</b></a>"
-        await alive.client.send_file(
+            f"<b> ✘   [   💻   ]    Database :</b> <code>{check_sgnirts}</code>\n\n"
+        )        
+        
+            await alive.client.send_file(
             alive.chat_id,
             CAT_IMG,
             caption=cat_caption,
