@@ -42,7 +42,6 @@ async def amireallyalive(alive):
         )
         cat_caption += f"<b> ✘   [   👤   ]    My Master : {hmention}</b>\n"
 
-
         await alive.client.send_file(
             alive.chat_id,
             CAT_IMG,
