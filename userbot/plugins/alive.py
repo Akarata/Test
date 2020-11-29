@@ -4,7 +4,7 @@ from platform import python_version
 from telethon import version
 
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
-from . import CMD_HELP, StartTime, catdef, catversion, hmention, mention
+from . import CMD_HELP, StartTime, catdef, catversion, hmention, mention, UPSTREAM_REPO_BRANCH
 
 CAT_IMG = Config.ALIVE_PIC
 JISAN = (
@@ -27,8 +27,7 @@ async def amireallyalive(alive):
     if CAT_IMG:
         cat_caption = f"<b>{JISAN}</b>\n\n"
         cat_caption += f"<b> ✘   [   👤   ]    My Master : {hmention}</b>\n"
-        cat_caption += f"<b> ✘   [   👁️‍🗨️   ]    Username : @{user.username}</b>\n"
-        cat_caption += f"<b> ✘   [   🕒   ]    Bot Uptime :</b> <code>{uptime}</code>\n"
+        cat_caption += f"<b> ✘   [   🚀   ]    Bot Uptime :</b> <code>{uptime}</code>\n"
         cat_caption += (
             f"<b> ✘   [   🐍   ]    Python :</b> <code>{python_version()}</code>\n"
         )
@@ -41,6 +40,9 @@ async def amireallyalive(alive):
         cat_caption += (
             f"<b> ✘   [   💻   ]    Database :</b> <code>{check_sgnirts}</code>\n\n"
         )
+        cat_caption += (
+            f"<b> ✘   [   ⚔️   ]    Running on :</b> <code>{UPSTREAM_REPO_BRANCH}</code>\n\n"
+        ) 
 
         await alive.client.send_file(
             alive.chat_id,
