@@ -1,5 +1,5 @@
 import time
-from platform import python_version, uname
+from platform import python_version
 
 from telethon import version
 
@@ -27,9 +27,7 @@ async def amireallyalive(alive):
     if CAT_IMG:
         cat_caption = f"<b>{JISAN}</b>\n\n"
         cat_caption += f"<b> ✘   [   👤   ]    My Master : {hmention}</b>\n"
-        cat_caption += (
-            f"<b> ✘   [   👁️‍🗨️   ]    Username : @{user.username}</b>\n"
-        )
+        cat_caption += f"<b> ✘   [   👁️‍🗨️   ]    Username : @{user.username}</b>\n"
         cat_caption += f"<b> ✘   [   🕒   ]    Bot Uptime :</b> <code>{uptime}</code>\n"
         cat_caption += (
             f"<b> ✘   [   🐍   ]    Python :</b> <code>{python_version()}</code>\n"
