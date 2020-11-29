@@ -2,7 +2,7 @@ import asyncio
 from datetime import datetime
 
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
-from . import CMD_HELP, hmention
+from . import CMD_HELP
 
 
 @bot.on(admin_cmd(pattern=f"fping$", outgoing=True))
@@ -59,21 +59,22 @@ async def _(event):
     if event.fwd_from:
         return
     start = datetime.now()
-    event = await edit_or_reply(event, "<b><i>☞ Pong!</b></i>", "html")
+    event = await edit_or_reply(event, "<b>Pong..!!!<b>", "html")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(
-        f"<b><i>☞ Pong</b></i>\n➥ {ms}\n➥ <b><i>Bot of {hmention}</b></i>",
+        f"<b>╭━━  Pong..!!!!
+< </b>\n╰━━  <b>{ms}</b>",
         parse_mode="html",
     )
 
 
 CMD_HELP.update(
     {
-        "ping": "__**PLUGIN NAME :** Ping__\
-    \n\n📌** CMD ➥** `.fping`\
-    \n**USAGE   ➥  **A kind ofping with extra animation\
-    \n\n📌** CMD ➥** `.ping`\
-    \n**USAGE   ➥  **Shows you the ping speed of server"
+        "ping": "__**Nama Plugin :** Ping__\
+    \n\n✅** CMD ➥** `.fping`\
+    \n**Fungsi   ➥  **Animasi ping\
+    \n\n✅** CMD ➥** `.ping`\
+    \n**Fungsi   ➥  **Untuk memberitahu kecepatan pada server"
     }
 )
