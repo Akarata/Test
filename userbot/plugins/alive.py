@@ -37,9 +37,7 @@ async def amireallyalive(alive):
         cat_caption += (
             f"<b> ✘   [   🤖   ]    Aka Version :</b> <code>{catversion}</code>\n"
         )
-        cat_caption += (
-            f"<b> ✘   [   ⚔️   ]    Running on :</b> <code>Master</code>\n"
-        )        
+        cat_caption += f"<b> ✘   [   ⚔️   ]    Running on :</b> <code>Master</code>\n"
         cat_caption += (
             f"<b> ✘   [   💻   ]    Database :</b> <code>{check_sgnirts}</code>\n\n"
         )
