@@ -295,7 +295,7 @@ async def kang(args):
         await edit_delete(
             catevent,
             f"`Stiker berhasil di curi!\
-            \nKamu bisa lihat hasil curian` [disini](t.me/addstickers/{packname}) `and emoji of the sticker is {emoji}`",
+            \nKamu bisa lihat hasil curian` [disini](t.me/addstickers/{packname}) `Emoji yang digunakan {emoji}`",
             parse_mode="md",
             time=7,
         )
