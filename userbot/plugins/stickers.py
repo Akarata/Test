@@ -297,7 +297,6 @@ async def kang(args):
             f"`Stiker berhasil di curi!\
             \nKamu bisa lihat kumpulan stiker` [disini](t.me/addstickers/{packname}) `Emoji yang digunakan {emoji}`",
             parse_mode="md",
-            
         )
 
 
