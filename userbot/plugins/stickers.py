@@ -115,7 +115,7 @@ async def kang(args):
             packnick = f"{Config.CUSTOM_STICKER_PACKNAME} Vol.{pack}"
         else:
             packnick = f"@{user.username}'s kang pack Vol.{pack}"
-        packname = f"_by_{user.username}_{pack}"
+        packname = f"a{user.id}_by_{user.username}_{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
         if is_anim:
@@ -294,8 +294,8 @@ async def kang(args):
                 await args.client.send_read_acknowledge(conv.chat_id)
         await edit_delete(
             catevent,
-            f"`Sticker kanged successfully!\
-            \nPack can be found` [here](t.me/addstickers/{packname}) `and emoji of the sticker is {emoji}`",
+            f"`Stiker berhasil di curi!\
+            \nKamu bisa lihat hasil curian` [disini](t.me/addstickers/{packname}) `and emoji of the sticker is {emoji}`",
             parse_mode="md",
             time=7,
         )
