@@ -1,4 +1,4 @@
-# Afk plugin from Akarata ported from uniborg
+# Afk plugin from catuserbot ported from uniborg
 import asyncio
 from datetime import datetime
 
@@ -52,7 +52,8 @@ async def set_not_afk(event):
     if "afk" not in current_message and "on" in USERAFK_ON:
         shite = await event.client.send_message(
             event.chat_id,
-            "`Aku telah kembali! Tidak lama Offline.\nOffline Sejak " + endtime + "`",
+            "`ent.chat_id,
+            "`Aku telah kembali! Tidak lama Offline.\nOffline Sejak  " + endtime + "`",
         )
         USERAFK_ON = {}
         afk_time = None
@@ -62,7 +63,8 @@ async def set_not_afk(event):
             await event.client.send_message(
                 BOTLOG_CHATID,
                 "#AFKFALSE \n`Set AFK mode to False\n"
-                + "Aku telah kembali! Tidak lama Offline.\nOffline Sejak "
+                + "ent.chat_id,
+            "Aku telah kembali! Tidak lama Offline.\nOffline Sejak  "
                 + endtime
                 + "`",
             )
@@ -79,6 +81,7 @@ async def on_afk(event):
     global last_afk_message
     global afk_start
     global afk_end
+    global link
     back_alivee = datetime.now()
     afk_end = back_alivee.replace(microsecond=0)
     if afk_start != {}:
@@ -106,12 +109,21 @@ async def on_afk(event):
         return False
     if USERAFK_ON and not (await event.get_sender()).bot:
         msg = None
-        message_to_reply = (
-            f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}` **yang lalu**"
+        if link and reason:
+            message_to_reply = (
+                f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}` **yang lalu**"
             + f"\n\n**Karena  Aku** : {reason}"
+            )
+        elif reason:
+            message_to_reply = (
+                f"**I am AFK\n\nAFK Since :** `{endtime}`\n**Reason : **`{reason}`"
+            )
+        else:
+            message_to_reply = (
+                f"n**Karena  Aku** : {reason}"
             if reason
             else f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}` **yang lalu** \n**Karena : **`Sibuk`"
-        )
+            )
         if event.chat_id not in Config.UB_BLACK_LIST_CHAT:
             msg = await event.reply(message_to_reply)
         if event.chat_id in last_afk_message:
@@ -140,6 +152,7 @@ async def _(event):
     global afk_start
     global afk_end
     global reason
+    global link
     USERAFK_ON = {}
     afk_time = None
     last_afk_message = {}
@@ -150,9 +163,11 @@ async def _(event):
         input_str = event.pattern_match.group(1)
         if ";" in input_str:
             msg, link = input_str.split(";", 1)
-            reason = f"[{msg}]({link})"
+            reason = f"[{msg.strip()}]({link.strip()})"
+            link = True
         else:
             reason = input_str
+            link = False
         last_seen_status = await event.client(
             functions.account.GetPrivacyRequest(types.InputPrivacyKeyStatusTimestamp())
         )
@@ -162,7 +177,7 @@ async def _(event):
         if reason:
             await edit_delete(event, f"`Aku Akan Offline Karena ` {reason}", 5)
         else:
-            await edit_delete(event, f"`Aku Akan Offline `", 5)
+            await edit_delete(event, f"`Aku Akan Offline Karena Sibuk `", 5)
         if BOTLOG:
             if reason:
                 await event.client.send_message(
