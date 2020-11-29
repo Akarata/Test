@@ -41,7 +41,7 @@ async def amireallyalive(alive):
         cat_caption += (
             f"<b> ✘   [   💻   ]    Database :</b> <code>{check_sgnirts}</code>\n\n"
         )
-        
+
         await alive.client.send_file(
             alive.chat_id,
             CAT_IMG,
