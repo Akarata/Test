@@ -400,13 +400,13 @@ def char_is_emoji(character):
 CMD_HELP.update(
     {
         "stickers": "__**PLUGIN NAME :** Stickers__\
-\n\n📌** CMD ➥** `.kang`\
+\n\n📌** CMD ➥** `.curi`\
 \n**USAGE   ➥  **Reply .kang to a sticker or an image to kang it to your userbot pack.\
-\n\n📌** CMD ➥** `.kang [emoji('s)]`\
+\n\n📌** CMD ➥** `.curi [emoji('s)]`\
 \n**USAGE   ➥  **Works just like .kang but uses the emoji('s) you picked.\
-\n\n📌** CMD ➥** `.kang [number]`\
+\n\n📌** CMD ➥** `.curi [number]`\
 \n**USAGE   ➥  **Kang's the sticker/image to the specified pack but uses 🤔 as emoji.\
-\n\n📌** CMD ➥** `.kang [emoji('s)] [number]`\
+\n\n📌** CMD ➥** `.curi [emoji('s)] [number]`\
 \n**USAGE   ➥  **Kang's the sticker/image to the specified pack and uses the emoji('s) you picked.\
 \n\n📌** CMD ➥** `.stickers name`\
 \n**USAGE   ➥  **Shows you the list of non-animated sticker packs with that name.\
