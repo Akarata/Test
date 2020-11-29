@@ -108,13 +108,9 @@ async def on_afk(event):
     if USERAFK_ON and not (await event.get_sender()).bot:
         msg = None
         if link and reason:
-            message_to_reply = (
-                f"**Aku sedang offline**\n\n**Sejak :** `{endtime}` yang lalu\n**Karena : **{reason}"
-            )
+            message_to_reply = f"**Aku sedang offline**\n\n**Sejak :** `{endtime}` yang lalu\n**Karena : **{reason}"
         elif reason:
-            message_to_reply = (
-                f"**Aku sedang offline\n\nSejak :** `{endtime}` yang lalu\n**Karena : **`{reason}`"
-            )
+            message_to_reply = f"**Aku sedang offline\n\nSejak :** `{endtime}` yang lalu\n**Karena : **`{reason}`"
         else:
             message_to_reply = (
                 f"`Aku sedang offline\n\nSejak :{endtime} yang lalu\nKarena : Sibuk`"
