@@ -6,7 +6,6 @@ from telethon import version
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from . import (
     CMD_HELP,
-    UPSTREAM_REPO_BRANCH,
     StartTime,
     catdef,
     catversion,
