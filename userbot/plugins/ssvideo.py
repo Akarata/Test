@@ -12,9 +12,11 @@ from telethon.tl.types import DocumentAttributeFilename
 
 from userbot import CMD_HELP, bot
 from userbot.utils import progress
+from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
-@register(outgoing=True, pattern=r"^\.ssvideo(?: |$)(.*)")
+@bot.on(admin_cmd(pattern="ssvideo(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="ssvideo(?: |$)(.*)", allow_sudo=True))
 async def ssvideo(event):
     if not event.reply_to_msg_id:
         await event.edit("`Reply to any media..`")
