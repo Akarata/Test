@@ -12,7 +12,8 @@ from telethon.tl.types import DocumentAttributeFilename
 
 from userbot import CMD_HELP, bot
 from userbot.utils import progress
-from ..utils import admin_cmd, edit_or_reply, sudo_cmd
+
+from ..utils import admin_cmd, sudo_cmd
 
 
 @bot.on(admin_cmd(pattern="ssvideo(?: |$)(.*)", outgoing=True))
