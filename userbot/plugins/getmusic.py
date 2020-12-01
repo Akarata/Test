@@ -73,7 +73,7 @@ def getmusicvideo(cat):
 
 
 @bot.on(admin_cmd(pattern="song(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="song(?: |$)(.*)", allow_sudo=True)))
+@bot.on(sudo_cmd(pattern="song(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
