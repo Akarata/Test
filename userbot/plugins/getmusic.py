@@ -19,8 +19,9 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import DocumentAttributeVideo
 
 from userbot import CMD_HELP, LASTFM_USERNAME, bot
-from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.utils import progress
+
+from ..utils import admin_cmd, sudo_cmd
 
 
 # For song module
@@ -71,7 +72,6 @@ def getmusicvideo(cat):
     os.system(command)
 
 
-
 @bot.on(admin_cmd(pattern="song(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="song(?: |$)(.*)", allow_sudo=True))
 async def _(event):
@@ -117,7 +117,6 @@ async def _(event):
     os.system("rm -rf *.mp3")
     os.remove(thumb_image)
     subprocess.check_output("rm -rf *.mp3", shell=True)
-
 
 
 @bot.on(admin_cmd(pattern="vsong(?: |$)(.*)", outgoing=True))
@@ -187,7 +186,6 @@ async def _(event):
     os.system("rm -rf *.webm")
 
 
-
 @bot.on(admin_cmd(pattern="smd(?:(now)|$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="smd(?:(now)|$)(.*)", allow_sudo=True))
 async def _(event):
@@ -232,7 +230,6 @@ async def _(event):
         )
 
 
-
 @bot.on(admin_cmd(pattern="net(?:(now)|$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="net(?:(now)|$)(.*)", allow_sudo=True))
 async def _(event):
@@ -274,7 +271,6 @@ async def _(event):
         return await event.edit(
             "`Error: `@WooMaiBot` is not responding or Song not found!.`"
         )
-
 
 
 @bot.on(admin_cmd(pattern="sdd(?: |$)(.*)", outgoing=True))
