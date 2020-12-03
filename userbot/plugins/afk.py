@@ -108,7 +108,7 @@ async def on_afk(event):
         msg = None
         message_to_reply = (
             f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}` **yang lalu**"
-            + f"\n\n**Karena  Aku** : {reason}"
+            + f"\n\n**Karena** : {reason}"
             if reason
             else f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}` **yang lalu** \n**Karena : **`Sibuk`"
         )
