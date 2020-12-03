@@ -152,11 +152,10 @@ async def apkr(event):
 
 CMD_HELP.update(
     {
-        "app": "__**PLUGIN NAME :** App__\
+        "app": "__**NAMA PLUGIN :** App__\
 \n\n📌** CMD ➥** `.app` [app name]\
-\nUSAGE   ➥  **Searches the app in the playstore and provides the link to the app in playstore and fetchs app details \
+\n**PENGGUNAAN   ➥  **Mencari aplikasi di playstore dan memberikan tautan ke aplikasi di playstore dan mengambil detail aplikasi\
 \n\n📌** CMD ➥** `.appr` [app name]\
-\nUSAGE   ➥  **Searches the app in the playstore and provides the link to the app in playstore and fetchs app details with Xpl0iter request link. \
-"
+\n**PENGGUNAAN   ➥  **Mencari aplikasi di playstore dan memberikan tautan ke aplikasi di playstore dan mengambil detail aplikasi dengan tautan permintaan Xpl0iter.\"
     }
 )
