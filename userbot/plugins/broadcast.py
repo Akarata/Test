@@ -348,22 +348,22 @@ async def catbroadcast_delete(event):
 
 CMD_HELP.update(
     {
-        "broadcast": "__**PLUGIN NAME :** Broadcast__\
+        "broadcast": "__**NAMA PLUGIN :** Broadcast__\
 \n\n📌** CMD ➥** `.sendto category_name`\
-\n**USAGE   ➥  **__Will send the replied message to all the chats in give category__\
+\n**PENGGUNAAN   ➥  **__Akan mengirim pesan balasan ke semua obrolan di kategori beri__\
 \n\n📌** CMD ➥** `.fwdto category_name`\
-\n**USAGE   ➥  **__Will forward the replied message to all the chats in give category__\
+\n**PENGGUNAAN   ➥  **__Akan meneruskan pesan balasan ke semua obrolan di kategori beri__\
 \n\n📌** CMD ➥** `.addto category_name`\
-\n**USAGE   ➥  **__It will add this chat/user/channel to the category of the given name__\
+\n**PENGGUNAAN   ➥  **__Ini akan menambahkan obrolan / pengguna / saluran ini ke kategori nama yang diberikan__\
 \n\n📌** CMD ➥** `.rmfrom category_name`\
-\n**USAGE   ➥  **__To remove the Chat/user/channel from the given category name__\
+\n**PENGGUNAAN   ➥  **__Untuk menghapus Obrolan / pengguna / saluran dari nama kategori yang diberikan__\
 \n\n📌** CMD ➥** `.list category_name`\
-\n**USAGE   ➥  **__Will show the list of all chats in the given category__\
+\n**PENGGUNAAN   ➥  **__Akan menampilkan daftar semua obrolan dalam kategori yang diberikan__\
 \n\n📌** CMD ➥** `.listall`\
-\n**USAGE   ➥  **__Will show the list of all category names__\
+\n**PENGGUNAAN   ➥  **__Akan menampilkan daftar semua nama kategori__\
 \n\n📌** CMD ➥** `.frmfrom category_name chat_id`\
-\n**USAGE   ➥  **__To force remove the given chat_id from the given category name usefull when you left that chat or banned you there__\
+\n**PENGGUNAAN   ➥  **__Untuk menghapus paksa chat_id yang diberikan dari nama kategori yang diberikan berguna saat Anda meninggalkan obrolan itu atau mencekal Anda di sana__\
 \n\n📌** CMD ➥** `.delc` <category_name>\
-\n**USAGE   ➥  **__Deletes the category completely in database__"
+\n**PENGGUNAAN   ➥  **__Hapus kategori sepenuhnya di database__"
     }
 )
