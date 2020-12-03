@@ -230,27 +230,27 @@ async def kakashi(shit):
 
 CMD_HELP.update(
     {
-        "artsay": "__**PLUGIN NAME :** Artsay__\
+        "artsay": "__**NAMA PLUGIN :** Artsay__\
       \n\n📌** CMD ➥** `.carry` <your text>\
-      \n**USAGE   ➥  **Send your text with carry's art.\
+      \n**PENGGUNAAN   ➥  **Kirim teks Anda dengan seni carry.\
       \n\n📌** CMD ➥** `.killer` <text>\
-      \n**USAGE   ➥  **Be a warrior & kill enimes.\
+      \n**PENGGUNAAN   ➥  **Jadilah pejuang & bunuh musuh.\
       \n\n📌** CMD ➥** `.ded` <text>\
-      \n**USAGE   ➥  **Hang yourself.\
+      \n**PENGGUNAAN   ➥  **Gantung dirimu.\
       \n\n📌** CMD ➥** `.sthink` <your text>\
-      \n**USAGE   ➥  **Send your text which tou thinking about.\
+      \n**PENGGUNAAN   ➥  **Kirim teks Anda yang Anda pikirkan.\
       \n\n📌** CMD ➥** `.sfrog` <your text>\
-      \n**USAGE   ➥  **Send your text with frog's art.\
+      \n**PENGGUNAAN   ➥  **Kirim teks Anda dengan seni katak.\
       \n\n📌** CMD ➥** `.sdead` <your text>\
-      \n**USAGE   ➥  **Send your text with dead forg's art.\
+      \n**PENGGUNAAN   ➥  **Kirim teks Anda dengan seni mati.\
       \n\n📌** CMD ➥** `.sputin` <your text>\
-      \n**USAGE   ➥  **Send your text with putin's art.\
+      \n**PENGGUNAAN   ➥  **Kirim teks Anda dengan seni putin.\
       \n\n📌** CMD ➥** `.strump` <your text>\
-      \n**USAGE   ➥  **Send your text with trump's art.\
+      \n**PENGGUNAAN   ➥  **Kirim teks Anda dengan seni truf.\
       \n\n📌** CMD ➥** `.china` <your text>\
-      \n**USAGE   ➥  **Send your text with china's art.\
+      \n**PENGGUNAAN   ➥  **Kirim teks Anda dengan seni cina.\
       \n\n📌** CMD ➥** `.sshit` \
-      \n**USAGE   ➥  **Ahhh shit...here we go again..\
+      \n**PENGGUNAAN   ➥  **Ahhh shit...here we go again..\
 "
     }
 )
