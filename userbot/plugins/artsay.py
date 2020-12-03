@@ -250,7 +250,7 @@ CMD_HELP.update(
       \n\n📌** CMD ➥** `.china` <your text>\
       \n**PENGGUNAAN   ➥  **Kirim teks Anda dengan seni cina.\
       \n\n📌** CMD ➥** `.sshit` \
-      \n**PENGGUNAAN   ➥  **Ahhh shit...here we go again..\
+      \n**PENGGUNAAN   ➥  **Ahhh shit...here we go again.. \
 "
     }
 )
