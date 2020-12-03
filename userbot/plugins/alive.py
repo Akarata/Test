@@ -61,9 +61,7 @@ async def amireallyalive(alive):
             f"<b> »» [🐍] ➥ Python :</b> <code>{python_version()}</code>\n"
             f"<b> »» [⚙️] ➥ Telethon :</b> <code>{version.__version__}</code>\n"
             f"<b> »» [🤖] ➥ Bot :</b> <code>{catversion}</code>\n"
-            f"<b> »» [💻] ➥ Database :</b> <code>{check_sgnirts}</code>\n\n"
-            "    | <a href = https://github.com/bapakbapak><b>Dame_Project</b></a> | ",
-            parse_mode="html",
+            f"<b> »» [💻] ➥ Database :</b> <code>{check_sgnirts}</code>\n\n"            
         )
 
 
@@ -119,10 +117,10 @@ def check_data_base_heal_th():
 
 CMD_HELP.update(
     {
-        "alive": "__**PLUGIN NAME :** Alive__\
+        "alive": "__**NAMA PLUGIN :** Alive__\
       \n\n📌** CMD ➥** `.alive`\
-      \n**USAGE   ➥  **To see wether your bot is working or not.\
+      \n**PENGGUNAAN   ➥  **Untuk melihat apakah bot Anda berfungsi atau tidak.\
       \n\n📌** CMD ➥** `.ialive`\
-      \n**USAGE   ➥  **__Status of bot will be showed by inline mode with button__."
+      \n**PENGGUNAAN   ➥  **__Status bot akan ditampilkan dalam mode inline dengan button__."
     }
 )
