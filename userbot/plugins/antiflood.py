@@ -75,9 +75,9 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "antiflood": "__**PLUGIN NAME :** Antiflood__\
+        "antiflood": "__**NAMA PLUGIN :** Antiflood__\
 \n\n📌** CMD ➥** `.setflood` [number]\
-\n**USAGE   ➥  **Warns the user if he spams the chat  if you are admin mutes him in that group .\
+\n**PENGGUNAAN   ➥  **Memperingatkan pengguna jika dia melakukan spam pada obrolan jika Anda adalah admin yang membungkamnya dalam grup itu .\
 "
     }
 )
