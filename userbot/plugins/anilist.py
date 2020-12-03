@@ -327,15 +327,15 @@ async def anilist(event):
 
 CMD_HELP.update(
     {
-        "anilist": "__**PLUGIN NAME :** Anilist__\
+        "anilist": "__**NAMA PLUGIN :** Anilist__\
     \n\n📌** CMD ➥** `.anilist` <anime name >\
-    \n**USAGE   ➥  **Shows you the details of the anime.\
+    \n**PENGGUNAAN   ➥  **Menunjukkan detail anime.\
     \n\n📌** CMD ➥** `.char` <character name >\
-    \n**USAGE   ➥  **Shows you the details of that character in anime with pic.\
+    \n**PENGGUNAAN   ➥  **Menunjukkan Anda detail karakter itu di anime dengan gambar.\
     \n\n📌** CMD ➥** `.manga` <anime name >\
-    \n**USAGE   ➥  **Shows you the details of the manga.\
+    \n**PENGGUNAAN   ➥  **Menunjukkan detail manga.\
     \n\n📌** CMD ➥** `.airing` <anime name >\
-    \n**USAGE   ➥  **Shows you the time for that current running anime show.\
+    \n**PENGGUNAAN   ➥  **Menunjukkan waktu untuk acara anime yang sedang berjalan itu.\
     "
     }
 )
