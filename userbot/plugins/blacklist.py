@@ -98,14 +98,14 @@ async def on_view_blacklist(event):
 
 CMD_HELP.update(
     {
-        "blacklist": "__**PLUGIN NAME :** Blacklist__\
+        "blacklist": "__**NAMA PLUGIN :** Blacklist__\
     \n\n📌** CMD ➥** `.addblacklist` <word/words>\
-    \n**USAGE   ➥  **The given word or words will be added to blacklist in that specific chat if any user sends then the message deletes.\
+    \n**PENGGUNAAN   ➥  **Kata atau kata-kata yang diberikan akan ditambahkan ke daftar hitam di obrolan tertentu itu jika ada pengguna yang mengirim, maka pesan itu akan dihapus.\
     \n\n📌** CMD ➥** `.rmblacklist` <word/words>\
-    \n**USAGE   ➥  **The given word or words will be removed from blacklist in that specific chat\
+    \n**PENGGUNAAN   ➥  **Kata atau kata-kata tertentu akan dihapus dari daftar hitam di obrolan tertentu itu\
     \n\n📌** CMD ➥** `.listblacklist`\
-    \n**USAGE   ➥  **Shows you the list of blacklist words in that specific chat\
-    \n\n**NOTE : **If you are adding more than one word at time via this then remember that new word must be given in new line that is not [hi hello] . it must be as\
-    [hi \n hello]"
+    \n**PENGGUNAAN   ➥  **Shows you the list of blacklist words in that specific chat\
+    \n\n**NOTE : **Jika Anda menambahkan lebih dari satu kata sekaligus melalui ini, maka ingatlah bahwa kata baru harus diberikan di baris baru, bukan [halo].  itu harus seperti\
+    [hai \n halo]"
     }
 )
