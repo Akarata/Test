@@ -194,8 +194,8 @@ CMD_HELP.update(
     {
         "antispambot": "__**PLUGIN NAME :** Aantispambot__\
         \n\n📌** CMD ➥** `.cascheck`\
-        \n**USAGE   ➥  **Searches for cas(combot antispam service) banned users in group and shows you the list\
+        \n**PENGGUNAAN   ➥  **Pencarian untuk pengguna yang dilarang cas (combot antispam service) dalam grup dan menunjukkan daftar kepada Anda\
         \n\n📌** CMD ➥** `.spamcheck`\
-        \n**USAGE   ➥  **Searches for spamwatch banned users in group and shows you the list"
+        \n**PENGGUNAAN   ➥  **Pencarian untuk spamwatch melarang pengguna dalam grup dan menampilkan daftarnya"
     }
 )
