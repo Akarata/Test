@@ -605,28 +605,28 @@ async def get_user_from_id(user, event):
 
 CMD_HELP.update(
     {
-        "admin": "__**PLUGIN NAME :** Admin__\
+        "admin": "__**NAMA PLUGIN :** Admin__\
 \n\n📌** CMD ➥** `.setgpic` <reply to image>\
-\n**USAGE   ➥  **Changes the group's display picture\
+\n**PENGGUNAAN   ➥  **Mengubah gambar tampilan grup\
 \n\n📌** CMD ➥** `.promote` <username/reply> <custom rank (optional)>\
-\n**USAGE   ➥  **Provides admin rights to the person in the chat.\
+\n**PENGGUNAAN   ➥  **Memberikan hak admin kepada orang dalam obrolan.\
 \n\n📌** CMD ➥** `.demote` <username/reply>\
-\n**USAGE   ➥  **Revokes the person's admin permissions in the chat.\
+\n**PENGGUNAAN   ➥  **Mencabut izin admin orang tersebut dalam obrolan.\
 \n\n📌** CMD ➥** `.ban` <username/reply> <reason (optional)>\
-\n**USAGE   ➥  **Bans the person off your chat.\
+\n**PENGGUNAAN   ➥  **Larang orang tersebut keluar dari obrolan Anda.\
 \n\n📌** CMD ➥** `.unban` <username/reply>\
-\n**USAGE   ➥  **Removes the ban from the person in the chat.\
+\n**PENGGUNAAN   ➥  **Menghapus larangan dari orang dalam obrolan.\
 \n\n📌** CMD ➥** `.mute` <username/reply> <reason (optional)>\
-\n**USAGE   ➥  **Mutes the person in the chat, works on admins too.\
+\n**PENGGUNAAN   ➥  **Membungkam orang dalam obrolan, juga berfungsi pada admin.\
 \n\n📌** CMD ➥** `.unmute` <username/reply>\
-\n**USAGE   ➥  **Removes the person from the muted list.\
+\n**PENGGUNAAN   ➥  **Menghapus orang tersebut dari daftar yang dibungkam.\
 \n\n📌** CMD ➥** `.pin` <reply> or `.pin loud`\
-\n**USAGE   ➥  **Pins the replied message in Group\
+\n**PENGGUNAAN   ➥  **Pin pesan balasan di Grup\
 \n\n📌** CMD ➥** `.unpin` <reply> or `.unpin all`\
-\n**USAGE   ➥  **Unpins the replied message in Group\
+\n**PENGGUNAAN   ➥  **Lepas pin pesan balasan di Grup\
 \n\n📌** CMD ➥** `.kick` <username/reply> \
-\n**USAGE   ➥  **kick the person off your chat.\
+\n**PENGGUNAAN   ➥  **keluarkan orang tersebut dari obrolan Anda.\
 \n\n📌** CMD ➥** `.iundlt`\
-\n**USAGE   ➥  **display last 5 deleted messages in group."
+\n**PENGGUNAAN   ➥  **menampilkan 5 pesan terakhir yang dihapus dalam grup."
     }
 )
