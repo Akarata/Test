@@ -447,8 +447,8 @@ async def kakashi(lol):
 
 CMD_HELP.update(
     {
-        "art": "__**PLUGIN NAME :** Art__\
+        "art": "__**NAMA PLUGIN :** Art__\
 \n\n📌** CMD ➥** `.gay` | `.bot` | `.hai` | `.nou` |`.elove` | `.monster` | `.pig` | `.gun` | `.dog` | `.hello` | `.hmf` | `.couple` | `.sup` | `.india` | `.wc` | `.snk` | `.bye` | `.shitos` | `.dislike` | `.lol` | `.loal`\
-\n\n**USAGE   ➥  **These are arts,use & see"
+\n\n**PENGGUNAAN   ➥  **Ini adalah seni, gunakan & lihat"
     }
 )
