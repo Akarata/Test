@@ -154,7 +154,7 @@ CMD_HELP.update(
     {
         "app": "__**NAMA PLUGIN :** App__\
 \n\n📌** CMD ➥** `.app` [app name]\
-\n**PENGGUNAAN   ➥  **Mencari aplikasi di playstore dan memberikan tautan ke aplikasi di playstore dan mengambil detail aplikasi \
+\n**PENGGUNAAN   ➥  **Mencari aplikasi di playstore dan memberikan tautan ke aplikasi di playstore dan mengambil detail aplikasi. \
 \n\n📌** CMD ➥** `.appr` [app name]\
 \n**PENGGUNAAN   ➥  **Mencari aplikasi di playstore dan memberikan tautan ke aplikasi di playstore dan mengambil detail aplikasi dengan tautan permintaan Xpl0iter. \
 "
