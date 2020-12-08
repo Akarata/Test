@@ -8,8 +8,8 @@ from ..utils import admin_cmd, edit_or_reply, errors_handler, sudo_cmd
 from . import BOTLOG, BOTLOG_CHATID, CMD_HELP
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="purge$"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern="purge$"))
+@bot.on(admin_cmd(outgoing=True, pattern="p$"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern="p$"))
 @errors_handler
 async def fastpurger(purg):
     # For .purge command, purge all messages starting from the reply.
@@ -37,13 +37,13 @@ async def fastpurger(purg):
         await purg.client.delete_messages(chat, msgs)
     done = await purg.client.send_message(
         purg.chat_id,
-        "Fast purge complete!\nPurged " + str(count) + " messages.",
+        "Pembersihan cepat selesai!\nDibersihkan " + str(count) + " pesan.",
     )
 
     if BOTLOG:
         await purg.client.send_message(
             BOTLOG_CHATID,
-            "#PURGE \nPurge of " + str(count) + " messages done successfully.",
+            "#PURGE \nPembersihan " + str(count) + " pesan berhasil.",
         )
     await sleep(2)
     await done.delete()
@@ -78,8 +78,8 @@ async def purgeme(delme):
     await smsg.delete()
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="del$"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern="del$"))
+@bot.on(admin_cmd(outgoing=True, pattern="d$"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern="d$"))
 @errors_handler
 async def delete_it(delme):
     """ For .del command, delete the replied message. """
@@ -90,25 +90,25 @@ async def delete_it(delme):
             await delme.delete()
             if BOTLOG:
                 await delme.client.send_message(
-                    BOTLOG_CHATID, "#DEL \nDeletion of message was successful"
+                    BOTLOG_CHATID, "#DEL \nMenghapus pesan berhasil"
                 )
         except rpcbaseerrors.BadRequestError:
             if BOTLOG:
                 await delme.client.send_message(
-                    BOTLOG_CHATID, "Well, I can't delete a message"
+                    BOTLOG_CHATID, "Aku tidak bisa menghapus pesan"
                 )
 
 
 CMD_HELP.update(
     {
-        "purge": "__**PLUGIN NAME :** Purge__\
-    \n\n📌** CMD ➥** `.purge`\
-    \n**USAGE   ➥  **Purges all messages starting from the reply.\
-    \n\n📌** CMD ➥** `.purgeme` <x>\
-    \n**USAGE   ➥  **Deletes x amount of your latest messages.\
-    \n\n📌** CMD ➥** `.del`\
-    \n**USAGE   ➥  **Deletes the message you replied to.\
-    \n\n📌** CMD ➥** `.edit` <newmessage>\
-    \n**USAGE   ➥  **Replace your last message with <newmessage>."
+        "purge": "__**Nama Plugin :** Purge__\
+    \n\n✅** CMD ➥** `.p`\
+    \n**Fungsi   ➥  **Untuk membersihkan pesan, balas untuk menggunakannya.\
+    \n\n✅** CMD ➥** `.purgeme` <x>\
+    \n**Fungsi   ➥  **Hapus x total pesan baru.\
+    \n\n✅** CMD ➥** `.d`\
+    \n**Fungsi   ➥  **Hapus pesan yang kamu balas.\
+    \n\n✅** CMD ➥** `.edit` <pesanbaru>\
+    \n**Fungsi   ➥  **Timpa pesan, balas pesan untuk mengedit <pesanbaru>."
     }
 )
