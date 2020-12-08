@@ -1,102 +1,105 @@
-import string
+# ported from paperplaneExtended by avinashreddy3108 for media support
+import re
 
-from telethon.tl.types import Channel
+from telethon import events
 
+from .. import BOTLOG_CHATID, CMD_HELP, bot
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
-from . import CMD_HELP
-
-global msg_cache
-msg_cache = {}
-
-
-global groupsid
-groupsid = []
-
-
-async def all_groups_id(cat):
-    catgroups = []
-    async for dialog in cat.client.iter_dialogs():
-        entity = dialog.entity
-        if isinstance(entity, Channel) and entity.megagroup:
-            catgroups.append(entity.id)
-    return catgroups
-
-
-@bot.on(admin_cmd(pattern="frwd$"))
-@bot.on(sudo_cmd(pattern="frwd$", allow_sudo=True))
-async def _(event):
-    if event.fwd_from:
-        return
-    if Config.PRIVATE_CHANNEL_BOT_API_ID is None:
-        await edit_or_reply(
-            event,
-            "Please set the required environment variable `PRIVATE_CHANNEL_BOT_API_ID` for this plugin to work",
-        )
-        return
-    try:
-        e = await event.client.get_entity(Config.PRIVATE_CHANNEL_BOT_API_ID)
-    except Exception as e:
-        await edit_or_reply(event, str(e))
-    else:
-        re_message = await event.get_reply_message()
-        # https://t.me/telethonofftopic/78166
-        fwd_message = await event.client.forward_messages(e, re_message, silent=True)
-        await event.client.forward_messages(event.chat_id, fwd_message)
-        await event.delete()
-
-
-@bot.on(admin_cmd(pattern="resend$"))
-@bot.on(sudo_cmd(pattern="resend$", allow_sudo=True))
-async def _(event):
-    if event.fwd_from:
-        return
-    try:
-        await event.delete()
-    except:
-        pass
-    m = await event.get_reply_message()
-    if not m:
-        return
-    await event.respond(m)
-
-
-@bot.on(admin_cmd(pattern=r"fpost (.*)"))
-@bot.on(sudo_cmd(pattern=r"fpost (.*)", allow_sudo=True))
-async def _(event):
-    if event.fwd_from:
-        return
-    global groupsid
-    global msg_cache
-    await event.delete()
-    text = event.pattern_match.group(1)
-    destination = await event.get_input_chat()
-    if len(groupsid) == 0:
-        groupsid = await all_groups_id(event)
-    for c in text.lower():
-        if c not in string.ascii_lowercase:
-            continue
-        if c not in msg_cache:
-            async for msg in event.client.iter_messages(event.chat_id, search=c):
-                if msg.raw_text.lower() == c and msg.media is None:
-                    msg_cache[c] = msg
-                    break
-        if c not in msg_cache:
-            for i in groupsid:
-                async for msg in event.client.iter_messages(event.chat_id, search=c):
-                    if msg.raw_text.lower() == c and msg.media is None:
-                        msg_cache[c] = msg
-                        break
-        await event.client.forward_messages(destination, msg_cache[c])
-
-
-CMD_HELP.update(
-    {
-        "forward": "__**PLUGIN NAME :** Forward__\
-    \n\n📌** CMD ➥** `.frwd` <reply to any message>\
-    \n**USAGE   ➥  **Enable Seen Counter in any message, to know how many users have seen your message\
-    \n\n📌** CMD ➥** `.resend` reply to message\
-    \n**USAGE   ➥  **Just resend the replied message again in that chat__\
-    \n\n📌** CMD ➥** `.fpost text`\
-    \n**USAGE   ➥  **Split the word and forwards each letter from the messages cache if exists "
-    }
+from .sql_helper.filter_sql import (
+    add_filter,
+    get_filters,
+    remove_all_filters,
+    remove_filter,
 )
+
+
+@bot.on(events.NewMessage(incoming=True))
+async def filter_incoming_handler(handler):
+    try:
+        if not (await handler.get_sender()).bot:
+            name = handler.raw_text
+            filters = get_filters(handler.chat_id)
+            if not filters:
+                return
+            for trigger in filters:
+                pattern = r"( |^|[^\w])" + re.escape(trigger.keyword) + r"( |$|[^\w])"
+                if re.search(pattern, name, flags=re.IGNORECASE):
+                    if trigger.f_mesg_id:
+                        msg_o = await handler.client.get_messages(
+                            entity=BOTLOG_CHATID, ids=int(trigger.f_mesg_id)
+                        )
+                        await handler.reply(msg_o.message, file=msg_o.media)
+                    elif trigger.reply:
+                        await handler.reply(trigger.reply)
+    except AttributeError:
+        pass
+
+
+@bot.on(admin_cmd(pattern="filter (.*)"))
+@bot.on(sudo_cmd(pattern="filter (.*)", allow_sudo=True))
+async def add_new_filter(new_handler):
+    keyword = new_handler.pattern_match.group(1)
+    string = new_handler.text.partition(keyword)[2]
+    msg = await new_handler.get_reply_message()
+    msg_id = None
+    if msg and msg.media and not string:
+        if BOTLOG_CHATID:
+            await new_handler.client.send_message(
+                BOTLOG_CHATID,
+                f"#FILTER\
+            \nCHAT ID: {new_handler.chat_id}\
+            \nTRIGGER: {keyword}\
+            \n\nThe following message is saved as the filter's reply data for the chat, please do NOT delete it !!",
+            )
+            msg_o = await new_handler.client.forward_messages(
+                entity=BOTLOG_CHATID,
+                messages=msg,
+                from_peer=new_handler.chat_id,
+                silent=True,
+            )
+            msg_id = msg_o.id
+        else:
+            await edit_or_reply(
+                new_handler,
+                "`Saving media as reply to the filter requires the BOTLOG_CHATID to be set.`",
+            )
+            return
+    elif new_handler.reply_to_msg_id and not string:
+        rep_msg = await new_handler.get_reply_message()
+        string = rep_msg.text
+    success = "`Filter` **{}** `{} ditambahkan`"
+    if add_filter(str(new_handler.chat_id), keyword, string, msg_id) is True:
+        return await edit_or_reply(new_handler, success.format(keyword, "berhasil"))
+    remove_filter(str(new_handler.chat_id), keyword)
+    if add_filter(str(new_handler.chat_id), keyword, string, msg_id) is True:
+        return await edit_or_reply(new_handler, success.format(keyword, "Updated"))
+    await edit_or_reply(new_handler, f"Error while setting filter for {keyword}")
+
+
+@bot.on(admin_cmd(pattern="filters$"))
+@bot.on(sudo_cmd(pattern="filters$", allow_sudo=True))
+async def on_snip_list(event):
+    OUT_STR = "tidak ada filter pada pesan ini."
+    filters = get_filters(event.chat_id)
+    for filt in filters:
+        if OUT_STR == "Tidak ada filter di chat ini.":
+            OUT_STR = "Filter di chat ini:\n"
+        OUT_STR += "👉 `{}`\n".format(filt.keyword)
+    if len(OUT_STR) > 4096:
+        with io.BytesIO(str.encode(OUT_STR)) as out_file:
+            out_file.name = "filters.text"
+            await bot.send_file(
+                event.chat_id,
+                out_file,
+                force_document=True,
+                allow_cache=False,
+                caption="Filter yang tersedia di chat ini",
+                reply_to=event,
+            )
+            await event.delete()
+    else:
+        await edit_or_reply(event, OUT_STR)
+
+
+@bot.on(admin_cmd(pattern="stop (.*)"))
+@bot.on(sudo_cmd(pattern="stop (.*)", allow_sudo=True))
