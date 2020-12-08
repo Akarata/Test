@@ -1,10 +1,8 @@
 # ported from paperplaneExtended by avinashreddy3108 for media support
 import re
 
-from telethon import events
-
-from .. import BOTLOG_CHATID, CMD_HELP, bot
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
+from . import BOTLOG, BOTLOG_CHATID, CMD_HELP
 from .sql_helper.filter_sql import (
     add_filter,
     get_filters,
