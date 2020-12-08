@@ -11,7 +11,7 @@ from .sql_helper.filter_sql import (
 )
 
 
-@bot.on(events.NewMessage(incoming=True))
+@bot.on(admin_cmd(incoming=True))
 async def filter_incoming_handler(handler):
     try:
         if not (await handler.get_sender()).bot:
