@@ -2,7 +2,7 @@
 import re
 
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
-from . import BOTLOG, BOTLOG_CHATID, CMD_HELP
+from . import BOTLOG_CHATID, CMD_HELP
 from .sql_helper.filter_sql import (
     add_filter,
     get_filters,
