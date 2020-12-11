@@ -116,15 +116,15 @@ async def load(event):
 
 CMD_HELP.update(
     {
-        "corecmds": "__**PLUGIN NAME :** Corecmds__\
-    \n\n📌** CMD ➥** `.install` <replay on a plugin>\
-    \n**USAGE   ➥  **To install external plugin in bot. \
-    \n\n📌** CMD ➥** `.send` <plugin name>\
-    \n**USAGE   ➥  **To send/share loaded plugin.\
-    \n\n📌** CMD ➥** `.unload` <plugin name>\
-    \n**USAGE   ➥  **To unload any loaded plugin from bot.\
-    \n\n📌** CMD ➥** `.load` <plugin name>\
-    \n**USAGE   ➥  **To load plugins which are installed but unloaded in bot.\
+        "corecmds": "__**NAMA PLUGIN:** Corecmds__\
+    \n\n✅** CMD ➥** `.install` <memutar ulang di plugin>\
+    \n**Fungsi   ➥  **Untuk menginstal plugin eksternal di bot. \
+    \n\n✅** CMD ➥** `.send` <nama plugin>\
+    \n**Fungsi   ➥  **Untuk mengirim / berbagi plugin yang dimuat.\
+    \n\n✅** CMD ➥** `.unload` <nama plugin>\
+    \n**Fungsi   ➥  **Untuk membongkar plugin apa pun yang dimuat dari bot.\
+    \n\n✅** CMD ➥** `.load` <nama plugin>\
+    \n**Fungsi   ➥  **Untuk memuat plugin yang dipasang tetapi dibongkar di bot.\
     "
     }
 )
