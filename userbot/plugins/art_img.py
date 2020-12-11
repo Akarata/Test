@@ -93,10 +93,10 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "art_img": "__**PLUGIN NAME :** Art Image__\
-      \n\n📌** CMD ➥** `.iascii` reply to any image file:\
-      \n**USAGE   ➥  **Makes an image ascii style, try out your own.\
-      \n\n📌** CMD ➥** `.line` reply to any image file:\
-      \n**USAGE   ➥  **Makes an image line style.\ "
+        "art_img": "__**NAMA PLUGIN :** Art Image__\
+      \n\n✅** CMD ➥** `.iascii` membalas file gambar apa pun:\
+      \n**Fungsi   ➥  **Membuat gaya gambar ascii, coba sendiri.\
+      \n\n✅** CMD ➥** `.line` membalas file gambar apa pun:\
+      \n**Fungsi   ➥  **Membuat gaya garis gambar.\ "
     }
 )
