@@ -71,14 +71,14 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "create": "__**PLUGIN NAME :** Create__\
-    \n\n📌** CMD ➥** `.create b`\
-    \n**USAGE   ➥  **Creates a super group and send you link\
-    \n\n📌** CMD ➥** `.create g`\
-    \n**USAGE   ➥  **Creates a private group and sends you link\
-    \n\n📌** CMD ➥** `.create c`\
-    \n**USAGE   ➥  **Creates a Channel and sends you link\
-    \n\n**Here the bot accout is owner**\
+        "create": "__**NAMA PLUGIN :** Create__\
+    \n\n✅** CMD ➥** `.create b`\
+    \n**Fungsi   ➥  **Membuat grup super dan mengirimi Anda tautan\
+    \n\n✅** CMD ➥** `.create g`\
+    \n**Fungsi   ➥  **Membuat grup pribadi dan mengirimi Anda tautan\
+    \n\n✅** CMD ➥** `.create c`\
+    \n**Fungsi   ➥  **Membuat Saluran dan mengirimi Anda tautan\
+    \n\n**Di sini akun bot adalah pemiliknya**\
     "
     }
 )
