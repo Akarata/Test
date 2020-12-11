@@ -20,17 +20,17 @@ async def collage(cat):
     reply = await cat.get_reply_message()
     catid = cat.reply_to_msg_id
     cat = await edit_or_reply(
-        cat, "```collaging this may take several minutes too..... 😁```"
+        cat, "```membuat kolase, ini mungkin membutuhkan waktu beberapa menit juga..... :D```"
     )
     if not (reply and (reply.media)):
-        await cat.edit("`Media not found...`")
+        await cat.edit("`Media tidak ditemukan...`")
         return
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
     catsticker = await reply.download_media(file="./temp/")
     if not catsticker.endswith((".mp4", ".mkv", ".tgs")):
         os.remove(catsticker)
-        await cat.edit("`Media format is not supported...`")
+        await cat.edit("`Format media tidak didukung...`")
         return
     if catinput:
         if not catinput.isdigit():
@@ -41,7 +41,7 @@ async def collage(cat):
         if not 0 < catinput < 10:
             os.remove(catsticker)
             await cat.edit(
-                "`Why too big grid you cant see images, use size of grid between 1 to 9`"
+                "`Mengapa grid terlalu besar Anda tidak dapat melihat gambar, gunakan ukuran grid antara 1 hingga 9`"
             )
             return
     else:
@@ -62,7 +62,7 @@ async def collage(cat):
             if files and os.path.exists(files):
                 os.remove(files)
         return await edit_delete(
-            cat, f"`media is not supported or try with smaller grid size`", 5
+            cat, f"`media tidak didukung atau coba dengan ukuran kisi yang lebih kecil`", 5
         )
     await cat.client.send_file(
         cat.chat_id,
@@ -77,8 +77,8 @@ async def collage(cat):
 
 CMD_HELP.update(
     {
-        "collage": "__**PLUGIN NAME :** Collage__\
-        \n\n📌** CMD ➥** `.collage` <grid size>\
-        \n**USAGE   ➥  **__Shows you the grid image of images extracted from video \n\nGrid size must be between 1 to 9 by default it is 3__"
+        "collage": "__**NAMA PLUGIN :** Collage__\
+        \n\n✅** CMD ➥** `.collage` <grid size>\
+        \n**Fungsi   ➥  **__Menunjukkan gambar kisi gambar yang diekstrak dari video \n\nUkuran grid harus antara 1 sampai 9 secara default adalah 3__"
     }
 )
