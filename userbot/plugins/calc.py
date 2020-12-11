@@ -48,8 +48,8 @@ async def aexec(code, event):
 
 CMD_HELP.update(
     {
-        "calc": "__**PLUGIN NAME :** Calc__\
-      \n\n📌** CMD ➥** `.calc` your equation :\
-      \n**USAGE   ➥  **Solves the given maths equation by bodmass rule. "
+        "calc": "__**NAMA PLUGIN :** Calc__\
+      \n\n✅** CMD ➥** `.calc` persamaan Anda :\
+      \n**Fungsi   ➥  **Memecahkan persamaan matematika yang diberikan dengan aturan bodmas. "
     }
 )
