@@ -233,15 +233,15 @@ async def twrp(request):
 CMD_HELP.update(
     {
         "android": "__**NAMA PLUGIN :** Android__\
-\n\n📌** CMD ➥** `.magisk`\
-\n**PENGGUNAAN   ➥  **Dapatkan rilis Magisk terbaru\
-\n\n📌** CMD ➥** `.device` <codename>\
-\n**PENGGUNAAN   ➥  **Dapatkan info tentang nama kode atau model perangkat android.\
-\n\n📌** CMD ➥** `.codename` <brand> <device>\
-\n**PENGGUNAAN   ➥  **Cari nama kode perangkat android.\
-\n\n📌** CMD ➥** `.aspecs` <brand> <device>\
-\n**PENGGUNAAN   ➥  **Dapatkan info spesifikasi perangkat.\
-\n\n📌** CMD ➥** `.twrp` <codename>\
-\n**PENGGUNAAN   ➥  **Dapatkan unduhan twrp terbaru untuk perangkat android. "
+\n\n✅** CMD ➥** `.magisk`\
+\n**Fungsi   ➥  **Dapatkan rilis Magisk terbaru\
+\n\n✅** CMD ➥** `.device` <codename>\
+\n**Fungsi   ➥  **Dapatkan info tentang nama kode atau model perangkat android.\
+\n\n✅** CMD ➥** `.codename` <brand> <device>\
+\n**Fungsi   ➥  **Cari nama kode perangkat android.\
+\n\n✅** CMD ➥** `.aspecs` <brand> <device>\
+\n**Fungsi   ➥  **Dapatkan info spesifikasi perangkat.\
+\n\n✅** CMD ➥** `.twrp` <codename>\
+\n**Fungsi   ➥  **Dapatkan unduhan twrp terbaru untuk perangkat android. "
     }
 )
