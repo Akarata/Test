@@ -231,26 +231,26 @@ async def kakashi(shit):
 CMD_HELP.update(
     {
         "artsay": "__**NAMA PLUGIN :** Artsay__\
-      \n\n📌** CMD ➥** `.carry` <your text>\
-      \n**PENGGUNAAN   ➥  **Kirim teks Anda dengan seni carry.\
-      \n\n📌** CMD ➥** `.killer` <text>\
-      \n**PENGGUNAAN   ➥  **Jadilah pejuang & bunuh musuh.\
-      \n\n📌** CMD ➥** `.ded` <text>\
-      \n**PENGGUNAAN   ➥  **Gantung dirimu.\
-      \n\n📌** CMD ➥** `.sthink` <your text>\
-      \n**PENGGUNAAN   ➥  **Kirim teks Anda yang Anda pikirkan.\
-      \n\n📌** CMD ➥** `.sfrog` <your text>\
-      \n**PENGGUNAAN   ➥  **Kirim teks Anda dengan seni katak.\
-      \n\n📌** CMD ➥** `.sdead` <your text>\
-      \n**PENGGUNAAN   ➥  **Kirim teks Anda dengan seni mati.\
-      \n\n📌** CMD ➥** `.sputin` <your text>\
-      \n**PENGGUNAAN   ➥  **Kirim teks Anda dengan seni putin.\
-      \n\n📌** CMD ➥** `.strump` <your text>\
-      \n**PENGGUNAAN   ➥  **Kirim teks Anda dengan seni truf.\
-      \n\n📌** CMD ➥** `.china` <your text>\
-      \n**PENGGUNAAN   ➥  **Kirim teks Anda dengan seni cina.\
-      \n\n📌** CMD ➥** `.sshit` \
-      \n**PENGGUNAAN   ➥  **Ahhh shit...here we go again.. \
+      \n\n✅** CMD ➥** `.carry` <your text>\
+      \n**Fungsi   ➥  **Kirim teks Anda dengan seni carry.\
+      \n\n✅** CMD ➥** `.killer` <text>\
+      \n**Fungsi   ➥  **Jadilah pejuang & bunuh musuh.\
+      \n\n✅** CMD ➥** `.ded` <text>\
+      \n**Fungsi   ➥  **Gantung dirimu.\
+      \n\n✅** CMD ➥** `.sthink` <your text>\
+      \n**Fungsi   ➥  **Kirim teks Anda yang Anda pikirkan.\
+      \n\n✅** CMD ➥** `.sfrog` <your text>\
+      \n**Fungsi   ➥  **Kirim teks Anda dengan seni katak.\
+      \n\n✅** CMD ➥** `.sdead` <your text>\
+      \n**Fungsi   ➥  **Kirim teks Anda dengan seni mati.\
+      \n\n✅** CMD ➥** `.sputin` <your text>\
+      \n**Fungsi   ➥  **Kirim teks Anda dengan seni putin.\
+      \n\n✅** CMD ➥** `.strump` <your text>\
+      \n**Fungsi   ➥  **Kirim teks Anda dengan seni truf.\
+      \n\n✅** CMD ➥** `.china` <your text>\
+      \n**Fungsi   ➥  **Kirim teks Anda dengan seni cina.\
+      \n\n✅** CMD ➥** `.sshit` \
+      \n**Fungsi   ➥  **Ahhh shit...here we go again.. \
 "
     }
 )
