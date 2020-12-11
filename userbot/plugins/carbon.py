@@ -271,7 +271,7 @@ async def carbon_api(e):
     await e.client.send_file(
         e.chat_id,
         file,
-        caption=f"Here's your Karbon2",
+        caption=f"Inilah Karbon2 Kamu",
         force_document=True,
         reply_to=e.message.reply_to_msg_id,
     )
@@ -334,7 +334,7 @@ async def carbon_api(e):
     await e.client.send_file(
         e.chat_id,
         file,
-        caption=f"Here's your Karbon3",
+        caption=f"Inilah Karbon3 Kamu",
         force_document=True,
         reply_to=e.message.reply_to_msg_id,
     )
@@ -397,7 +397,7 @@ async def carbon_api(e):
     await e.client.send_file(
         e.chat_id,
         file,
-        caption=f"Here's your Karbon4 ",
+        caption=f"Inilah Karbon4 Kamu ",
         force_document=True,
         reply_to=e.message.reply_to_msg_id,
     )
@@ -465,7 +465,7 @@ async def carbon_api(e):
     await e.client.send_file(
         e.chat_id,
         file,
-        caption=f"Here's your karbonrgb",
+        caption=f"Inilah karbon rbgk Kamu",
         force_document=True,
         reply_to=e.message.reply_to_msg_id,
     )
@@ -562,7 +562,7 @@ async def carbon_api(e):
     await e.client.send_file(
         e.chat_id,
         file,
-        caption=f"Here's your karbonrgb",
+        caption=f"Ini karbonrgb Kamu ",
         force_document=True,
         reply_to=e.message.reply_to_msg_id,
     )
@@ -573,15 +573,15 @@ async def carbon_api(e):
 CMD_HELP.update(
     {
         "carbon": "__**NAMA PLUGIN :** Carbon__\
-    \n\n📌** CMD ➥** `.carbon` <reply to code>\
-    \n**PENGGUNAAN   ➥  **Menampilkan kode Anda dalam gaya yang berbeda\
-    \n\n__**Simillary try differnt styles **__\
-    \n📌** CMD ➥** `.kar1` <reply to code>\
-    \n📌** CMD ➥** `.kar2` <reply to code>\
-    \n📌** CMD ➥** `.kar3` <reply to code>\
-    \n📌** CMD ➥** `.kar4` <reply to code>\
-    \n📌** CMD ➥** `.rgbk2` <reply to code>\
-    \n📌** CMD ➥** `.kargb` <reply to code>\
+    \n\n✅** CMD ➥** `.carbon` <reply to code>\
+    \n**Fungsi   ➥  **Menampilkan kode Anda dalam gaya yang berbeda\
+    \n\n__**Mirip mencoba gaya yang berbeda **__\
+    \n✅** CMD ➥** `.kar1` <balas kode>\
+    \n✅** CMD ➥** `.kar2` <balas kode>\
+    \n✅** CMD ➥** `.kar3` <balas kode>\
+    \n✅** CMD ➥** `.kar4` <balas kode>\
+    \n✅** CMD ➥** `.rgbk2` <balas kode>\
+    \n✅** CMD ➥** `.kargb` <balas kode>\
     "
     }
 )
