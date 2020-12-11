@@ -107,10 +107,10 @@ def resize_image(image):
 CMD_HELP.update(
     {
         "telegraph": "**Plugin :**`telegraph`\
-     \n\n  •  **Syntax :** `.telegraph media` `or` `tgm`\
-     \n  •  **Function :**__Reply to any image or video to upload it to telegraph (video must be less than 5mb)__\
-     \n\n  •  **Syntax :** `.telegraph text` `or` `.tgt`\
-     \n  •  **Function :** __reply to any text file or any message to paste it to telegraph__\
+     \n\n  •  **Syntax :** `.telegraph media` `atau` `tgm`\
+     \n  •  **Fungsi :**__Balas gambar atau video apa pun untuk diunggah ke telegraf (video harus kurang dari 5mb)__\
+     \n\n  •  **Syntax :** `.telegraph text` `atau` `.tgt`\
+     \n  •  **Fungsi :** __balas file teks atau pesan apa pun untuk ditempelkan ke telegraf__\
     "
     }
 )
