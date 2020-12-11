@@ -54,13 +54,13 @@ async def itachi(event):
 
 CMD_HELP.update(
     {
-        "emojify": "__**PLUGIN NAME :** Emojify__\
-      \n\n📌** CMD ➥** `.emoji` <text>\
-      \n**USAGE   ➥  **Converts your text to big emoji text, with default emoji. \
-      \n\n📌** CMD ➥** `.cmoji` <emoji> <text>\
-      \n**USAGE   ➥  **Converts your text to big emoji text, with your custom emoji.\
-      \n\n**☞ NOTE :** For giving sapce between two words use **@** symbol.\
-      \n**EXAMPLE :**  `.emoji Bad@cat`\
-      \n                    `.cmoji 😋 Good@cat`"
+        "emojify": "__**NAMA PLUGIN :** Emojify__\
+      \n\n✅** CMD ➥** `.emoji` <teks>\
+      \n**Fungsi   ➥  **Ubah teks Anda menjadi teks emoji besar, dengan emoji default. \
+      \n\n✅** CMD ➥** `.cmoji` <emoji> <teks>\
+      \n**Fungsi   ➥  **Ubah teks Anda menjadi teks emoji besar, dengan emoji khusus Anda.\
+      \n\n**☞ NOTE :** Untuk memberi jarak antara dua kata, gunakan **@** simbol.\
+      \n**CONTOH :**  `.emoji Akarata@Jisoo`\
+      \n                    `.cmoji 💖 Akarata@Jichu`"
     }
 )
