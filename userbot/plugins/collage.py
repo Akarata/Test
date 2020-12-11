@@ -20,7 +20,8 @@ async def collage(cat):
     reply = await cat.get_reply_message()
     catid = cat.reply_to_msg_id
     cat = await edit_or_reply(
-        cat, "```membuat kolase, ini mungkin membutuhkan waktu beberapa menit juga..... :D```"
+        cat,
+        "```membuat kolase, ini mungkin membutuhkan waktu beberapa menit juga..... :D```",
     )
     if not (reply and (reply.media)):
         await cat.edit("`Media tidak ditemukan...`")
@@ -62,7 +63,9 @@ async def collage(cat):
             if files and os.path.exists(files):
                 os.remove(files)
         return await edit_delete(
-            cat, f"`media tidak didukung atau coba dengan ukuran kisi yang lebih kecil`", 5
+            cat,
+            f"`media tidak didukung atau coba dengan ukuran kisi yang lebih kecil`",
+            5,
         )
     await cat.client.send_file(
         cat.chat_id,
