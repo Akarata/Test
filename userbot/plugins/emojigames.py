@@ -185,17 +185,17 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "emojigames": "__**PLUGIN NAME :** Emojigames\
-    \n\n📌** CMD ➥** `.🎯` or `.dart` [1-6]\
-    \n**USAGE   ➥  **Each number shows different animation\
-    \n\n📌** CMD ➥** `.🎲` or `.dice` [1-6]\
-    \n**USAGE   ➥  **Each number shows different animation\
-    \n\n📌** CMD ➥** `.🏀` or `.bb` [1-5]\
-    \n**USAGE   ➥  **Each number shows different animation\
-    \n\n📌** CMD ➥** `.⚽️` or `.fb` [1-5]\
-    \n**USAGE   ➥  **Each number shows different animation\
-    \n\n📌** CMD ➥** `.🎰` [1-64] or `.jp` [1-64]\
-    \n**USAGE   ➥  **Each number shows different animation for slot machine(jackpot)\
+        "emojigames": "__**NAMA PLUGIN :** Emojigames\
+    \n\n✅** CMD ➥** `.🎯` atau `.dart` [1-6]\
+    \n**Fungsi   ➥  **Setiap angka menunjukkan animasi yang berbeda\
+    \n\n✅** CMD ➥** `.🎲` atau `.dice` [1-6]\
+    \n**Fungsi   ➥  **Setiap angka menunjukkan animasi yang berbeda\
+    \n\n✅** CMD ➥** `.🏀` atau `.bb` [1-5]\
+    \n**Fungsi   ➥  **Setiap angka menunjukkan animasi yang berbeda\
+    \n\n✅** CMD ➥** `.⚽️` atau `.fb` [1-5]\
+    \n**Fungsi   ➥  **Setiap angka menunjukkan animasi yang berbeda\
+    \n\n✅** CMD ➥** `.🎰` [1-64] atau `.jp` [1-64]\
+    \n**Fungsi   ➥  **Setiap angka menunjukkan animasi yang berbeda untuk mesin judi(jackpot)\
     "
     }
 )
