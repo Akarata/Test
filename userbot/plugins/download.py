@@ -72,12 +72,12 @@ async def _(event):
             )
             estimated_total_time = downloader.get_eta(human=True)
             try:
-                current_message = f"Downloading the file\
+                current_message = f"Mendownload file\
                                 \n\n**URL : **`{url}`\
-                                \n**File Name :** `{file_name}`\
+                                \n**Nama file :** `{file_name}`\
                                 \n{progress_str}\
-                                \n`{humanbytes(downloaded)} of {humanbytes(total_length)}`\
-                                \n**ETA : **`{estimated_total_time}``"
+                                \n`{humanbytes(downloaded)} oleh {humanbytes(total_length)}`\
+                                \n**Waktu : **`{estimated_total_time}``"
                 if round(diff % 10.00) == 0 and current_message != display_message:
                     await mone.edit(current_message)
                     display_message = current_message
@@ -87,18 +87,18 @@ async def _(event):
         ms = (end - start).seconds
         if downloader.isSuccessful():
             await mone.edit(
-                f"**  •  Downloaded in {ms} seconds.**\n**  •  Downloaded to :- ** `{downloaded_file_name}`"
+                f"**  •  Diunduh dalam {ms} detik.**\n**  •  Diunduh ke :- ** `{downloaded_file_name}`"
             )
         else:
-            await mone.edit("Incorrect URL\n {}".format(input_str))
+            await mone.edit("URL salah\n {}".format(input_str))
     else:
-        await mone.edit("Reply to a message to download to my local server.")
+        await mone.edit("Balas pesan untuk mengunduh ke server lokal saya.")
 
 
 CMD_HELP.update(
     {
-        "download": "__**PLUGIN NAME :** Download__\
-\n\n📌** CMD ➥** `.download` <link|filename> or reply to media\
-\n**USAGE   ➥  **Downloads file to the server."
+        "download": "__**NAMA PLUGIN :** Download__\
+\n\n✅** CMD ➥** `.download` <link|namafile> atau balas media\
+\n**Fungsi   ➥  **Unduh file ke server."
     }
 )
