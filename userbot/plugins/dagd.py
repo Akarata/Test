@@ -125,15 +125,15 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "dagd": "__**PLUGIN NAME :** Dagd__\
-    \n\n📌** CMD ➥** `.dns` <link>\
-    \n**USAGE   ➥  **Shows you Domain Name System(dns) of the given link . example `.dns google.com` or `.dns github.cm`\
-    \n\n📌** CMD ➥** `.url` <link>\
-    \n**USAGE   ➥  **Shortens the given link\
-    \n\n📌** CMD ➥** `.unshort` <link>\
-    \n**USAGE   ➥  **Unshortens the given short link\
-    \n\n📌** CMD ➥** `.hl` <link>\
-    \n**USAGE   ➥  **Hide the given link\
+        "dagd": "__**NAMA PLUGIN :** Dagd__\
+    \n\n✅** CMD ➥** `.dns` <link>\
+    \n**Fungsi   ➥  **Menunjukkan Anda Domain Name System(dns) dari tautan yang diberikan.  contoh `.dns google.com` atau `.dns github.com`\
+    \n\n✅** CMD ➥** `.url` <link>\
+    \n**Fungsi   ➥  **Mempersingkat tautan yang diberikan\
+    \n\n✅** CMD ➥** `.unshort` <link>\
+    \n**Fungsi   ➥  **Unshortens link pendek yang diberikan\
+    \n\n✅** CMD ➥** `.hl` <link>\
+    \n**Fungsi   ➥  **Sembunyikan tautan yang diberikan\
     "
     }
 )
