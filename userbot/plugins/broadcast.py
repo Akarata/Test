@@ -349,21 +349,21 @@ async def catbroadcast_delete(event):
 CMD_HELP.update(
     {
         "broadcast": "__**NAMA PLUGIN :** Broadcast__\
-\n\n📌** CMD ➥** `.sendto category_name`\
-\n**PENGGUNAAN   ➥  **__Akan mengirim pesan balasan ke semua obrolan di kategori beri__\
-\n\n📌** CMD ➥** `.fwdto category_name`\
-\n**PENGGUNAAN   ➥  **__Akan meneruskan pesan balasan ke semua obrolan di kategori beri__\
-\n\n📌** CMD ➥** `.addto category_name`\
-\n**PENGGUNAAN   ➥  **__Ini akan menambahkan obrolan / pengguna / saluran ini ke kategori nama yang diberikan__\
-\n\n📌** CMD ➥** `.rmfrom category_name`\
-\n**PENGGUNAAN   ➥  **__Untuk menghapus Obrolan / pengguna / saluran dari nama kategori yang diberikan__\
-\n\n📌** CMD ➥** `.list category_name`\
-\n**PENGGUNAAN   ➥  **__Akan menampilkan daftar semua obrolan dalam kategori yang diberikan__\
-\n\n📌** CMD ➥** `.listall`\
-\n**PENGGUNAAN   ➥  **__Akan menampilkan daftar semua nama kategori__\
-\n\n📌** CMD ➥** `.frmfrom category_name chat_id`\
-\n**PENGGUNAAN   ➥  **__Untuk menghapus paksa chat_id yang diberikan dari nama kategori yang diberikan berguna saat Anda meninggalkan obrolan itu atau mencekal Anda di sana__\
-\n\n📌** CMD ➥** `.delc` <category_name>\
-\n**PENGGUNAAN   ➥  **__Hapus kategori sepenuhnya di database__"
+\n\n✅** CMD ➥** `.sendto category_name`\
+\n**Fungsi   ➥  **__Akan mengirim pesan balasan ke semua obrolan di kategori beri__\
+\n\n✅** CMD ➥** `.fwdto category_name`\
+\n**Fungsi   ➥  **__Akan meneruskan pesan balasan ke semua obrolan di kategori beri__\
+\n\n✅** CMD ➥** `.addto category_name`\
+\n**Fungsi   ➥  **__Ini akan menambahkan obrolan / pengguna / saluran ini ke kategori nama yang diberikan__\
+\n\n✅** CMD ➥** `.rmfrom category_name`\
+\n**Fungsi   ➥  **__Untuk menghapus Obrolan / pengguna / saluran dari nama kategori yang diberikan__\
+\n\n✅** CMD ➥** `.list category_name`\
+\n**Fungsi   ➥  **__Akan menampilkan daftar semua obrolan dalam kategori yang diberikan__\
+\n\n✅** CMD ➥** `.listall`\
+\n**Fungsi   ➥  **__Akan menampilkan daftar semua nama kategori__\
+\n\n✅** CMD ➥** `.frmfrom category_name chat_id`\
+\n**Fungsi   ➥  **__Untuk menghapus paksa chat_id yang diberikan dari nama kategori yang diberikan berguna saat Anda meninggalkan obrolan itu atau mencekal Anda di sana__\
+\n\n✅** CMD ➥** `.delc` <category_name>\
+\n**Fungsi   ➥  **__Hapus kategori sepenuhnya di database__"
     }
 )
