@@ -104,13 +104,13 @@ def build_keyboard(buttons):
 
 CMD_HELP.update(
     {
-        "button": "__**PLUGIN NAME :** Button__\
-    \n\n📌** CMD ➥** `.cbutton`\
-    \n**USAGE   ➥  **Buttons must be in th format as [name on button]<buttonurl:link you want to open> and narddown is Default to html\
-    \n\n**EXAMPLE :** `.cbutton test [google]<buttonurl:https://www.google.com> [catuserbot]<buttonurl:https://t.me/catuserbot17:same> [support]<buttonurl:https://t.me/catuserbot_support>`\
-    \n\n📌** CMD ➥** `.ibutton`\
-    \n**USAGE   ➥  **Buttons must be in th format as [name on button]<buttonurl:link you want to open>\
-    \n\n**EXAMPLE :** `.ibutton test [google]<buttonurl:https://www.google.com> [catuserbot]<buttonurl:https://t.me/catuserbot17:same> [support]<buttonurl:https://t.me/catuserbot_support>`\
+        "button": "__**NAMA PLUGIN :** Button__\
+    \n\n✅** CMD ➥** `.cbutton`\
+    \n**Fungsi   ➥  **Tombol harus dalam format seperti [nama pada tombol]<buttonurl:tautan yang ingin Anda buka> dan narddown adalah default untuk html\
+    \n\n**Contoh :** `.cbutton test [google]<buttonurl:https://www.google.com> [My account]<buttonurl:https://t.me/Akarata:same> [Test]<buttonurl:https://pornhub.com>`\
+    \n\n✅** CMD ➥** `.ibutton`\
+    \n**Fungsi   ➥  **Buttons must be in th format as [name on button]<buttonurl:link you want to open>\
+    \n\n**Contoh :** `.ibutton test [google]<buttonurl:https://www.google.com> [My account]<buttonurl:https://t.me/Akarata:same> [Test]<buttonurl:https://pornhub.com>`\
     "
     }
 )
