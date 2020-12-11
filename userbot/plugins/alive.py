@@ -117,6 +117,6 @@ CMD_HELP.update(
       \n\n✅** CMD ➥** `.alive`\
       \n**Fungsi   ➥  **Untuk melihat apakah bot Anda berfungsi atau tidak.\
       \n\n✅** CMD ➥** `.ialive`\
-      \n**Funsgi   ➥  **__Status bot akan ditampilkan dalam mode inline dengan button__."
+      \n**Fungsi   ➥  **__Status bot akan ditampilkan dalam mode inline dengan button__."
     }
 )
