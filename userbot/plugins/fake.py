@@ -114,13 +114,13 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "fake": "__**PLUGIN NAME :** Fake__\
-    \n\n📌** CMD ➥** `.scam` <action> <time>\
-    \n**USAGE   ➥  **Type .scam (action name) this shows the fake action in the group  the actions are typing ,contact ,game, location, voice, round, video,photo,document, cancel.\
-    \n\n📌** CMD ➥** `.prankpromote` reply to user to who you want to prank promote\
-    \n**USAGE   ➥  **It promotes him to admin but he will not have any permission to take action that is he can see rection actions but cant take any admin action\
-    \n\n📌** CMD ➥** `.padmin`\
-    \n**USAGE   ➥  **An animation that shows enableing all permissions to him that he is admin(fake promotion)\
+        "fake": "__**NAMA PLUGIN :** Fake__\
+    \n\n✅** CMD ➥** `.scam` <tindakan> <waktu>\
+    \n**Fungsi   ➥  **Ketik .scam (nama tindakan) ini menunjukkan tindakan palsu dalam grup tindakan tersebut typing ,contact ,game, location, voice, round, video,photo,document, cancel.\
+    \n\n✅** CMD ➥** `.prankpromote` reply to user to who you want to prank promote\
+    \n**Fungsi   ➥  **Ini mempromosikan dia menjadi admin tetapi dia tidak akan memiliki izin untuk mengambil tindakan yaitu dia dapat melihat tindakan rection tetapi tidak dapat mengambil tindakan admin apa pun\
+    \n\n✅** CMD ➥** `.padmin`\
+    \n**Fungsi   ➥  **Animasi yang menunjukkan mengaktifkan semua izin kepadanya bahwa dia adalah admin(promosi palsu)\
     "
     }
 )
