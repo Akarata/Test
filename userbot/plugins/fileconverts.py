@@ -317,19 +317,19 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "fileconverts": "__**PLUGIN NAME :** File Converts__\
-    \n\n📌** CMD ➥** `.stoi` reply to sticker\
-    \n**USAGE   ➥  **Converts sticker to image\
-    \n\n📌** CMD ➥** `.itos` reply to image\
-    \n**USAGE   ➥  **Converts image to sticker\
-    \n\n📌** CMD ➥** `.ftoi` reply to image file\
-    \n**USAGE   ➥  **Converts Given image file to straemable form\
-    \n\n📌** CMD ➥** `.gif` reply to animated sticker\
-    \n**USAGE   ➥  **Converts Given animated sticker to gif\
-    \n\n📌** CMD ➥** `.ttf` <file name> reply to text message\
-    \n**USAGE   ➥  **Converts Given text message to required file(given file name)\
-    \n\n📌** CMD ➥** `.nfc voice` or `.nfc mp3` reply to required media to extract voice/mp3 :\
-    \n**USAGE   ➥  **Converts the required media file to voice or mp3 file.\
+        "fileconverts": "__**NAMA PLUGIN :** File Converts__\
+    \n\n✅** CMD ➥** `.stoi` membalas ke sticker\
+    \n**Fungsi   ➥  **Mengubah stiker menjadi gambar\
+    \n\n✅** CMD ➥** `.itos` membalas ke image\
+    \n**Fungsi   ➥  **Mengubah gambar menjadi stiker\
+    \n\n✅** CMD ➥** `.ftoi` membalas ke image file\
+    \n**Fungsi   ➥  **Mengonversi file gambar yang diberikan ke bentuk yang dapat ditangkap\
+    \n\n✅** CMD ➥** `.gif` membalas ke animasi sticker\
+    \n**Fungsi   ➥  **Mengkonversi stiker animasi yang diberikan ke gif\
+    \n\n✅** CMD ➥** `.ttf` <file name> membalas pesan teks\
+    \n**Fungsi   ➥  **Mengonversi pesan teks yang diberikan ke file yang diperlukan(diberi nama file)\
+    \n\n✅** CMD ➥** `.nfc voice` atau `.nfc mp3` balas media yang diperlukan untuk mengekstrak suara/mp3 :\
+    \n**Fungsi   ➥  **Mengubah file media yang diperlukan menjadi suara atau mp3 file.\
     "
     }
 )
