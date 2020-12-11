@@ -38,9 +38,6 @@ async def amireallyalive(alive):
             f"<b> ✘   [   🤖   ]    Aka Version :</b> <code>{catversion}</code>\n"
         )
         cat_caption += f"<b> ✘   [   ⚔️   ]    Running on :</b> <code>Master</code>\n"
-        cat_caption += (
-            f"<b> ✘   [   💻   ]    Database :</b> <code>{check_sgnirts}</code>\n\n"
-        )
 
         await alive.client.send_file(
             alive.chat_id,
@@ -60,8 +57,7 @@ async def amireallyalive(alive):
             f"<b> »» [🕒] ➥ Uptime :</b> <code>{uptime}</code>\n"
             f"<b> »» [🐍] ➥ Python :</b> <code>{python_version()}</code>\n"
             f"<b> »» [⚙️] ➥ Telethon :</b> <code>{version.__version__}</code>\n"
-            f"<b> »» [🤖] ➥ Bot :</b> <code>{catversion}</code>\n"
-            f"<b> »» [💻] ➥ Database :</b> <code>{check_sgnirts}</code>\n\n",
+            f"<b> »» [🤖] ➥ Bot :</b> <code>{catversion}</code>\n",
         )
 
 
@@ -118,9 +114,9 @@ def check_data_base_heal_th():
 CMD_HELP.update(
     {
         "alive": "__**NAMA PLUGIN :** Alive__\
-      \n\n📌** CMD ➥** `.alive`\
-      \n**PENGGUNAAN   ➥  **Untuk melihat apakah bot Anda berfungsi atau tidak.\
-      \n\n📌** CMD ➥** `.ialive`\
-      \n**PENGGUNAAN   ➥  **__Status bot akan ditampilkan dalam mode inline dengan button__."
+      \n\n✅** CMD ➥** `.alive`\
+      \n**Fungsi   ➥  **Untuk melihat apakah bot Anda berfungsi atau tidak.\
+      \n\n✅** CMD ➥** `.ialive`\
+      \n**Funsgi   ➥  **__Status bot akan ditampilkan dalam mode inline dengan button__."
     }
 )
