@@ -72,11 +72,11 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "cricket": "__**PLUGIN NAME :** Cricket__\
-      \n\n📌** CMD ➥** `.score`\
-      \n**USAGE   ➥  **To see score of ongoing matches.\
-      \n\n📌** CMD ➥** `.cric` <commnd>\
-      \n**USAGE   ➥**  That will send details like scoreboard or commentary.\
-      \n\n**Example :-** `.cric /scorecard_30....`"
+        "cricket": "__**NAMA PLUGIN :** Cricket__\
+      \n\n✅** CMD ➥** `.score`\
+      \n**Fungsi   ➥  **Untuk melihat skor pertandingan yang sedang berlangsung.\
+      \n\n✅** CMD ➥** `.cric` <commnd>\
+      \n**Fungsi   ➥**  Itu akan mengirimkan detail seperti papan skor atau komentar.\
+      \n\n**Contoh :-** `.cric /scorecard_30....`"
     }
 )
