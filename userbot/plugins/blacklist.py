@@ -45,7 +45,7 @@ async def on_add_black_list(event):
         sql.add_to_blacklist(event.chat_id, trigger.lower())
     await edit_or_reply(
         event,
-        "Added {} triggers to the blacklist in the current chat".format(
+        "Ditambahkan {} Memicu daftar hitam pada obrolan saat ini".format(
             len(to_blacklist)
         ),
     )
@@ -66,7 +66,7 @@ async def on_delete_blacklist(event):
     )
 
     await edit_or_reply(
-        event, f"Removed {successful} / {len(to_unblacklist)} from the blacklist"
+        event, f"Dihapus {successful} / {len(to_unblacklist)} dari daftar hitam"
     )
 
 
@@ -99,12 +99,12 @@ async def on_view_blacklist(event):
 CMD_HELP.update(
     {
         "blacklist": "__**NAMA PLUGIN :** Blacklist__\
-    \n\n📌** CMD ➥** `.addblacklist` <word/words>\
-    \n**PENGGUNAAN   ➥  **Kata atau kata-kata yang diberikan akan ditambahkan ke daftar hitam di obrolan tertentu itu jika ada pengguna yang mengirim, maka pesan itu akan dihapus.\
-    \n\n📌** CMD ➥** `.rmblacklist` <word/words>\
-    \n**PENGGUNAAN   ➥  **Kata atau kata-kata tertentu akan dihapus dari daftar hitam di obrolan tertentu itu\
-    \n\n📌** CMD ➥** `.listblacklist`\
-    \n**PENGGUNAAN   ➥  **Shows you the list of blacklist words in that specific chat\
+    \n\n✅** CMD ➥** `.addblacklist` <word/words>\
+    \n**Fungsi   ➥  **Kata atau kata-kata yang diberikan akan ditambahkan ke daftar hitam di obrolan tertentu itu jika ada pengguna yang mengirim, maka pesan itu akan dihapus.\
+    \n\n✅** CMD ➥** `.rmblacklist` <word/words>\
+    \n**Fungsi   ➥  **Kata atau kata-kata tertentu akan dihapus dari daftar hitam di obrolan tertentu itu\
+    \n\n✅** CMD ➥** `.listblacklist`\
+    \n**Fungsi   ➥  **Shows you the list of blacklist words in that specific chat\
     \n\n**NOTE : **Jika Anda menambahkan lebih dari satu kata sekaligus melalui ini, maka ingatlah bahwa kata baru harus diberikan di baris baru, bukan [halo].  itu harus seperti\
     [hai \n halo]"
     }
