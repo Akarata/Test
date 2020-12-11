@@ -371,29 +371,29 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "execmod": "__**PLUGIN NAME :** Execmod__\
-    \n\n📌** CMD ➥** `.pips` <query>\
-    \n**USAGE   ➥  **Searches your pip modules\
-    \n\n📌** CMD ➥** `.sucide`\
-    \n**USAGE   ➥  **Deletes all your folders and files in the bot\
-    \n\n📌** CMD ➥** `.plugins`\
-    \n**USAGE   ➥  **Shows you the list of modules that are in bot\
-    \n\n📌** CMD ➥** `.date`\
-    \n**USAGE   ➥  **Shows you the date of today\
-    \n\n📌** CMD ➥** `.env`\
-    \n**USAGE   ➥  **Shows you the list of all your heroku vars\
-    \n\n📌** CMD ➥** `.fast`\
-    \n**USAGE   ➥  **speed calculator\
-    \n\n📌** CMD ➥** `.fortune`\
-    \n**USAGE   ➥  **Fortune teller\
-    \n\n📌** CMD ➥** `.qquote`\
-    \n**USAGE   ➥  **Random quote generator\
-    \n\n📌** CMD ➥** `.fakeid`\
-    \n**USAGE   ➥  **Random fakeid generator\
-    \n\n📌** CMD ➥** `.kwot`\
-    \n**USAGE   ➥  **An awesome random quote generator.\
-    \n\n📌** CMD ➥** `.qpro`\
-    \n**USAGE   ➥  **Programming Quotes\
+        "execmod": "__**NAMA PLUGIN :** Execmod__\
+    \n\n✅** CMD ➥** `.pips` <query>\
+    \n**Fungsi   ➥  **Mencari modul pip Anda\
+    \n\n✅** CMD ➥** `.sucide`\
+    \n**Fungsi   ➥  **Menghapus semua folder dan file Anda di bot\
+    \n\n✅** CMD ➥** `.plugins`\
+    \n**Fungsi   ➥  **Menampilkan daftar modul yang ada di bot\
+    \n\n✅** CMD ➥** `.date`\
+    \n**Fungsi   ➥  **Menunjukkan tanggal hari ini\
+    \n\n✅** CMD ➥** `.env`\
+    \n**Fungsi   ➥  **Menunjukkan daftar semua heroku vars Anda\
+    \n\n✅** CMD ➥** `.fast`\
+    \n**Fungsi   ➥  **kalkulator kecepatan\
+    \n\n✅** CMD ➥** `.fortune`\
+    \n**Fungsi   ➥  **Peramal\
+    \n\n✅** CMD ➥** `.qquote`\
+    \n**Fungsi   ➥  **Generator kuotes acak\
+    \n\n✅** CMD ➥** `.fakeid`\
+    \n**Fungsi   ➥  **Generator id palsu acak\
+    \n\n✅** CMD ➥** `.kwot`\
+    \n**Fungsi   ➥  **Generator kuotes acak yang mengagumkan.\
+    \n\n✅** CMD ➥** `.qpro`\
+    \n**Fungsi   ➥  **Kuotes Pemrograman\
     "
     }
 )
