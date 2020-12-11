@@ -271,16 +271,16 @@ async def cult_small_video(
 CMD_HELP.update(
     {
         "ffmpeg": "__**NAMA PLUGIN :** Ffmpeg__\
-\n\n📌** CMD ➥** `.ffmpegsave`\
-\n**PENGGUNAAN   ➥  **__Menyimpan file media di bot untuk memangkas beberapa kali__\
-\n\n📌** CMD ➥** `.vtrim time`\
-\n**PENGGUNAAN   ➥  **__Mengirimi Anda tangkapan layar video pada waktu tertentu__\
-\n\n📌** CMD ➥** `.vtrim starttime endtime`\
-\n**PENGGUNAAN   ➥  **__Memangkas media yang disimpan dengan interval waktu dan keluaran tertentu sebagai video__\
-\n\n📌** CMD ➥** `.atrim starttime endtime`\
-\n**PENGGUNAAN   ➥  **__Memangkas media yang disimpan dengan interval waktu dan output tertentu sebagai audio__\
-\n\n📌** CMD ➥** `.ffmpegclear`\
-\n**PENGGUNAAN   ➥  **__Menghapus media yang disimpan sehingga Anda dapat menyimpan yang baru__\
+\n\n✅** CMD ➥** `.ffmpegsave`\
+\n**Fungsi   ➥  **__Menyimpan file media di bot untuk memangkas beberapa kali__\
+\n\n✅** CMD ➥** `.vtrim time`\
+\n**Fungsi   ➥  **__Mengirimi Anda tangkapan layar video pada waktu tertentu__\
+\n\n✅** CMD ➥** `.vtrim starttime endtime`\
+\n**Fungsi   ➥  **__Memangkas media yang disimpan dengan interval waktu dan keluaran tertentu sebagai video__\
+\n\n✅** CMD ➥** `.atrim starttime endtime`\
+\n**Fungsi   ➥  **__Memangkas media yang disimpan dengan interval waktu dan output tertentu sebagai audio__\
+\n\n✅** CMD ➥** `.ffmpegclear`\
+\n**Fungsi   ➥  **__Menghapus media yang disimpan sehingga Anda dapat menyimpan yang baru__\
     "
     }
 )
