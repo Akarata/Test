@@ -81,10 +81,10 @@ async def get_media(event):
 
 CMD_HELP.update(
     {
-        "channel_download": "__**PLUGIN NAME :** Channel Download__\
-\n\n📌** CMD ➥** `.geta` <channel_username>\
-\n**USAGE   ➥  **Will  get all media from channel, though there is limit of 3000 there to prevent API limits.\
-\n\n📌** CMD ➥** `.getc` <number_of_messsages channel_username>\
-\n**USAGE   ➥  **Will  get that number of media from channel"
+        "channel_download": "__**NAMA PLUGIN :** Channel Download__\
+\n\n✅** CMD ➥** `.geta` <channel_username>\
+\n**Fungsi   ➥  **Akan mendapatkan semua media dari saluran, meskipun ada batas 3000 di sana untuk mencegah batas API.\
+\n\✅** CMD ➥** `.getc` <number_of_messsages channel_username>\
+\n**Fungsi   ➥  **Akan mendapatkan sejumlah media dari saluran"
     }
 )
