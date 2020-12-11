@@ -31,12 +31,12 @@ async def echo(cat):
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
-            await edit_or_reply(cat, "The user is already enabled with echo ")
+            await edit_or_reply(cat, "Pengguna sudah diaktifkan dengan echo ")
             return
         addecho(user_id, chat_id)
         await edit_or_reply(cat, "Hi")
     else:
-        await edit_or_reply(cat, "Reply to a User's message to echo his messages")
+        await edit_or_reply(cat, "Balas pesan Pengguna untuk menggemakan pesannya")
 
 
 @bot.on(admin_cmd(pattern="rmecho$"))
@@ -56,11 +56,11 @@ async def echo(cat):
             pass
         if is_echo(user_id, chat_id):
             remove_echo(user_id, chat_id)
-            await edit_or_reply(cat, "Echo has been stopped for the user")
+            await edit_or_reply(cat, "Gema telah dihentikan untuk pengguna")
         else:
-            await edit_or_reply(cat, "The user is not activated with echo")
+            await edit_or_reply(cat, "Pengguna tidak diaktifkan dengan echo")
     else:
-        await edit_or_reply(cat, "Reply to a User's message to echo his messages")
+        await edit_or_reply(cat, "Balas pesan Pengguna untuk menggemakan pesannya")
 
 
 @bot.on(admin_cmd(pattern="listecho$"))
@@ -111,13 +111,13 @@ async def samereply(cat):
 
 CMD_HELP.update(
     {
-        "echo": "__**PLUGIN NAME :** Echo__\
-    \n\n📌** CMD ➥** `.addecho` reply to user to who you want to enable\
-    \n**USAGE   ➥  **replay's his every message for whom you enabled echo\
-    \n\n📌** CMD ➥** `.rmecho` reply to user to who you want to stop\
-    \n**USAGE   ➥  **Stops replaying his messages\
-    \n\n📌** CMD ➥** `.listecho`\
-    \n**USAGE   ➥  **shows the list of users for who you enabled echo\
+        "echo": "__**NAMA PLUGIN :** Echo__\
+    \n\n✅** CMD ➥** `.addecho` balas ke pengguna yang ingin Anda aktifkan\
+    \n**Fungsi   ➥  **putar ulang setiap pesannya untuk siapa Anda mengaktifkan gema\
+    \n\n✅** CMD ➥** `.rmecho` balas pengguna yang ingin Anda hentikan\
+    \n**Fungsi   ➥  **Stops memutar ulang pesannya\
+    \n\n✅** CMD ➥** `.listecho`\
+    \n**Fungsi   ➥  **menampilkan daftar pengguna yang Anda aktifkan gema\
     "
     }
 )
