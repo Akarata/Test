@@ -30,9 +30,9 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "chain": "__**PLUGIN NAME :** Chain__\
-        \n\n📌** CMD ➥** `.chain`\
-        \n**USAGE : **Reply this command to any converstion where you want to find length of converstion(Only tagged chain will count ) \
+        "chain": "__**NAMA PLUGIN :** Chain__\
+        \n\n✅** CMD ➥** `.chain`\
+        \n**Fungsi : **Balas perintah ini ke percakapan mana pun yang ingin Anda temukan panjang percakapannya(Hanya rantai yang diberi tag yang akan dihitung ) \
     "
     }
 )
