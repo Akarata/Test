@@ -217,12 +217,12 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "climate": "__**PLUGIN NAME :** Climate__\
-    \n\n📌** CMD ➥** `.climate` <city> or `.weather` <city>, <country name/code>\
-    \n**USAGE   ➥  **Gets the weather of a city.By default it is delhi change it by setcity.\
-    \n\n📌** CMD ➥** `.wttr` <city>\
-    \n**USAGE   ➥  **Shows you the climate data of 3 days from today in a image.\
-    \n\n📌** CMD ➥** `.setcity` <city> or `.setcity` <city>, <country name/code>\
-    \n**USAGE   ➥  **Sets your default city so you can just use .climate"
+        "climate": "__**NAMA PLUGIN :** Climate__\
+    \n\n✅** CMD ➥** `.climate` <city> atau `.weather` <city>, <country name/code>\
+    \n**Fungsi   ➥  **Mendapat cuaca suatu kota. Secara default adalah delhi mengubahnya dengan setcity.\
+    \n\n✅** CMD ➥** `.wttr` <city>\
+    \n**Fungsi   ➥  **Menampilkan data iklim 3 hari mulai hari ini dalam sebuah gambar.\
+    \n\n✅** CMD ➥** `.setcity` <city> atau `.setcity` <city>, <country name/code>\
+    \n**Fungsi   ➥  **Tetapkan kota default Anda sehingga Anda dapat menggunakannya .climate"
     }
 )
