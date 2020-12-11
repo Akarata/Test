@@ -193,9 +193,9 @@ def spamchecker(user_id):
 CMD_HELP.update(
     {
         "antispambot": "__**NAMA PLUGIN :** Aantispambot__\
-        \n\n📌** CMD ➥** `.cascheck`\
-        \n**PENGGUNAAN   ➥  **Pencarian untuk pengguna yang dilarang cas (combot antispam service) dalam grup dan menunjukkan daftar kepada Anda\
-        \n\n📌** CMD ➥** `.spamcheck`\
-        \n**PENGGUNAAN   ➥  **Pencarian untuk spamwatch melarang pengguna dalam grup dan menampilkan daftarnya"
+        \n\n✅** CMD ➥** `.cascheck`\
+        \n**Fungsi   ➥  **Pencarian untuk pengguna yang dilarang cas (combot antispam service) dalam grup dan menunjukkan daftar kepada Anda\
+        \n\n✅** CMD ➥** `.spamcheck`\
+        \n**Fungsi   ➥  **Pencarian untuk spamwatch melarang pengguna dalam grup dan menampilkan daftarnya"
     }
 )
