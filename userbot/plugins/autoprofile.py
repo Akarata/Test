@@ -268,22 +268,22 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "autoprofile": "__**PLUGIN NAME :** Autoprofile__\
-\n\n📌** CMD ➥** `.autopic`\
-\n**USAGE   ➥  **Rotating image along with the time on it .\
-\nfor working this you must set `DOWNLOAD_PFP_URL_CLOCK` in the heroku vars first with telegraph link of required image\
-\n\n📌** CMD ➥** `.digitalpfp`\
-\n**USAGE   ➥  **Your profile pic changes to digitaltime profile picutre \
-\n\n📌** CMD ➥** `.bloom`\
-\n**USAGE   ➥  **Random colour profile pics will be setted along with time on it.\
-\nfor working this you must set `DOWNLOAD_PFP_URL_CLOCK` in the heroku vars first with telegraph link of required image\
-\n\n📌** CMD ➥** `.autoname`\
-\n**USAGE   ➥  **For time along name to work this you must set `AUTONAME`in the heroku vars first \
-\n\n📌** CMD ➥** `.autobio`\
-\n**USAGE   ➥  **For time along with your bio to work this you must set `DEFAULT_BIO` in the heroku vars first \
-\n\n📌** CMD ➥** `.monkeybio`\
-\n**USAGE   ➥  **Set of funny monkey bio's\
-\n\n for stoping these aby command you need to do `.restart` and change them manually\
+        "autoprofile": "__**NAMA PLUGIN :** Autoprofile__\
+\n\n✅** CMD ➥** `.autopic`\
+\n**Fungsi   ➥  **Gambar berputar seiring dengan waktu di atasnya .\
+\nuntuk mengerjakan ini, Anda harus mengatur `DOWNLOAD_PFP_URL_CLOCK` di heroku vars pertama dengan telegraf tautan gambar yang diperlukan\
+\n\n✅** CMD ➥** `.digitalpfp`\
+\n**Fungsi   ➥  **Gambar profil Anda berubah menjadi gambar profil waktu digital \
+\n\n✅** CMD ➥** `.bloom`\
+\n**Fungsi   ➥  **Foto profil warna acak akan diatur bersama dengan waktu di atasnya.\
+\nuntuk mengerjakan ini, Anda harus mengatur `DOWNLOAD_PFP_URL_CLOCK` di heroku vars pertama dengan telegraf tautan gambar yang diperlukan\
+\n\n✅** CMD ➥** `.autoname`\
+\n**Fungsi   ➥  **Untuk waktu bersama nama untuk bekerja ini Anda harus mengatur `AUTONAME`di heroku vars dulu \
+\n\n✅** CMD ➥** `.autobio`\
+\n**Fungsi   ➥  **Untuk waktu bersama dengan bio Anda untuk bekerja ini, Anda harus mengatur `DEFAULT_BIO` di heroku vars dulu \
+\n\n✅** CMD ➥** `.monkeybio`\
+\n**Fungsi   ➥  **Set of funny monkey bio's\
+\n\n untuk menghentikan perintah apa pun yang perlu Anda lakukan `.restart` dan mengubahnya secara manual\
 "
     }
 )
