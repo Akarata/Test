@@ -192,9 +192,9 @@ async def stylish_generator(event):
 
 CMD_HELP.update(
     {
-        "fonts": "__**PLUGIN NAME :** Fonts__\
-        \n\n📌** CMD ➥** `.fmusical` | `.ancient` | `.vapor` | `.smallcaps` | `.blackbf` | `.bubbles` | `.tanf` | `.boxf` | `.smothtext` \
-        \n\n**USAGE   ➥  **Use cmd <text> , it will change your text to that font.\
-        \n\n**Example :** `.fmusical hello there`"
+        "fonts": "__**NAMA PLUGIN :** Fonts__\
+        \n\n✅** CMD ➥** `.fmusical` | `.ancient` | `.vapor` | `.smallcaps` | `.blackbf` | `.bubbles` | `.tanf` | `.boxf` | `.smothtext` \
+        \n\n**Fungsi   ➥  **Use cmd <text> , itu akan mengubah teks Anda menjadi font itu.\
+        \n\n**Contoh :** `.fmusical Halo yang disana`"
     }
 )
