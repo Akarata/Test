@@ -179,7 +179,7 @@ CMD_HELP.update(
     {
         "funnyfonts": "__**NAMA PLUGIN :** Funnyfonts__\
         \n\n✅** CMD ➥** `.str` | `.zal` | `.cp` | `.weeb` | `.downside` | `.subscript` | `.superscript` \
-        \n\n**Fungsi   ➥  **Use cmd <text> , itu akan mengubah teks Anda menjadi font itu.\
+        \n\n**Fungsi   ➥  **Gunakan cmd <teks> , itu akan mengubah teks Anda menjadi font itu.\
         \n\n**Contoh :** `.weeb Halo yang disana`"
     }
 )
