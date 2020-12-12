@@ -409,7 +409,7 @@ def get_lst_of_files(input_directory, output_lst):
 CMD_HELP.update(
     {
         "archive": "__**PLUGIN NAME :** Archive__\
-    \n\n📌** CMD ➥** `.zip` reply to a file/media\
+    \n\n✅** CMD ➥** `.zip` reply to a file/media\
     \n**USAGE   ➥  **It will zip that file/media\
     \n\n📌** CMD ➥** `.rar` reply to a file/media\
     \n**USAGE   ➥  **It will rar that file/media\
