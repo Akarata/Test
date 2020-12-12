@@ -148,9 +148,9 @@ async def stylish_generator(event):
 
 CMD_HELP.update(
     {
-        "fonts2": "__**PLUGIN NAME :** Fonts2__\
-        \n\n📌** CMD ➥** `.egyptf` | `.maref` | `.handcf` | `.doublef` | `.mock` | `.ghostf` | `.handsf` \
-        \n\n**USAGE   ➥  **Use cmd <text> , it will change your text to that font.\
-        \n\n**Example :** `.egyptf hello there`"
+        "fonts2": "__**NAMA PLUGIN :** Fonts2__\
+        \n\n✅** CMD ➥** `.egyptf` | `.maref` | `.handcf` | `.doublef` | `.mock` | `.ghostf` | `.handsf` \
+        \n\n**Fungsi   ➥  **Use cmd <text> , itu akan mengubah teks Anda menjadi font itu.\
+        \n\n**Contoh :** `.egyptf Halo yang disana`"
     }
 )
