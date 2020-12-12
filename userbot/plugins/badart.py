@@ -1,6 +1,6 @@
 """
 Created by @Jisan7509
-Plugin for CatUserbot
+Modified @Akarata
 #credit @GulfysHalfyyyy
 """
 import asyncio
@@ -66,7 +66,7 @@ async def kakashi(bsdk):
         return
     animation_interval = 0.3
     animation_ttl = range(100)
-    bsdk = await edit_or_reply(bsdk, f"**Ahhhhhhhh......**💦💦...")
+    bsdk = await edit_or_reply(bsdk, f"**Ahhh pengin coli......**💦💦...")
     animation_chars = [
         "8✊️===D",
         "8=✊️==D",
@@ -78,6 +78,7 @@ async def kakashi(bsdk):
         "8===✊️D💦",
         "8==✊️=D💦💦",
         "8=✊️==D💦💦💦",
+        "Croooottt💦💦💦", 
     ]
 
     for i in animation_ttl:
@@ -94,17 +95,17 @@ async def kakashi(bsdk):
     animation_ttl = range(11)
     bsdk = await edit_or_reply(bsdk, f"**Ohhh nooooo **💦💦...")
     animation_chars = [
-        "**Ohhh Baby..**😈",
+        "**Ohhh Sayang..**😈",
         "__**Ohh Yeaah..**__\n\n 😈\n  |\  \n  |  \   \n 8=👊-D\n  |   \         \n 👟 👟       😲",
         "__**Ohh ohhh..**__\n\n 😈\n  |\  \n  |  \   \n  8=👊-D\n  |   \         \n 👟 👟       😲",
         "__**Ohh.. **__\n\n 😈\n  |\  \n  |  \   \n 8=👊-D\n  |   \         \n 👟 👟       😲",
-        "__**Ohh baby..**__\n\n 😈\n  |\  \n  |  \   \n8=👊-D💦\n  |   \         \n 👟 👟       😲",
+        "__**Ohh Sayang..**__\n\n 😈\n  |\  \n  |  \   \n8=👊-D💦\n  |   \         \n 👟 👟       😲",
         "__**Yeaah..**__\n\n 😣\n  |\  \n  |  \   \n 8=👊-D💦\n  |   \         \n 👟 👟       😲",
         "__**Yeaah Yaaah..**__\n\n 😣\n  |\  \n  |  \   \n  8=👊-D💦\n  |   \         💦\n 👟 👟       😲",
-        "__**Yaah baby..**__\n\n 😘\n  |\  \n  |  \   \n 8=👊-D💦\n  |   \         💦\n 👟 👟       🤤",
+        "__**Yaah Sayang..**__\n\n 😘\n  |\  \n  |  \   \n 8=👊-D💦\n  |   \         💦\n 👟 👟       🤤",
         "__**Ohhh..**__\n\n 😍\n  |\  \n  |  \   \n8=👊-D💦\n  |   \         💦\n 👟 👟       🤤",
-        "__**Love u..**__\n\n 😘\n  |\  \n  |  \   \n 8=👊-D💦\n  |   \         \n 👟 👟       🤤",
-        "__**Love u babe**__\n\n 😍\n  |\  \n  |  \   \n 8=👊-D\n  |   \         \n 👟 👟       🤤",
+        "__**Cinta kamu..**__\n\n 😘\n  |\  \n  |  \   \n 8=👊-D💦\n  |   \         \n 👟 👟       🤤",
+        "__**Cinta kamu sayang**__\n\n 😍\n  |\  \n  |  \   \n 8=👊-D\n  |   \         \n 👟 👟       🤤",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
@@ -120,7 +121,7 @@ async def _(event):
     animation_ttl = range(14)
     event = await edit_or_reply(event, "Starting asf")
     animation_chars = [
-        "1 ❤️ love story",
+        "1 ❤️ kisah cinta",
         "  😐             😕 \n/👕\         <👗\ \n 👖               /|",
         "  😉          😳 \n/👕\       /👗\ \n  👖            /|",
         "  😚            😒 \n/👕\         <👗> \n  👖             /|",
@@ -133,7 +134,7 @@ async def _(event):
         "😎 \n/\\_,__😫 \n  //    //       \\",
         "😖 \n/\\_,💦_😋  \n  //         //        \\",
         "  😭      ☺️ \n  /|\   /(👶)\ \n  /!\   / \ ",
-        "The End 😂...",
+        "Tamat 😂...",
     ]
 
     for i in animation_ttl:
@@ -183,10 +184,8 @@ async def bluedevilfooku(fooku):
         "          \                _.•´\n"
         "            \              (\n"
         "              \  \n"
-        "Roses are RED\n"
-        "Violets are BLUE\n"
-        "This is my middle finger\n"
-        "It just for U🖕😂\n",
+        "Ikan hiu makan tomat\n"
+        "Goblog 🖕😂\n",
     )
 
 
