@@ -19,9 +19,8 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import DocumentAttributeVideo
 
 from userbot import CMD_HELP, bot
+from userbot.events import register
 from userbot.utils import progress
-
-from ..utils import admin_cmd, sudo_cmd
 
 
 # For song module
@@ -72,8 +71,7 @@ def getmusicvideo(cat):
     os.system(command)
 
 
-@bot.on(admin_cmd(pattern="song(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="song(?: |$)(.*)", allow_sudo=True))
+@register(outgoing=True, pattern=r"^\.song (.*)")
 async def _(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
@@ -119,8 +117,7 @@ async def _(event):
     subprocess.check_output("rm -rf *.mp3", shell=True)
 
 
-@bot.on(admin_cmd(pattern="vsong(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="vsong(?: |$)(.*)", allow_sudo=True))
+@register(outgoing=True, pattern=r"^\.vsong(?: |$)(.*)")
 async def _(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
@@ -186,8 +183,7 @@ async def _(event):
     os.system("rm -rf *.webm")
 
 
-@bot.on(admin_cmd(pattern="smd(?:(now)|$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="smd(?:(now)|$)(.*)", allow_sudo=True))
+@register(outgoing=True, pattern=r"^\.smd (?:(now)|(.*) - (.*))")
 async def _(event):
     if event.fwd_from:
         return
@@ -230,8 +226,7 @@ async def _(event):
         )
 
 
-@bot.on(admin_cmd(pattern="net(?:(now)|$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="net(?:(now)|$)(.*)", allow_sudo=True))
+@register(outgoing=True, pattern=r"^\.net (?:(now)|(.*) - (.*))")
 async def _(event):
     if event.fwd_from:
         return
@@ -273,8 +268,7 @@ async def _(event):
         )
 
 
-@bot.on(admin_cmd(pattern="sdd(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="sdd(?: |$)(.*)", allow_sudo=True))
+@register(outgoing=True, pattern=r"^\.sdd(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -309,9 +303,8 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "song": "__**NAMA PLUGIN :** Songs__\
-        \n\n✅** CMD ➥** "`.song` **Artis - Judul lagu**"
-        \n\n**Fungsi   ➥   Menemukan dan mengunggah lagu.\n\n"
+        "song": ">`.song` **Artist - Song Title**"
+        "\nUsage: Finding and uploading song.\n\n"
         ">`.vsong` **Artist - Song Title**"
         "\nUsage: Finding and uploading videoclip.\n\n"
         ">`.smd` **Artist - Song Title**"
