@@ -18,9 +18,10 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import DocumentAttributeVideo
 
-from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import CMD_HELP, bot
 from userbot.utils import progress
+
+from ..utils import admin_cmd, sudo_cmd
 
 
 # For song module
