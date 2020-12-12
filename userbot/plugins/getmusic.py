@@ -19,7 +19,6 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import DocumentAttributeVideo
 
 from userbot import CMD_HELP, bot
-from userbot.events import register
 from userbot.utils import progress
 
 
@@ -71,7 +70,9 @@ def getmusicvideo(cat):
     os.system(command)
 
 
-@register(outgoing=True, pattern=r"^\.song (.*)")
+
+@bot.on(admin_cmd(outgoing=True, pattern="song$"))
+@bot.on(sudo_cmd(pattern="song$", allow_sudo=True))
 async def _(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
@@ -117,7 +118,9 @@ async def _(event):
     subprocess.check_output("rm -rf *.mp3", shell=True)
 
 
-@register(outgoing=True, pattern=r"^\.vsong(?: |$)(.*)")
+
+@bot.on(admin_cmd(outgoing=True, pattern="vsong$"))
+@bot.on(sudo_cmd(pattern="vsong$", allow_sudo=True))
 async def _(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
@@ -183,7 +186,9 @@ async def _(event):
     os.system("rm -rf *.webm")
 
 
-@register(outgoing=True, pattern=r"^\.smd (?:(now)|(.*) - (.*))")
+
+@bot.on(admin_cmd(outgoing=True, pattern="smd$"))
+@bot.on(sudo_cmd(pattern="smd$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -226,7 +231,9 @@ async def _(event):
         )
 
 
-@register(outgoing=True, pattern=r"^\.net (?:(now)|(.*) - (.*))")
+
+@bot.on(admin_cmd(outgoing=True, pattern="net$"))
+@bot.on(sudo_cmd(pattern="net$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -268,7 +275,9 @@ async def _(event):
         )
 
 
-@register(outgoing=True, pattern=r"^\.sdd(?: |$)(.*)")
+
+@bot.on(admin_cmd(outgoing=True, pattern="sdd$"))
+@bot.on(sudo_cmd(pattern="sdd$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -303,19 +312,15 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "song": ">`.song` **Artist - Song Title**"
-        "\nUsage: Finding and uploading song.\n\n"
-        ">`.vsong` **Artist - Song Title**"
-        "\nUsage: Finding and uploading videoclip.\n\n"
-        ">`.smd` **Artist - Song Title**"
-        "\nUsage: Download music from spotify use `@SpotifyMusicDownloaderBot`.\n\n"
-        ">`.smd now`"
-        "\nUsage: Download current LastFM scrobble use `@SpotifyMusicDownloaderBot`.\n\n"
-        ">`.net` **Artist - Song Title**"
-        "\nUsage: Download music use `@WooMaiBot`.\n\n"
-        ">`.net now`"
-        "\nUsage: Download current LastFM scrobble use `@WooMaiBot`.\n\n"
+        "song": ">`.song` **Artis - Judul Lagu**"
+        "\nFungsi: Menemukan dan mengunggah lagu.\n\n"
+        ">`.vsong` **Artis - Judul Lagu**"
+        "\nFungsi: Menemukan dan mengunggah klip video.\n\n"
+        ">`.smd` **Artis - Judul Lagu**"
+        "\nFungsi: Unduh musik dari penggunaan spotify `@SpotifyMusicDownloaderBot`.\n\n"        
+        ">`.net` **Artis - Judul Lagu**"
+        "\nFungsi: Unduh penggunaan musik `@WooMaiBot`.\n\n"        
         ">`.sdd <Spotify/Deezer Link>`"
-        "\nUsage: Download music from Spotify or Deezer use `@MusicsHunterbot`."
+        "\nFungsi: Unduh musik dari Spotify atau penggunaan Deezer `@MusicsHunterbot`."
     }
 )
