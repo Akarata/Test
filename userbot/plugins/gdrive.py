@@ -1408,7 +1408,7 @@ async def g_download(event):
 
 CMD_HELP.update(
     {
-        "gdrive": "__**PLUGIN NAME :** G-Drive__"
+        "gdrive": "__**NAMA PLUGIN :** G-Drive__"
         "\n\n✅** CMD ➥** `.gauth`"
         "\n**Fungsi   ➥  **Buat token untuk mengaktifkan semua layanan google drive cmd."
         "\nIni hanya perlu dijalankan sekali seumur hidup."
