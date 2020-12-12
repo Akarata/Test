@@ -26,18 +26,18 @@ async def amireallyalive(alive):
         reply_to_id = await alive.get_reply_message()
     if CAT_IMG:
         cat_caption = f"<b>{JISAN}</b>\n\n"
-        cat_caption += f"<b> ✘   [   👤   ]    My Master : {hmention}</b>\n"
-        cat_caption += f"<b> ✘   [   ⏱️   ]    Bot Uptime :</b> <code>{uptime}</code>\n"
+        cat_caption += f"<b> ✘   [   👤   ]  ➥  My Master : {hmention}</b>\n"
+        cat_caption += f"<b> ✘   [   ⏱️   ]  ➥  Bot Uptime :</b> <code>{uptime}</code>\n"
         cat_caption += (
-            f"<b> ✘   [   🐍   ]    Python :</b> <code>{python_version()}</code>\n"
+            f"<b> ✘   [   🐍   ]  ➥  Python :</b> <code>{python_version()}</code>\n"
         )
         cat_caption += (
-            f"<b> ✘   [   ⚙️   ]    Telethon :</b> <code>{version.__version__}</code>\n"
+            f"<b> ✘   [   ⚙️   ]  ➥  Telethon :</b> <code>{version.__version__}</code>\n"
         )
         cat_caption += (
-            f"<b> ✘   [   🤖   ]    Aka Version :</b> <code>{catversion}</code>\n"
+            f"<b> ✘   [   🤖   ]  ➥  Aka Version :</b> <code>{catversion}</code>\n"
         )
-        cat_caption += f"<b> ✘   [   ⚔️   ]    Running on :</b> <code>Master</code>\n"
+        cat_caption += f"<b> ✘   [   ⚔️   ]  ➥  Running on :</b> <code>Master</code>\n"
 
         await alive.client.send_file(
             alive.chat_id,
