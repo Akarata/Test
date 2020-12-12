@@ -65,7 +65,7 @@ async def kakashi(bsdk):
     if bsdk.fwd_from:
         return
     animation_interval = 0.3
-    animation_ttl = range(100)
+    animation_ttl = range(50)
     bsdk = await edit_or_reply(bsdk, f"**Ahhh pengin coli......**💦💦...")
     animation_chars = [
         "8✊️===D",
@@ -77,7 +77,6 @@ async def kakashi(bsdk):
         "8✊️===D",
         "8===✊️D💦",
         "8==✊️=D💦💦",
-        "8=✊️==D💦💦💦",
         "Croooottt💦💦💦",
     ]
 
@@ -93,7 +92,7 @@ async def kakashi(bsdk):
         return
     animation_interval = 1
     animation_ttl = range(11)
-    bsdk = await edit_or_reply(bsdk, f"**Ohhh nooooo **💦💦...")
+    bsdk = await edit_or_reply(bsdk, f"**Ahhh lagi sange **💦💦...")
     animation_chars = [
         "**Ohhh Sayang..**😈",
         "__**Ohh Yeaah..**__\n\n 😈\n  |\  \n  |  \   \n 8=👊-D\n  |   \         \n 👟 👟       😲",
@@ -119,7 +118,7 @@ async def _(event):
         return
     animation_interval = 3
     animation_ttl = range(14)
-    event = await edit_or_reply(event, "Starting asf")
+    event = await edit_or_reply(event, "Mulai suatu....")
     animation_chars = [
         "1 ❤️ kisah cinta",
         "  😐             😕 \n/👕\         <👗\ \n 👖               /|",
