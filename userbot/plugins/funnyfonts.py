@@ -177,9 +177,9 @@ async def stylish_generator(event):
 
 CMD_HELP.update(
     {
-        "funnyfonts": "__**PLUGIN NAME :** Funnyfonts__\
-        \n\n📌** CMD ➥** `.str` | `.zal` | `.cp` | `.weeb` | `.downside` | `.subscript` | `.superscript` \
-        \n\n**USAGE   ➥  **Use cmd <text> , it will change your text to that font.\
-        \n\n**Example :** `.weeb hello there`"
+        "funnyfonts": "__**NAMA PLUGIN :** Funnyfonts__\
+        \n\n✅** CMD ➥** `.str` | `.zal` | `.cp` | `.weeb` | `.downside` | `.subscript` | `.superscript` \
+        \n\n**Fungsi   ➥  **Use cmd <text> , itu akan mengubah teks Anda menjadi font itu.\
+        \n\n**Contoh :** `.weeb Halo yang disana`"
     }
 )
