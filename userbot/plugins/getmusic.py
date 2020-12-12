@@ -309,8 +309,9 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "song": ">`.song` **Artist - Song Title**"
-        "\nUsage: Finding and uploading song.\n\n"
+        "song": "__**NAMA PLUGIN :** Songs__\
+        \n\n✅** CMD ➥** "`.song` **Artis - Judul lagu**"
+        \n\n**Fungsi   ➥   Menemukan dan mengunggah lagu.\n\n"
         ">`.vsong` **Artist - Song Title**"
         "\nUsage: Finding and uploading videoclip.\n\n"
         ">`.smd` **Artist - Song Title**"
