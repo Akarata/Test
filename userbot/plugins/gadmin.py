@@ -297,16 +297,16 @@ async def watcher(event):
 
 CMD_HELP.update(
     {
-        "gadmin": "__**PLUGIN NAME :** Gadmin__\
-\n\n📌** CMD ➥** `.gban` <username/reply/userid> <reason (optional)>\
-\n**USAGE   ➥  **Bans the person in all groups where you are admin .\
-\n\n📌** CMD ➥** `.ungban` <username/reply/userid>\
-\n**USAGE   ➥  **Reply someone's message with .ungban to remove them from the gbanned list.\
-\n\n📌** CMD ➥** `.listgban`\
-\n**USAGE   ➥  **Shows you the gbanned list and reason for their gban.\
-\n\n📌** CMD ➥** `.gmute` <username/reply> <reason (optional)>\
-\n**USAGE   ➥  **Mutes the person in all groups you have in common with them.\
-\n\n📌** CMD ➥** `.ungmute` <username/reply>\
-\n**USAGE   ➥  **Reply someone's message with .ungmute to remove them from the gmuted list."
+        "gadmin": "__**NAMA PLUGIN :** Gadmin__\
+\n\n✅** CMD ➥** `.gban` <username/balas/userid> <alasan (opsional)>\
+\n**Fungsi   ➥  **Melarang orang di semua grup tempat Anda menjadi admin .\
+\n\n✅** CMD ➥** `.ungban` <username/reply/userid>\
+\n**Fungsi   ➥  **Balas pesan seseorang dengan .ungban untuk menghapusnya dari daftar larangan.\
+\n\n✅** CMD ➥** `.listgban`\
+\n**Fungsi   ➥  **Menunjukkan daftar gb dan alasan gban mereka.\
+\n\n✅** CMD ➥** `.gmute` <username/balas> <alasan (opsional)>\
+\n**Fungsi   ➥  **Membungkam orang di semua grup yang memiliki kesamaan dengan Anda dengannya.\
+\n\n✅** CMD ➥** `.ungmute` <username/balas>\
+\n**Fungsi   ➥  **Balas pesan seseorang dengan .ungmute untuk menghapusnya dari daftar yang dibungkam."
     }
 )
