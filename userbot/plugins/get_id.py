@@ -28,7 +28,9 @@ async def _(event):
                     )
             except:
                 pass
-        await edit_or_reply(event, "`Berikan masukan sebagai nama pengguna atau balas ke pengguna`")
+        await edit_or_reply(
+            event, "`Berikan masukan sebagai nama pengguna atau balas ke pengguna`"
+        )
     elif event.reply_to_msg_id:
         await event.get_input_chat()
         r_msg = await event.get_reply_message()
