@@ -70,7 +70,6 @@ def getmusicvideo(cat):
     os.system(command)
 
 
-
 @bot.on(admin_cmd(outgoing=True, pattern="song$"))
 @bot.on(sudo_cmd(pattern="song$", allow_sudo=True))
 async def _(event):
@@ -116,7 +115,6 @@ async def _(event):
     os.system("rm -rf *.mp3")
     os.remove(thumb_image)
     subprocess.check_output("rm -rf *.mp3", shell=True)
-
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="vsong$"))
@@ -186,7 +184,6 @@ async def _(event):
     os.system("rm -rf *.webm")
 
 
-
 @bot.on(admin_cmd(outgoing=True, pattern="smd$"))
 @bot.on(sudo_cmd(pattern="smd$", allow_sudo=True))
 async def _(event):
@@ -229,7 +226,6 @@ async def _(event):
         return await event.edit(
             "`Error: `@SpotifyMusicDownloaderBot` is not responding or Song not found!.`"
         )
-
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="net$"))
@@ -275,7 +271,6 @@ async def _(event):
         )
 
 
-
 @bot.on(admin_cmd(outgoing=True, pattern="sdd$"))
 @bot.on(sudo_cmd(pattern="sdd$", allow_sudo=True))
 async def _(event):
@@ -317,9 +312,9 @@ CMD_HELP.update(
         ">`.vsong` **Artis - Judul Lagu**"
         "\nFungsi: Menemukan dan mengunggah klip video.\n\n"
         ">`.smd` **Artis - Judul Lagu**"
-        "\nFungsi: Unduh musik dari penggunaan spotify `@SpotifyMusicDownloaderBot`.\n\n"        
+        "\nFungsi: Unduh musik dari penggunaan spotify `@SpotifyMusicDownloaderBot`.\n\n"
         ">`.net` **Artis - Judul Lagu**"
-        "\nFungsi: Unduh penggunaan musik `@WooMaiBot`.\n\n"        
+        "\nFungsi: Unduh penggunaan musik `@WooMaiBot`.\n\n"
         ">`.sdd <Spotify/Deezer Link>`"
         "\nFungsi: Unduh musik dari Spotify atau penggunaan Deezer `@MusicsHunterbot`."
     }
