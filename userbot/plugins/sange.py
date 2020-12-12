@@ -254,8 +254,8 @@ async def cat(event):
     )
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="egali$"))
-@bot.on(sudo_cmd(pattern="egali$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="ngntd$"))
+@bot.on(sudo_cmd(pattern="ngntd$", allow_sudo=True))
 async def cat(event):
     await edit_or_reply(
         event,
