@@ -237,10 +237,10 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "filesummary": "__**PLUGIN NAME :** Filesummary__\
-\n\n📌** CMD ➥** `.chatfs` <or> `.chatfs username/id`\
-\n**USAGE   ➥  **__Shows you the complete media/file summary of the that group__\
-\n\n📌** CMD ➥** `.userfs` <or> `.userfs chat username/id`\
-\n**USAGE   ➥  **__Shows you the complete media/file summary of the that User in the group where you want__"
+        "filesummary": "__**NAMA PLUGIN :** Filesummary__\
+\n\n✅** CMD ➥** `.chatfs` <or> `.chatfs username/id`\
+\n**Fungsi   ➥  **__Menunjukkan ringkasan lengkap media / file dari grup itu__\
+\n\n✅** CMD ➥** `.userfs` <or> `.userfs chat username/id`\
+\n**Fungsi   ➥  **__Menunjukkan kepada Anda ringkasan media / file lengkap dari Pengguna tersebut dalam grup yang Anda inginkan__"
     }
 )
