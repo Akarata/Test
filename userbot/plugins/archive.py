@@ -409,18 +409,18 @@ def get_lst_of_files(input_directory, output_lst):
 CMD_HELP.update(
     {
         "archive": "__**PLUGIN NAME :** Archive__\
-    \n\n✅** CMD ➥** `.zip` reply to a file/media\
-    \n**USAGE   ➥  **It will zip that file/media\
-    \n\n📌** CMD ➥** `.rar` reply to a file/media\
-    \n**USAGE   ➥  **It will rar that file/media\
-    \n\n📌** CMD ➥** `.tar` reply to a file/media\
-    \n**USAGE   ➥  **It will tar that file/media\
-    \n\n📌** CMD ➥** `.unzip` reply to a .zip file\
-    \n**USAGE   ➥  **It will unzip that .zip file\
-    \n\n📌** CMD ➥** `.unrar` reply to a .rar file\
-    \n**USAGE   ➥  **It will unrar that .rar file\
-    \n\n📌** CMD ➥** `.untar` reply to a .tar\
-    \n**USAGE   ➥  **It will untar that .tar file\
+    \n\n✅** CMD ➥** `.zip` balas ke file/media\
+    \n**Fungsi   ➥  **Itu akan zip ke file/media\
+    \n\n✅** CMD ➥** `.rar` balas ke file/media\
+    \n**Fungsi   ➥  **Itu akan rar ke file/media\
+    \n\n✅** CMD ➥** `.tar` balas ke file/media\
+    \n**Fungsi   ➥  **Itu akan tar ke file/media\
+    \n\n✅** CMD ➥** `.unzip` balas ke .zip file\
+    \n**Fungsi   ➥  **Itu akan unzip ke .zip file\
+    \n\n✅** CMD ➥** `.unrar` balas ke.rar file\
+    \n**Fungsi   ➥  **Itu akan unrar ke .rar file\
+    \n\n✅** CMD ➥** `.untar` balas ke .tar\
+    \n**Fungsi   ➥  **Itu akan untar ke .tar file\
 "
     }
 )
