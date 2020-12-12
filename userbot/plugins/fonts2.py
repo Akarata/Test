@@ -150,7 +150,7 @@ CMD_HELP.update(
     {
         "fonts2": "__**NAMA PLUGIN :** Fonts2__\
         \n\n✅** CMD ➥** `.egyptf` | `.maref` | `.handcf` | `.doublef` | `.mock` | `.ghostf` | `.handsf` \
-        \n\n**Fungsi   ➥  **Use cmd <text> , itu akan mengubah teks Anda menjadi font itu.\
+        \n\n**Fungsi   ➥  **Gunakan cmd <teks> , itu akan mengubah teks Anda menjadi font itu.\
         \n\n**Contoh :** `.egyptf Halo yang disana`"
     }
 )
