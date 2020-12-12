@@ -92,11 +92,11 @@ async def _(event):
 CMD_HELP.update(
     {
         "forward": "__**NAMA PLUGIN :** Forward__\
-    \n\n📌** CMD ➥** `.frwd` <reply to any message>\
-    \n**PENGGUNAAN   ➥  **Aktifkan Penghitung Dilihat di pesan mana pun, untuk mengetahui berapa banyak pengguna yang telah melihat pesan Anda\
-    \n\n📌** CMD ➥** `.resend` reply to message\
-    \n**PENGGUNAAN   ➥  **Baru saja mengirim ulang pesan balasan lagi di obrolan itu__\
-    \n\n📌** CMD ➥** `.fpost text`\
-    \n**PENGGUNAAN   ➥  **Pisahkan kata dan teruskan setiap huruf dari cache pesan jika ada "
+    \n\n✅** CMD ➥** `.frwd` <reply to any message>\
+    \n**Fungsi   ➥  **Aktifkan Penghitung Dilihat di pesan mana pun, untuk mengetahui berapa banyak pengguna yang telah melihat pesan Anda\
+    \n\n✅** CMD ➥** `.resend` reply to message\
+    \n**Fungsi   ➥  **Baru saja mengirim ulang pesan balasan lagi di obrolan itu__\
+    \n\n✅** CMD ➥** `.fpost text`\
+    \n**Fungsi   ➥  **Pisahkan kata dan teruskan setiap huruf dari cache pesan jika ada "
     }
 )
