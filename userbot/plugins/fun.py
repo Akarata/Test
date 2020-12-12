@@ -256,14 +256,14 @@ async def kakashi(lol):
 
 CMD_HELP.update(
     {
-        "fun": "__**PLUGIN NAME :** Fun__\
-\n\n📌** CMD ➥** `.ml` <text>\
-\n**USAGE   ➥  **Monster send your text.\
-\n\n📌** CMD ➥** `.g1` <text>\
-\n**USAGE   ➥  **Send Long list of your text.\
-\n\n📌** CMD ➥** `.ftext` <text>\
-\n**USAGE   ➥  **Send Ftext text.\
-\n\n📌** CMD ➥** `.join` | `.climb` | `.aag` | `.push` |`.work` | `.ohh` | `.fail` | `.nih`\
-\n\n**USAGE   ➥  **These are arts,use & see"
+        "fun": "__**NAMA PLUGIN :** Fun__\
+\n\n✅** CMD ➥** `.ml` <text>\
+\n**Fungsi   ➥  **Monster mengirim teks Anda.\
+\n\n✅** CMD ➥** `.g1` <text>\
+\n**Fungsi   ➥  **Kirim daftar panjang teks Anda.\
+\n\n✅** CMD ➥** `.ftext` <text>\
+\n**Fungsi   ➥  **Kirim teks Ftext.\
+\n\n✅** CMD ➥** `.join` | `.climb` | `.aag` | `.push` |`.work` | `.ohh` | `.fail` | `.nih`\
+\n\n**Fungsi   ➥  **Ini adalah seni, gunakan & lihat"
     }
 )
