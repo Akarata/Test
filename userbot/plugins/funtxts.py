@@ -34,11 +34,11 @@ async def hmm(cat):
 CMD_HELP.update(
     {
         "funtxts": """__**PLUGIN NAME :** Funtxts__
-\n\n📌** CMD ➥** `.tcat`
-\n**USAGE   ➥  **__Sens you some random cat facial text art__
-\n\n📌** CMD ➥** `.why`
-\n**USAGE   ➥  **__Asks some random Funny questions__
-\n\n📌** CMD ➥** `.fact`
-\n**USAGE   ➥  **__Sends you some random facts__"""
+\n\n✅** CMD ➥** `.tcat`
+\n**Fungsi   ➥  **__Kirim seni teks wajah kucing acak__
+\n\n✅** CMD ➥** `.why`
+\n**Fungsi   ➥  **__Menanyakan beberapa pertanyaan lucu acak__
+\n\n✅** CMD ➥** `.fact`
+\n**Fungsi   ➥  **__Mengirimi Anda beberapa fakta acak__"""
     }
 )
