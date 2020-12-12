@@ -17,12 +17,26 @@ from pylast import User
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import DocumentAttributeVideo
+import asyncio
+import base64
+import os
+from pathlib import Path
 
-from userbot import CMD_HELP, bot
-from userbot.utils import progress
+from telethon.errors.rpcerrorlist import YouBlockedUserError
+from telethon.tl.functions.messages import ImportChatInviteRequest as Get
+from validators.url import url
 
-from ..utils import admin_cmd, sudo_cmd
-
+from ..utils import admin_cmd, edit_or_reply, sudo_cmd
+from . import (
+    CMD_HELP,
+    hmention,
+    name_dl,
+    reply_id,
+    runcmd,
+    song_dl,
+    video_dl,
+    yt_search,
+)
 
 # For song module
 def getmusic(get, DEFAULT_AUDIO_QUALITY):
