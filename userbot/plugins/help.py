@@ -61,9 +61,9 @@ async def cmd_list(event):
             await event.delete()
     else:
         if HELPTYPE is True:
-            help_string = f"Userbot Helper. Provided by {mention} to reveal all the plugins\
-                          \nCheck `.help plugin name` for commands, in case popup doesn't appear.\
-                          \nCheck `.info plugin name` for usage of thoose plugins and commands"
+            help_string = f"Pembantu Userbot. Disediakan oleh {mention} untuk menampilkan semua plugin\
+                          \nCek `.help plugin name` untuk perintah, seandainya popup tidak muncul.\
+                          \nCek `.info plugin name` untuk penggunaan plugin dan perintah tersebut"
             tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
             results = await bot.inline_query(  # pylint:disable=E0602
                 tgbotusername, help_string
@@ -73,7 +73,7 @@ async def cmd_list(event):
         else:
             string = "<b>Harap tentukan plugin mana yang Kamu inginkan bantuannya !!\
                 \nNumber of plugins : </b><code>{count}</code>\
-                \n<b>Usage:</b> <code>.help plugin name</code> \n\n"
+                \n<b>Gunakan:</b> <code>.help nama plugin</code> \n\n"
             catcount = 0
             for i in sorted(CMD_LIST):
                 string += "• " + f"<code>{str(i)}</code>"
@@ -86,7 +86,7 @@ async def cmd_list(event):
 async def info(event):
     input_str = event.pattern_match.group(1)
     if input_str == "text":
-        string = "Total {count} commands found in {plugincount} sudo plugins of catuserbot\n\n"
+        string = "Total {count} perintah ditemukan di {plugincount} sudo plugin dari userbot\n\n"
         catcount = 0
         plugincount = 0
         for i in sorted(SUDO_LIST):
@@ -133,11 +133,11 @@ async def info(event):
             await reply.delete()
     else:
         string = "<b> tentukan plugin mana yang Kamu inginkan bantuannya !!\
-            \nNumber of plugins : </b><code>{count}</code>\
-            \n<b>Usage:</b> <code>.help plugin name</code>\n\n"
+            \nJumlah plugin : </b><code>{count}</code>\
+            \n<b>Gunakan:</b> <code>.help nama plugin</code>\n\n"
         catcount = 0
         for i in sorted(SUDO_LIST):
-            string += "◆ " + f"<code>{str(i)}</code>"
+            string += "• " + f"<code>{str(i)}</code>"
             string += " "
             catcount += 1
         await event.reply(string.format(count=catcount), parse_mode="HTML")
@@ -157,11 +157,11 @@ async def info(event):
             await event.delete()
     else:
         string = "<b>tentukan plugin mana yang Kamu inginkan bantuannya !!\
-            \nNumber of plugins : </b><code>{count}</code>\
-            \n<b>Usage : </b><code>.info plugin name</code>\n\n"
+            \nJumlah plugin : </b><code>{count}</code>\
+            \n<b>Gunakan : </b><code>.info nama plugin</code>\n\n"
         catcount = 0
         for i in sorted(CMD_HELP):
-            string += "◆ " + f"<code>{str(i)}</code>"
+            string += "• " + f"<code>{str(i)}</code>"
             string += " "
             catcount += 1
         if event.sender_id in Config.SUDO_USERS:
