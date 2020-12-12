@@ -18,17 +18,17 @@ async def _(event):
         try:
             if p.first_name:
                 return await edit_or_reply(
-                    event, f"The id of the user `{input_str}` is `{p.id}`"
+                    event, f"ID pengguna `{input_str}` adalah `{p.id}`"
                 )
         except:
             try:
                 if p.title:
                     return await edit_or_reply(
-                        event, f"The id of the chat/channel `{p.title}` is `{p.id}`"
+                        event, f"ID obrolan / saluran `{p.title}` adalah `{p.id}`"
                     )
             except:
                 pass
-        await edit_or_reply(event, "`Either give input as username or reply to user`")
+        await edit_or_reply(event, "`Berikan masukan sebagai nama pengguna atau balas ke pengguna`")
     elif event.reply_to_msg_id:
         await event.get_input_chat()
         r_msg = await event.get_reply_message()
@@ -36,22 +36,22 @@ async def _(event):
             bot_api_file_id = pack_bot_file_id(r_msg.media)
             await edit_or_reply(
                 event,
-                f"**Current Chat ID : **`{str(event.chat_id)}`\n**From User ID: **`{str(r_msg.sender_id)}`\n**Media File ID: **`{bot_api_file_id}`",
+                f"**ID Obrolan Saat Ini : **`{str(event.chat_id)}`\n**Dari User ID: **`{str(r_msg.sender_id)}`\n**ID File Media: **`{bot_api_file_id}`",
             )
         else:
             await edit_or_reply(
                 event,
-                f"**Current Chat ID : **`{str(event.chat_id)}`\n**From User ID: **`{str(r_msg.sender_id)}`",
+                f"**ID Obrolan Saat Ini : **`{str(event.chat_id)}`\n**Dari User ID: **`{str(r_msg.sender_id)}`",
             )
     else:
-        await edit_or_reply(event, f"**Current Chat ID : **`{str(event.chat_id)}`")
+        await edit_or_reply(event, f"**ID Obrolan Saat Ini : **`{str(event.chat_id)}`")
 
 
 CMD_HELP.update(
     {
-        "get_id": "__**PLUGIN NAME :** Get_id__\
-    \n\n📌** CMD ➥** `.get_id` or `.id` <reply on a user msg>\
-    \n**USAGE   ➥  **__If given input then shows id of that given chat/channel/user else if you reply to user then shows id of the replied user \
-    along with current chat id and if not replied to user or given input then just show id of the chat where you used the command__"
+        "get_id": "__**NAMA PLUGIN :** Get_id__\
+    \n\n✅** CMD ➥** `.get_id` atau `.id` <balas di pesan user>\
+    \n**Fungsi   ➥  **__Jika diberi masukan maka tunjukkan id dari obrolan / saluran / pengguna yang diberikan lain jika Anda membalas ke pengguna maka tunjukkan id dari pengguna yang menjawab \
+    bersama dengan id obrolan saat ini dan jika tidak dibalas ke pengguna atau diberi masukan maka cukup tampilkan id obrolan di mana Anda menggunakan perintah__"
     }
 )
