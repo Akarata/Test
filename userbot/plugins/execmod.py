@@ -374,7 +374,7 @@ CMD_HELP.update(
         "execmod": "__**NAMA PLUGIN :** Execmod__\
     \n\n✅** CMD ➥** `.pips` <query>\
     \n**Fungsi   ➥  **Mencari modul pip Anda\
-    \n\n✅** CMD ➥** `.sucide`\
+    \n\n✅** CMD ➥** `.suicide`\
     \n**Fungsi   ➥  **Menghapus semua folder dan file Anda di bot\
     \n\n✅** CMD ➥** `.plugins`\
     \n**Fungsi   ➥  **Menampilkan daftar modul yang ada di bot\
