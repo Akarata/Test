@@ -78,7 +78,7 @@ async def kakashi(bsdk):
         "8===✊️D💦",
         "8==✊️=D💦💦",
         "8=✊️==D💦💦💦",
-        "Croooottt💦💦💦", 
+        "Croooottt💦💦💦",
     ]
 
     for i in animation_ttl:
