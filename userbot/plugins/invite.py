@@ -15,7 +15,7 @@ async def _(event):
     to_add_users = event.pattern_match.group(1)
     if event.is_private:
         await edit_delete(
-            event, "`.invite` users to a chat, not to a Private Message", 5
+            event, "`.invite` pengguna ke obrolan, bukan ke Pesan Pribadi", 5
         )
     else:
         if not event.is_channel and event.is_group:
@@ -41,13 +41,13 @@ async def _(event):
                 except Exception as e:
                     await edit_delete(event, f"`{str(e)}`", 5)
 
-        await edit_or_reply(event, f"`{to_add_users} is/are Invited Successfully`")
+        await edit_or_reply(event, f"`{to_add_users} is/Berhasil Diundang`")
 
 
 CMD_HELP.update(
     {
-        "invite": "__**PLUGIN NAME :**Invite__\
-        \n\n📌** CMD ➥** `.invite` <username/useid>\
-        \n**USAGE   ➥  **To invite specified user in certain chat."
+        "invite": "__**NAMA PLUGIN :**Invite__\
+        \n\n✅** CMD ➥** `.invite` <username/useid>\
+        \n**Fungsi   ➥  **Untuk mengundang pengguna tertentu dalam obrolan tertentu."
     }
 )
