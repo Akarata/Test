@@ -218,20 +218,20 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "meme": "__**PLUGIN NAME :** Meme__\
-\n\n📌** CMD ➥** `:/` or `-_-` or `;_;` \
-\n**USAGE   ➥  **Check yourself ;)\
-\n\n📌** CMD ➥** `.oof`\
-\n**USAGE   ➥  **Ooooof\
-\n\n📌** CMD ➥** `.type`\
-\n**USAGE   ➥  **Just a small command to make your keyboard become a typewriter!\
-\n\n📌** CMD ➥** `.repeat` <count message>\
-\n**USAGE   ➥  **Try out and check Yourself `.repeat 5 hello`\
-\n\n📌** CMD ➥** `.meme` \
-\n**USAGE   ➥  **Try yourself ;)\
-\n\n📌** CMD ➥** `.give` \
-\n**USAGE   ➥  **Share lolipop ;)\
-\n\n📌** CMD ➥** `.sadmin` \
-\n**USAGE   ➥  **Fun animation of @admin!"
+        "meme": "__**NAMA PLUGIN :** Meme__\
+\n\n✅** CMD ➥** `:/` atau `-_-` atau `;_;` \
+\n**Fungsi   ➥  **Coba sendiri ;)\
+\n\n✅** CMD ➥** `.oof`\
+\n**Fungsi   ➥  **Ooooof\
+\n\n✅** CMD ➥** `.type`\
+\n**Fungsi   ➥  **Hanya perintah kecil untuk membuat keyboard Anda menjadi mesin tik!\
+\n\n✅** CMD ➥** `.repeat` <hitung pesan>\
+\n**Fungsi   ➥  **Coba dan periksa Dirimu `.repeat 5 halo`\
+\n\n✅** CMD ➥** `.meme` \
+\n**Fungsi   ➥  **Coba sendiri ;)\
+\n\n✅** CMD ➥** `.give` \
+\n**Fungsi   ➥  **Bagikan permen lolipop ;)\
+\n\n✅** CMD ➥** `.sadmin` \
+\n**Fungsi   ➥  **Animasi menyenangkan dari @admin!"
     }
 )
