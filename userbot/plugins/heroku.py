@@ -106,8 +106,8 @@ async def variable(var):
             return await cat.edit(f"`{variable}`**  is not exists**")
 
 
-@bot.on(admin_cmd(pattern="usage$", outgoing=True))
-@bot.on(sudo_cmd(pattern="usage$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"(usage|dyno)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"(usage|dyno)", allow_sudo=True))
 async def dyno_usage(dyno):
     """
     Get your account Dyno Usage
