@@ -25,23 +25,23 @@ async def glitch(cat):
     catid = cat.reply_to_msg_id
     cat = await edit_or_reply(cat, "```Glitching... 😁```")
     if not (reply and (reply.media)):
-        await cat.edit("`Media not found...`")
+        await cat.edit("`Media tidak ditemukan...`")
         return
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
     catsticker = await reply.download_media(file="./temp/")
     if not catsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg")):
         os.remove(catsticker)
-        await cat.edit("`Media not found...`")
+        await cat.edit("`Media tidak ditemukan...`")
         return
     os.path.join("./temp/", "glitch.png")
     if catinput:
         if not catinput.isdigit():
-            await cat.edit("`You input is invalid, check help`")
+            await cat.edit("`Masukan Anda tidak valid, periksa bantuan`")
             return
         catinput = int(catinput)
         if not 0 < catinput < 9:
-            await cat.edit("`Invalid Range...`")
+            await cat.edit("`Rentang Tidak Valid...`")
             return
     else:
         catinput = 2
@@ -113,13 +113,13 @@ async def glitch(cat):
 
 CMD_HELP.update(
     {
-        "glitch": "__**PLUGIN NAME :** Glitch__\
-    \n\n📌** CMD ➥** `.glitch` reply to media file\
-    \n**USAGE   ➥  **Glitches the given mediafile(gif , stickers , image, videos) to a gif and glitch range is from 1 to 8.\
-    If nothing is mentioned then by default it is 2\
-    \n\n📌** CMD ➥** `.glitchs` reply to media file\
-    \n**USAGE   ➥  **Glitches the given mediafile(gif , stickers , image, videos) to a sticker and glitch range is from 1 to 8.\
-    If nothing is mentioned then by default it is 2\
+        "glitch": "__**NAMA PLUGIN :** Glitch__\
+    \n\n✅** CMD ➥** `.glitch` membalas ke media file\
+    \n**Fungsi   ➥  **Glitches pemberian media file(gif , stickers , image, videos) ke gif dan glitch adalah dari 1 hingga 8.\
+    Jika tidak ada yang disebutkan maka secara default adalah 2\
+    \n\n✅** CMD ➥** `.glitchs` membalas ke media file\
+    \n**Fungsi   ➥  **Glitches the given mediafile(gif , stickers , image, videos) untuk stiker dan glitch dari 1 hingga 8.\
+    Jika tidak ada yang disebutkan maka secara default adalah 2\
     "
     }
 )
