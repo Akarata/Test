@@ -124,13 +124,13 @@ async def mega_downloader(megadl):
         diff = time.time() - start
         try:
             current_message = (
-                f"**➥file name : **`{file_name}`\n\n"
+                f"**➥Nama file : **`{file_name}`\n\n"
                 "**➥Status**\n"
                 f"{progress_str}\n"
-                f"`{humanbytes(downloaded)}` of `{humanbytes(total_length)}`"
+                f"`{humanbytes(downloaded)}` dari `{humanbytes(total_length)}`"
                 f" @ `{speed}`\n"
-                f"**➥ETA -> **`{time_formatter(estimated_total_time)}`\n"
-                f"**➥ Duration -> **`{time_formatter(round(diff))}`"
+                f"**➥Waktu -> **`{time_formatter(estimated_total_time)}`\n"
+                f"**➥ Durasi -> **`{time_formatter(round(diff))}`"
             )
             if round(diff % 15.00) == 0 and (
                 display_message != current_message or total_length == downloaded
@@ -160,14 +160,14 @@ async def mega_downloader(megadl):
             return None
         else:
             await catevent.edit(
-                f"**➥ file name : **`{file_name}`\n\n"
-                f"**➥ Successfully downloaded in : ** `{file_path}`.\n"
-                f"**➥ Download took :** {time_formatter(download_time)}."
+                f"**➥ Nama file : **`{file_name}`\n\n"
+                f"**➥ Berhasil diunduh di : ** `{file_path}`.\n"
+                f"**➥ Diunduh dalam :** {time_formatter(download_time)}."
             )
             return None
     else:
         await megadl.edit(
-            "`Failed to download, " "check heroku Logs for more details.`"
+            "`Gagal mengunduh, "" periksa Log heroku untuk lebih jelasnya.`"
         )
         for e in downloader.get_errors():
             LOGS.info(str(e))
@@ -187,9 +187,9 @@ async def decrypt_file(megadl, file_path, temp_file_path, hex_key, hex_raw_key):
 
 CMD_HELP.update(
     {
-        "mega": "__**PLUGIN NAME :** Mega__\
-        \n\n📌** CMD ➥** `.mega` <MEGA.nz link>\
-        \n**USAGE   ➥  **Reply to a MEGA.nz link or paste your MEGA.nz link\
-        \n\n__ It will download the file into your userbot server.__"
+        "mega": "__**NAMA PLUGIN :** Mega__\
+        \n\n✅** CMD ➥** `.mega` <MEGA.nz link>\
+        \n**Fungsi   ➥  **Balas tautan MEGA.nz atau tempel tautan MEGA.nz Anda\
+        \n\n__ Ini akan mengunduh file ke server userbot Anda.__"
     }
 )
