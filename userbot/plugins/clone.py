@@ -16,7 +16,7 @@ DEFAULTUSER = str(AUTONAME) if AUTONAME else str(ALIVE_NAME)
 DEFAULTUSERBIO = (
     str(DEFAULT_BIO)
     if DEFAULT_BIO
-    else "sıɥʇ ǝpoɔǝp uǝɥʇ llıʇu∩ ˙ ǝɔɐds ǝʇɐʌıɹd ǝɯos ǝɯ ǝʌı⅁˙"
+    else "."
 )
 if Config.PRIVATE_GROUP_BOT_API_ID is None:
     BOTLOG = False
@@ -64,12 +64,12 @@ async def _(event):
     await event.client(functions.photos.UploadProfilePhotoRequest(pfile))
     await event.delete()
     await event.client.send_message(
-        event.chat_id, "**LET US BE AS ONE**", reply_to=reply_message
+        event.chat_id, "**BIARKAN KAMI MENJADI SATU**", reply_to=reply_message
     )
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID,
-            f"#CLONED\nSuccesfully cloned [{first_name}](tg://user?id={user_id })",
+            f"#CLONED\nBerhasil kloning [{first_name}](tg://user?id={user_id })",
         )
 
 
@@ -92,7 +92,7 @@ async def _(event):
     await event.edit("succesfully reverted to your account back")
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, f"#REVERT\nSuccesfully reverted back to your profile"
+            BOTLOG_CHATID, f"#REVERT\nBerhasil dikembalikan ke profil Anda"
         )
 
 
