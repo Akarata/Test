@@ -224,19 +224,19 @@ async def nekobot(cat):
 
 CMD_HELP.update(
     {
-        "imgmemes": """__**PLUGIN NAME :** Imgmemes__
-      \n\n📌** CMD ➥** `.fakegs search query ; what you mean text`
-      \n**USAGE   ➥  **__Shows you image meme for your google search query__ 
-      \n\n📌** CMD ➥** `.trump` <reply/text>
-      \n**USAGE   ➥  **__Sends you the trump tweet sticker with given custom text__
-      \n\n📌** CMD ➥** `.modi` <reply/text>
-      \n**USAGE   ➥  **__Sends you the modi tweet sticker with given custom text__ 
-      \n\n📌** CMD ➥** `.cmm` <reply/text>
-      \n**USAGE   ➥  **__Sends you the  Change my mind banner with given custom text__ 
-      \n\n📌** CMD ➥** `.kanna` <reply/text>
-      \n**USAGE   ➥  **__Sends you the kanna chan sticker with given custom text__
-      \n\n📌** CMD ➥** `.tweet reply/<username> ; <text>`
-      \n**USAGE   ➥  **__Sends you the desired person tweet sticker with given custom text__ 
+        "imgmemes": """__**NAMA PLUGIN :** Imgmemes__
+      \n\n✅** CMD ➥** `.fakegs permintaan pencarian ; apa maksudmu teks`
+      \n**Fungsi   ➥  **__Menunjukkan meme gambar untuk kueri penelusuran Google Anda__ 
+      \n\n✅** CMD ➥** `.trump` <balas/teks>
+      \n**Fungsi   ➥  **__Mengirim Anda stiker tweet truf dengan teks khusus yang diberikan__
+      \n\n✅** CMD ➥** `.modi` <balas/teks>
+      \n**Fungsi   ➥  **__Mengirim Anda stiker tweet modi dengan teks khusus yang diberikan__ 
+      \n\n✅** CMD ➥** `.cmm` <balas/teks>
+      \n**Fungsi   ➥  **__Mengirimkan Anda spanduk Ubah pikiran saya dengan teks khusus yang diberikan__ 
+      \n\n✅** CMD ➥** `.kanna` <balas/teks>
+      \n**Fungsi   ➥  **__Mengirimkan stiker kanna chan kepada Anda dengan teks khusus yang diberikan__
+      \n\n✅** CMD ➥** `.tweet balas/<username> ; <teks>`
+      \n**Fungsi   ➥  **__Mengirimi Anda stiker tweet orang yang diinginkan dengan teks khusus yang diberikan__ 
   """
     }
 )
