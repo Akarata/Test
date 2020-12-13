@@ -44,6 +44,6 @@ CMD_HELP.update(
     {
         "mashup": "__**NAMA PLUGIN :** Mashup__\
       \n\n✅** CMD ➥** `.mash` <text> \
-      \n**Fungsi   ➥  **Mengirimi Anda pesan video terkait dari teks yang diberikan . "
+      \n**Fungsi   ➥  **Mengirimi Anda pesan video terkait dari teks yang diberikan. "
     }
 )
