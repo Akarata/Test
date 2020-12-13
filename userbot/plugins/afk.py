@@ -42,12 +42,12 @@ async def set_not_afk(event):
         s = time
         endtime = ""
         if d > 0:
-            endtime += f"{d}hari {h}jam {m}menit {s}detik"
+            endtime += f"{d} hari {h} jam {m} menit {s} detik"
         else:
             if h > 0:
-                endtime += f"{h}jam {m}menit {s}detik"
+                endtime += f"{h} jam {m} menit {s} detik"
             else:
-                endtime += f"{m}menit {s}detik" if m > 0 else f"{s}detik"
+                endtime += f"{m} menit {s} detik" if m > 0 else f"{s} detik"
     current_message = event.message.message
     if "afk" not in current_message and "on" in USERAFK_ON:
         shite = await event.client.send_message(
@@ -93,12 +93,12 @@ async def on_afk(event):
         s = time
         endtime = ""
         if d > 0:
-            endtime += f"{d}hari {h}jam {m}menit {s}detik"
+            endtime += f"{d} hari {h} jam {m} menit {s} detik"
         else:
             if h > 0:
-                endtime += f"{h}jam {m}menit {s}detik"
+                endtime += f"{h} jam {m} menit {s} detik"
             else:
-                endtime += f"{m}menit {s}detik" if m > 0 else f"{s}detik"
+                endtime += f"{m} menit {s} detik" if m > 0 else f"{s} detik"
     current_message_text = event.message.message.lower()
     if "afk" in current_message_text:
         # userbot's should not reply to other userbot's
@@ -179,7 +179,7 @@ async def _(event):
 CMD_HELP.update(
     {
         "afk": "__**Nama Plugin :** Afk__\
-\n\n✅** CMD ➥** `.afk` [Optional Reason]\
+\n\n✅** CMD ➥** `.afk` [Alasan opsional]\
 \n**Digunakan   ➥  **Memberitahu bahwa kamu sedang offline.\nMembalas pesan mereka yang men tag akun mu \
 \n\n**Catatan :** jika Kamu ingin afk dengan menggunakan hyper link [ ; ] Setelah alasan, lalu tempel tautan media.\
 \n**Contoh :** `.afk lagi comli;<Media_link>`\
