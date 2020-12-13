@@ -91,14 +91,14 @@ async def set_no_log_p_m(event):
 
 CMD_HELP.update(
     {
-        "log_chats": "__**PLUGIN NAME :** Log Chats__\
-      \n\n📌** CMD ➥** `.save` :\
-      \n**USAGE   ➥  **Saves taged message in private group .\
-      \n\n📌** CMD ➥** `.kickme`:\
-      \n**USAGE   ➥  **kicks you from the chat where you used this\
-      \n\n📌** CMD ➥** `.log`:\
-      \n**USAGE   ➥  **By default will log all private chat messages if you use .nolog and want to log again then you need to use this\
-      \n\n📌** CMD ➥** `.nolog`:\
-      \n**USAGE   ➥  **To stops logging from a private chat "
+        "log_chats": "__**NAMA PLUGIN :** Log Chats__\
+      \n\n✅** CMD ➥** `.save` :\
+      \n**Fungsi   ➥  **Menyimpan pesan yang diberi tag di grup pribadi .\
+      \n\n✅** CMD ➥** `.kickme`:\
+      \n**Fungsi   ➥  **mengeluarkan Anda dari obrolan tempat Anda menggunakan ini\
+      \n\n✅** CMD ➥** `.log`:\
+      \n**Fungsi   ➥  **Secara default akan mencatat semua pesan obrolan pribadi jika Anda menggunakan .nolog dan ingin masuk lagi maka Anda perlu menggunakan ini\
+      \n\n✅** CMD ➥** `.nolog`:\
+      \n**Fungsi   ➥  **Untuk berhenti masuk dari obrolan pribadi "
     }
 )
