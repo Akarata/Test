@@ -133,10 +133,10 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "imposter": "__**PLUGIN NAME :** Imposter__\
-\n\n📌** CMD ➥** `.imp` / `.impn` <text>\
-\n**USAGE   ➥  **Find imposter with stickers.\
-\n\n📌** CMD ➥** `.timp` / `.timpn` <text>\
-\n**USAGE   ➥  **Find imposter only text."
+        "imposter": "__**NAMA PLUGIN :** Imposter__\
+\n\n✅** CMD ➥** `.imp` / `.impn` <teks>\
+\n**Fungsi   ➥  **Temukan penipu dengan stiker.\
+\n\n✅** CMD ➥** `.timp` / `.timpn` <teks>\
+\n**Fungsi   ➥  **Temukan penipu dengan teks."
     }
 )
