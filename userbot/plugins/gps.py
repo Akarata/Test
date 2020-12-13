@@ -30,9 +30,9 @@ async def gps(event):
     input_str = event.pattern_match.group(1)
 
     if not input_str:
-        return await event.edit("what should i find give me location.")
+        return await event.edit("apa yang harus saya temukan, beri saya lokasi.")
 
-    await event.edit("finding")
+    await event.edit("mencari")
 
     geolocator = Nominatim(user_agent="catuserbot")
     geoloc = geolocator.geocode(input_str)
@@ -45,7 +45,7 @@ async def gps(event):
         )
         await event.delete()
     else:
-        await event.edit("i coudn't find it")
+        await event.edit("saya tidak dapat menemukannya")
 
 
 @bot.on(sudo_cmd(pattern="gps ?(.*)", allow_sudo=True))
@@ -58,9 +58,9 @@ async def gps(event):
     input_str = event.pattern_match.group(1)
 
     if not input_str:
-        return await event.reply("what should i find give me location.")
+        return await event.reply("apa yang harus saya temukan, beri saya lokasi.")
 
-    cat = await event.reply("finding")
+    cat = await event.reply("mencari")
 
     geolocator = Nominatim(user_agent="catuserbot")
     geoloc = geolocator.geocode(input_str)
@@ -73,13 +73,13 @@ async def gps(event):
         )
         await cat.delete()
     else:
-        await cat.edit("i coudn't find it")
+        await cat.edit("saya tidak dapat menemukannya")
 
 
 CMD_HELP.update(
     {
-        "gps": "__**PLUGIN NAME :** GPS__\
-      \n\n📌** CMD ➥** `.gps` <location name> :\
-      \n**USAGE   ➥  **Sends you the given location name."
+        "gps": "__**NAMA PLUGIN :** GPS__\
+      \n\n✅** CMD ➥** `.gps` <nama lokasi> :\
+      \n**Fungsi   ➥  **Mengirimi Anda nama lokasi yang diberikan."
     }
 )
