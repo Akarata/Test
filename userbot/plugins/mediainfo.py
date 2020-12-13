@@ -100,8 +100,8 @@ async def mediainfo(event):
 
 CMD_HELP.update(
     {
-        "mediainfo": "__**PLUGIN NAME :** Mediainfo\
-      \n\n📌** CMD ➥** `.minfo` <reply to media> \
-      \n**USAGE   ➥  **Shows you the media information."
+        "mediainfo": "__**NAMA PLUGIN :** Mediainfo\
+      \n\n✅** CMD ➥** `.minfo` <membalas media> \
+      \n**Fungsi   ➥  **Menunjukkan informasi media."
     }
 )
