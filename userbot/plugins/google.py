@@ -43,12 +43,12 @@ async def gsearch(q_event):
         except IndexError:
             break
     await catevent.edit(
-        "**Search Query:**\n`" + match + "`\n\n**Results:**\n" + msg, link_preview=False
+        "**Kueri Pencarian:**\n`" + match + "`\n\n**Hasil:**\n" + msg, link_preview=False
     )
     if BOTLOG:
         await q_event.client.send_message(
             BOTLOG_CHATID,
-            "Google Search query `" + match + "` was executed successfully",
+            "Kueri Google Penelusuran `" + match + "` berhasil dieksekusi",
         )
 
 
@@ -58,9 +58,9 @@ async def _(event):
     if event.fwd_from:
         return
     start = datetime.now()
-    OUTPUT_STR = "Reply to an image to do Google Reverse Search"
+    OUTPUT_STR = "Balas gambar untuk melakukan Pencarian Terbalik Google"
     if event.reply_to_msg_id:
-        catevent = await edit_or_reply(event, "Pre Processing Media")
+        catevent = await edit_or_reply(event, "Pra Pengolahan Media")
         previous_message = await event.get_reply_message()
         previous_message_text = previous_message.message
         BASE_URL = "http://www.google.com"
@@ -88,7 +88,7 @@ async def _(event):
             request_url = SEARCH_URL.format(BASE_URL, previous_message_text)
             google_rs_response = requests.get(request_url, allow_redirects=False)
             the_location = google_rs_response.headers.get("Location")
-        await catevent.edit("Found Google Result. Pouring some soup on it!")
+        await catevent.edit("Menemukan Hasil Google.  Menuangkan sedikit sup di atasnya!")
         headers = {
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0"
         }
@@ -105,9 +105,9 @@ async def _(event):
         end = datetime.now()
         ms = (end - start).seconds
         OUTPUT_STR = """{img_size}
-<b>Possible Related Search : </b> <a href="{prs_url}">{prs_text}</a> 
-<b>More Info : </b> Open this <a href="{the_location}">Link</a> 
-<i>fetched in {ms} seconds</i>""".format(
+<b>Kemungkinan Pencarian Terkait : </b> <a href="{prs_url}">{prs_text}</a> 
+<b>Info lebih lanjut : </b> Buka ini <a href="{the_location}">Link</a> 
+<i>diambil dalam {ms} detik</i>""".format(
             **locals()
         )
     await catevent.edit(OUTPUT_STR, parse_mode="HTML", link_preview=False)
@@ -124,14 +124,14 @@ async def _(img):
         photo = io.BytesIO()
         await bot.download_media(message, photo)
     else:
-        await edit_or_reply(img, "`Reply to photo or sticker nigger.`")
+        await edit_or_reply(img, "`Balas foto atau stiker.`")
         return
     if photo:
-        catevent = await edit_or_reply(img, "`Processing...`")
+        catevent = await edit_or_reply(img, "`Tunggu beberapa saat...`")
         try:
             image = Image.open(photo)
         except OSError:
-            await catevent.edit("`Unsupported , most likely.`")
+            await catevent.edit("`Tidak didukung, kemungkinan besar.`")
             return
         name = "okgoogle.png"
         image.save(name, "PNG")
@@ -143,20 +143,20 @@ async def _(img):
         fetchUrl = response.headers["Location"]
         if response != 400:
             await img.edit(
-                "`Image successfully uploaded to Google. Maybe.`"
-                "\n`Parsing source now. Maybe.`"
+                "`Gambar berhasil diunggah ke Google.  Mungkin.`"
+                "\n`Parsing sumber sekarang.  Mungkin.`"
             )
         else:
-            await catevent.edit("`Google told me to fuck off.`")
+            await catevent.edit("`Google menyuruhku pergi.`")
             return
         os.remove(name)
         match = await ParseSauce(fetchUrl + "&preferences?hl=en&fg=1#languages")
         guess = match["best_guess"]
         imgspage = match["similar_images"]
         if guess and imgspage:
-            await catevent.edit(f"[{guess}]({fetchUrl})\n\n`Looking for this Image...`")
+            await catevent.edit(f"[{guess}]({fetchUrl})\n\n`Mencari Gambar ini...`")
         else:
-            await catevent.edit("`Can't find this piece of shit.`")
+            await catevent.edit("`Tidak dapat menemukan omong kosong ini.`")
             return
 
         lim = img.pattern_match.group(1) or 3
@@ -174,7 +174,7 @@ async def _(img):
         except TypeError:
             pass
         await catevent.edit(
-            f"[{guess}]({fetchUrl})\n\n[Visually similar images]({imgspage})"
+            f"[{guess}]({fetchUrl})\n\n[Gambar yang mirip secara visual]({imgspage})"
         )
 
 
@@ -214,12 +214,12 @@ async def scam(results, lim):
 
 CMD_HELP.update(
     {
-        "google": "__**PLUGIN NAME :** Google__\
-        \n\n📌** CMD ➥** `.gs` <limit> <query> or `.gs <limit> (replied message)`\
-        \n**USAGE   ➥  **Will google  search and sends you top 10 results links.\
-        \n\n📌** CMD ➥** `.grs` reply to image\
-        \n**USAGE   ➥  **Will google reverse search the image and shows you the result.\
-        \n\n📌** CMD ➥** `.reverse`\
-        \n**USAGE   ➥  **Reply to a pic/sticker to revers-search it on Google Images !!"
+        "google": "__**NAMA PLUGIN :** Google__\
+        \n\n✅** CMD ➥** `.gs` <limit> <query> or `.gs <limit> (membalas pesan)`\
+        \n**Fungsi   ➥  **Akankah google mencari dan mengirimi Anda 10 tautan hasil teratas.\
+        \n\n✅** CMD ➥** `.grs` reply to image\
+        \n**Fungsi   ➥  **Akankah google membalikkan pencarian gambar dan menunjukkan hasilnya kepada Anda.\
+        \n\n✅** CMD ➥** `.reverse`\
+        \n**Fungsi   ➥  **Balas gambar / stiker untuk melakukan pencarian terbalik di Gambar Google !!"
     }
 )
