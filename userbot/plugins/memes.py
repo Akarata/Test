@@ -334,35 +334,35 @@ async def gbun(event):
 
 CMD_HELP.update(
     {
-        "memes": "__**PLUGIN NAME :** Memes__\
-\n\n📌** CMD ➥** `.cowsay`\
-\n**USAGE   ➥  **cow which says things.\
-\n\n📌** CMD ➥** `.milksay`\
-\n**USAGE   ➥  **Weird Milk that can speak\
-\n\n📌** CMD ➥** `.coinflip` <heads/tails>\
-\n**USAGE   ➥  **Flip a coin !!\
-\n\n📌** CMD ➥** `.slap`\
-\n**USAGE   ➥  **reply to slap them with random objects !!\
-\n\n📌** CMD ➥** `.yes`|`.no`|`.maybe`|`.decide`\
-\n**USAGE   ➥  **Make a quick decision.\
-\n\n📌** CMD ➥** `.owo` <text> \
-\n**USAGE   ➥  **UwU\
-\n\n📌** CMD ➥** `.clap`\
-\n**USAGE   ➥  **Praise people!\
-\n\n📌** CMD ➥** `.smk` <text/reply>\
-\n**USAGE   ➥  **A shit module for ツ , who cares.\
-\n\n📌** CMD ➥** `.shg`\
-\n**USAGE   ➥  **Shrug at it !!\
-\n\n📌** CMD ➥** `.react` <type>\
-\n**USAGE   ➥  **Make your userbot react. types are <happy ,think ,wave ,wtf ,love ,confused,dead, sad,dog>\
-\n\n📌** CMD ➥** `.bt`\
-\n**USAGE   ➥  **Believe me, you will find this useful.\
-\n\n📌** CMD ➥** `.shout text`\
-\n**USAGE   ➥  **shouts the text in a fun way\
-\n\n📌** CMD ➥** `.wish` <reply/text>\
-\n**USAGE   ➥  **Shows the chance of your success inspired from @CalsiBot.\
-\n\n📌** CMD ➥**  `.gbun <reason>`\
-\n**USAGE   ➥  **Fake gban action !!\
+        "memes": "__**NAMA PLUGIN :** Memes__\
+\n\n✅** CMD ➥** `.cowsay`\
+\n**Fungsi   ➥  **sapi yang mengatakan sesuatu.\
+\n\n✅** CMD ➥** `.milksay`\
+\n**Fungsi   ➥  **Susu Aneh yang bisa berbicara\
+\n\n✅** CMD ➥** `.coinflip` <heads/tails>\
+\n**Fungsi   ➥  **Lempar koin !!\
+\n\n✅** CMD ➥** `.slap`\
+\n**Fungsi   ➥  **balas menampar mereka dengan benda acak !!\
+\n\n✅** CMD ➥** `.yes`|`.no`|`.maybe`|`.decide`\
+\n**Fungsi   ➥  **Buat keputusan cepat.\
+\n\n✅** CMD ➥** `.owo` <text> \
+\n**Fungsi   ➥  **UwU\
+\n\n✅** CMD ➥** `.clap`\
+\n**Fungsi   ➥  **Puji orang!\
+\n\n✅** CMD ➥** `.smk` <text/reply>\
+\n**Fungsi   ➥  **Modul kotoran untuk ツ, siapa peduli.\
+\n\n✅** CMD ➥** `.shg`\
+\n**Fungsi   ➥  **Angkat bahu !!\
+\n\n✅** CMD ➥** `.react` <type>\
+\n**Fungsi   ➥  **Buat pengguna Anda bereaksi.  jenis adalah <happy ,think ,wave ,wtf ,love ,confused,dead, sad,dog>\
+\n\n✅** CMD ➥** `.bt`\
+\n**Fungsi   ➥  **Percayalah, ini berguna bagi Anda.\
+\n\n✅** CMD ➥** `.shout text`\
+\n**Fungsi   ➥  **meneriakkan teks dengan cara yang menyenangkan\
+\n\n✅** CMD ➥** `.wish` <reply/text>\
+\n**Fungsi   ➥  **Menunjukkan peluang kesuksesan Anda terinspirasi dari @CalsiBot.\
+\n\n✅** CMD ➥**  `.gbun <reason>`\
+\n**Fungsi   ➥  **Tindakan gban palsu !!\
 "
     }
 )
