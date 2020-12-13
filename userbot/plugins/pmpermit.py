@@ -293,21 +293,21 @@ if Config.PRIVATE_GROUP_ID is not None:
 
 CMD_HELP.update(
     {
-        "pmpermit": "**Plugin : **`pmpermit`\
-        \n\n  •  **Syntax : **`.approve or .a`\
-        \n  •  **Function : **__Approves the mentioned/replied person to PM.__\
-        \n\n  •  **Syntax : **`.disapprove or .da`\
-        \n  •  **Function : **__dispproves the mentioned/replied person to PM.__\
-        \n\n  •  **Syntax : **`.block`\
-        \n  •  **Function : **__Blocks the person.__\
-        \n\n  •  **Syntax : **`.unblock`\
-        \n  •  **Function : **__Unblocks the person.__\
-        \n\n  •  **Syntax : **`.listapproved`\
-        \n  •  **Function : **__To list the all approved users.__\
-        \n\n  •  **Syntax : **`.disapprove all or da all`\
-        \n  •  **Function : **__To disapprove all the approved users.__\
-        \n\n  •  Available variables for formatting `CUSTOM_PMPERMIT_TEXT` :\
-        \n`{mention}`, `{first}`, `{last} `, `{fullname}`, `{userid}`, `{username}`, `{my_first}`, `{my_fullname}`, `{my_last}`, `{my_mention}`, `{my_username}`,`{warns}` , `{totalwarns}`.\
+        "pmpermit": "__**PLUGIN NAME :** Pm Permit__\
+\n\n📌** CMD ➥** `.approve` or `.a`\
+\n**USAGE   ➥  **__Approves the mentioned/replied person to PM.__\
+\n\n📌** CMD ➥** `.disapprove` or `.da`\
+\n**USAGE   ➥  **__Dispproves the mentioned/replied person to PM.__\
+\n\n📌** CMD ➥** `.block`\
+\n**USAGE   ➥  **__Blocks the person.__\
+\n\n📌** CMD ➥** `.unblock`\
+\n**USAGE   ➥  **__Unblocks the person.__\
+\n\n📌** CMD ➥** `.listapproved`\
+\n**USAGE   ➥  **__To list the all approved users.__\
+\n\n📌** CMD ➥** `.disapprove all` or `da all`\
+\n**USAGE   ➥  **__To disapprove all the approved users.__\
+\n\n**Note :** Available variables for formatting `CUSTOM_PMPERMIT_TEXT` :\
+\n`{mention}`,`{first}`,`{last}`,`{fullname}`,`{userid}`,`{username}`,`{my_first}`,`{my_fullname}`,`{my_last}`,`{my_mention}`,`{my_username}`\
 "
     }
 )
