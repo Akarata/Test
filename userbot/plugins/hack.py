@@ -107,13 +107,13 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "hack": "__**PLUGIN NAME :** Hack__\
-    \n\n📌** CMD ➥** `.hack` reply to a person\
-    \n**USAGE   ➥  **Shows a animation of hacking progess bar\
-    \n\n📌** CMD ➥** `.thack` reply to a person\
-    \n**USAGE   ➥  **Shows aanimation of hacking replied person telegram account\
-    \n\n📌** CMD ➥** `.wahack` reply to a person\
-    \n**USAGE   ➥  **Hows aanimation of hacking replied person whatsapp account\
-    \n\n\n **Don't use this animation commands in group i am not responsible for your ban.**"
+        "hack": "__**NAMA PLUGIN :** Hack__\
+    \n\n✅** CMD ➥** `.hack` membalas ke seseorang\
+    \n**Fungsi   ➥  **Menampilkan animasi bilah kemajuan peretasan\
+    \n\n✅** CMD ➥** `.thack` membalas ke seseorang\
+    \n**Fungsi   ➥  **Menunjukkan animasi hacking akun telegram orang yang dijawab\
+    \n\n✅** CMD ➥** `.wahack` membalas ke seseorang\
+    \n**Fungsi   ➥  **Menunjukan animasi peretasan menjawab orang akun whatsapp\
+    \n\n\n **Jangan gunakan perintah animasi ini dalam grup, saya tidak bertanggung jawab atas larangan Anda.**"
     }
 )
