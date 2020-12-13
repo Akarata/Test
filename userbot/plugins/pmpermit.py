@@ -62,7 +62,7 @@ if Config.PRIVATE_GROUP_ID is not None:
             pmpermit_sql.approve(user.id, reason)
             await edit_delete(
                 event,
-                f"`Approved to pm `[{user.first_name}](tg://user?id={user.id})",
+                f"`Disetujui untuk pm `[{user.first_name}](tg://user?id={user.id})",
                 5,
             )
             if user.id in PMMESSAGE_CACHE:
@@ -95,7 +95,7 @@ if Config.PRIVATE_GROUP_ID is not None:
             pmpermit_sql.disapprove(user.id)
             await edit_or_reply(
                 event,
-                f"`disapproved to pm` [{user.first_name}](tg://user?id={user.id})",
+                f"`tidak disetujui untuk pm` [{user.first_name}](tg://user?id={user.id})",
             )
         else:
             await edit_or_reply(
@@ -115,7 +115,7 @@ if Config.PRIVATE_GROUP_ID is not None:
         if user.id in PM_START:
             PM_START.remove(user.id)
         await event.edit(
-            f"`You are blocked Now .You Can't Message Me from now..`[{user.first_name}](tg://user?id={user.id})"
+            f"`Kamu diblokir Sekarang. Kamu Tidak Dapat Mengirim Pesan Mulai Sekarang ..`[{user.first_name}](tg://user?id={user.id})"
         )
         await event.client(functions.contacts.BlockRequest(user.id))
 
@@ -129,13 +129,13 @@ if Config.PRIVATE_GROUP_ID is not None:
                 return await edit_delete(event, "`Couldn't Fectch user`", 5)
         await event.client(functions.contacts.UnblockRequest(user.id))
         await event.edit(
-            f"`You are Unblocked Now .You Can Message Me From now..`[{user.first_name}](tg://user?id={user.id})"
+            f"`Sekarang Kamu Tidak Terkunci. Kamu Dapat Mengirim Pesan Mulai Sekarang ..`[{user.first_name}](tg://user?id={user.id})"
         )
 
     @bot.on(admin_cmd(pattern="listapproved$"))
     async def approve_p_m(event):
         approved_users = pmpermit_sql.get_all_approved()
-        APPROVED_PMs = "Current Approved PMs\n"
+        APPROVED_PMs = "at Ini\n"
         if len(approved_users) > 0:
             for sender in approved_users:
                 if sender.reason:
@@ -150,14 +150,14 @@ if Config.PRIVATE_GROUP_ID is not None:
             event,
             APPROVED_PMs,
             file_name="approvedpms.txt",
-            caption="`Current Approved PMs`",
+            caption="`PM yang Disetujui Saat Ini`",
         )
 
     @bot.on(admin_cmd(pattern="(disapprove all|da all)$"))
     async def disapprove_p_m(event):
         if event.fwd_from:
             return
-        result = "`ok , everyone is disapproved now`"
+        result = "`Oke, semua orang tidak disetujui sekarang`"
         pmpermit_sql.disapprove_all()
         await edit_delete(event, result, parse_mode=parse_pre, time=10)
 
@@ -247,15 +247,15 @@ if Config.PRIVATE_GROUP_ID is not None:
                         warns=warns,
                     )
                     + "\n\n"
-                    + "**Send** `/start` ** so that my master can decide why you're here.**"
+                    + "**Kirim** `/start` ** agar Aku bisa memutuskan kenapa kamu ada di sini.**"
                 )
             else:
 
                 USER_BOT_NO_WARN = (
-                    f"`Hi `{mention}`, I haven't approved you yet to personal message me, Don't spam my inbox."
-                    f"Just say the reason and wait until you get approved.\
-                                    \n\nyou have {warns}/{totalwarns} warns`\
-                                    \n\n**Send** `/start` **so that my master can decide why you're here.**"
+                    f"`Hai `{mention}`,Aku belum menyetujui Kamu untuk mengirimi Aku pesan pribadi, Jangan mengirim spam ke kotak masuk Aku."
+                    f"Cukup ucapkan alasannya dan tunggu sampai Kamu disetujui.\
+                                    \n\nkamu punya {warns}/{totalwarns} peringatan`\
+                                    \n\n**Kirim** `/start` **agar tuanku bisa memutuskan kenapa kamu ada di sini.**"
                 )
         else:
             if Config.CUSTOM_PMPERMIT_TEXT:
@@ -276,9 +276,9 @@ if Config.PRIVATE_GROUP_ID is not None:
                 )
             else:
                 USER_BOT_NO_WARN = (
-                    f"`Hi `{mention}`, I haven't approved you yet to personal message me, Don't spam my inbox."
-                    f"Just say the reason and wait until you get approved.\
-                                    \n\nyou have {warns}/{totalwarns} warns`"
+                    f"`Hai `{mention}`,Aku belum menyetujui Kamu untuk mengirimi Aku pesan pribadi, Jangan mengirim spam ke kotak masuk Aku."
+                    f"Cukup ucapkan alasannya dan tunggu sampai Kamu disetujui.\
+                                    \n\nkamu punya {warns}/{totalwarns} peringatan`"
                 )
         if PMPERMIT_PIC:
             r = await event.reply(USER_BOT_NO_WARN, file=PMPERMIT_PIC)
@@ -293,21 +293,21 @@ if Config.PRIVATE_GROUP_ID is not None:
 
 CMD_HELP.update(
     {
-        "pmpermit": "__**PLUGIN NAME :** Pm Permit__\
-\n\n📌** CMD ➥** `.approve` or `.a`\
-\n**USAGE   ➥  **__Approves the mentioned/replied person to PM.__\
-\n\n📌** CMD ➥** `.disapprove` or `.da`\
-\n**USAGE   ➥  **__Dispproves the mentioned/replied person to PM.__\
-\n\n📌** CMD ➥** `.block`\
-\n**USAGE   ➥  **__Blocks the person.__\
-\n\n📌** CMD ➥** `.unblock`\
-\n**USAGE   ➥  **__Unblocks the person.__\
-\n\n📌** CMD ➥** `.listapproved`\
-\n**USAGE   ➥  **__To list the all approved users.__\
-\n\n📌** CMD ➥** `.disapprove all` or `da all`\
-\n**USAGE   ➥  **__To disapprove all the approved users.__\
-\n\n**Note :** Available variables for formatting `CUSTOM_PMPERMIT_TEXT` :\
-\n`{mention}`,`{first}`,`{last}`,`{fullname}`,`{userid}`,`{username}`,`{my_first}`,`{my_fullname}`,`{my_last}`,`{my_mention}`,`{my_username}`\
+        "pmpermit": "__**NAMA PLUGIN :** Pm Permit__\
+\n\n✅** CMD ➥** `.approve` or `.a`\
+\n**Fungsi   ➥  **__Menyetujui orang yang disebutkan/menjawab PM.__\
+\n\n✅** CMD ➥** `.disapprove` or `.da`\
+\n**Fungsi   ➥  **__Menolak orang yang disebutkan / menjawab PM.__\
+\n\n✅** CMD ➥** `.block`\
+\n**Fungsi   ➥  **__Block orang itu.__\
+\n\n✅** CMD ➥** `.unblock`\
+\n**Fungsi   ➥  **__Membebaskan orang itu.__\
+\n\n✅** CMD ➥** `.listapproved`\
+\n**Fungsi   ➥  **__Untuk mencantumkan semua pengguna yang disetujui.__\
+\n\n✅** CMD ➥** `.disapprove all` or `da all`\
+\n**Fungsi   ➥  **__Untuk menolak semua pengguna yang disetujui.__\
+\n\n**Note :** Variabel yang tersedia untuk pemformatan `CUSTOM_PMPERMIT_TEXT` :\
+\n`{mention}`,`{first}`,`{last}`,`{fullname}`,`{userid}`,`{username}`,`{my_first}`,`{my_fullname}`,`{my_last}`,`{my_mention}`,`{my_username}`,`{warns}`,`(totalwarns)` . \
 "
     }
 )
