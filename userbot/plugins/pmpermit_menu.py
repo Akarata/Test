@@ -28,23 +28,23 @@ async def _(event):
             return
         set_key(PMMESSAGE_CACHE, event.chat_id, event.id)
         PM = (
-            "Hello. You are accessing the availabe menu of my master, "
+            "Halo.  Kamu mengakses menu yang tersedia dari aku, "
             f"{mention}.\n"
-            "__Let's make this smooth and let me know why you are here.__\n"
-            "**Choose one of the following reasons why you are here:**\n\n"
-            "`a`. To chat with my master\n"
-            "`b`. To spam my master's inbox.\n"
-            "`c`. To enquire something\n"
-            "`d`. To request something\n"
+            "__Mari kita perjelas dan beri tahu aku mengapa kamu ada di sini.__\n"
+            "**Pilih salah satu alasan berikut mengapa Kamu ada di sini:**\n\n"
+            "`a`. Untuk mengobrol dengan aku\n"
+            "`b`. Untuk mengirim spam ke kotak masuk aku.\n"
+            "`c`. Untuk menanyakan sesuatu\n"
+            "`d`. Untuk meminta sesuatu\n"
         )
         ONE = (
-            "__Okay. Your request has been registered. Do not spam my master's inbox.You can expect a reply within 24 light years. He/She is a busy man, unlike you probably.__\n\n"
-            "**⚠️ You will be blocked and reported if you spam nibba. ⚠️**\n\n"
+            "__Baik.  Permintaan kamu telah terdaftar.  Jangan mengirim spam ke kotak masuk aku. Kamu dapat mengharapkan balasan dalam waktu 24 tahun cahaya.  Aku orang yang sibuk, tidak seperti kamu.__\n\n"
+            "**⚠️Kamu akan diblokir dan dilaporkan jika kamu melakukan spam. ⚠️**\n\n"
         )
-        TWO = " `███████▄▄███████████▄  \n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓███░░░░░░░░░░░░█\n██████▀▀▀█░░░░██████▀  \n░░░░░░░░░█░░░░█  \n░░░░░░░░░░█░░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░░▀▀ `\n\n**So uncool, this is not your home. Go bother someone else. You have been blocked and reported until further notice.**"
-        THREE = "__Okay. My master has not seen your message yet.He/She usually responds to people,though idk about retarted ones.__\n __He'll respond when he/she comes back, if he/she wants to.There's already a lot of pending messages😶__\n **Please do not spam unless you wish to be blocked and reported.**"
-        FOUR = "`Okay. please have the basic manners as to not bother my master too much. If he/she wishes to help you, he/she will respond to you soon.`\n**Do not ask repeatdly else you will be blocked and reported.**"
-        LWARN = "**This is your last warning. DO NOT send another message else you will be blocked and reported. Keep patience. My master will respond you ASAP.**\n"
+        TWO = " `███████▄▄███████████▄  \n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓███░░░░░░░░░░░░█\n██████▀▀▀█░░░░██████▀  \n░░░░░░░░░█░░░░█  \n░░░░░░░░░░█░░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░░▀▀ `\n\n**: sangat tidak keren, ini bukan rumahmu. Ganggu orang lain.  Kamu telah diblokir dan dilaporkan hingga pemberitahuan lebih lanjut.**"
+        THREE = "__Oke. Aku belum melihat pesan kamu. Aku biasanya menanggapi orang, meskipun tidak tahu tentang yang menunda.__\n __Aku akan merespon ketika aku kembali, jika aku mau. Sudah banyak pesan yang tertunda😶__\n **Harap jangan mengirim spam kecuali kamu ingin diblokir dan dilaporkan.**"
+        FOUR = "`Oke. Mohon bersikaplah sopan agar tidak terlalu mengganggu aku.  Jika aku ingin membantu kamu, aku akan segera merespons kamu.`\n**Jangan meminta berulang kali karena kamu akan diblokir dan dilaporkan.**"
+        LWARN = "**Ini peringatan terakhirmu.  JANGAN kirim pesan lain karena kamu akan diblokir dan dilaporkan.  Tetap sabar.  Aku akan membalas kamu secepat mungkin.**\n"
         try:
             async with event.client.conversation(chat) as conv:
                 if pmpermit_sql.is_approved(chat_id):
