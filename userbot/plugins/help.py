@@ -215,7 +215,7 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "help": "__**PLUGIN NAME :** Help__\
+        "help": "__**NAMA PLUGIN :** Help__\
     \n\n✅** CMD ➥** `.help` <plugin name>\
     \n**Fungsi   ➥  **Dapatkan perintah dari plugin tertentu.\
     \n\n✅** CMD ➥** `.info` <plugin name>\
