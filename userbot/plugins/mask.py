@@ -251,9 +251,9 @@ async def catbot(catmemes):
 
 CMD_HELP.update(
     {
-        "mask": "__**PLUGIN NAME :** Mask__\
-\n\n**📌 CMD ➥** `.mask` | `.awooify` | `.lolice` | `.bun` | `.iphx` \
-\n\n**USAGE   ➥  **Makes an image a different style try out your own.\
+        "mask": "__**NAMA PLUGIN :** Mask__\
+\n\n**✅ CMD ➥** `.mask` | `.awooify` | `.lolice` | `.bun` | `.iphx` \
+\n\n**Fungsi   ➥  **Cobalah gaya yang berbeda pada gambar Anda sendiri.\
 "
     }
 )
