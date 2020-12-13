@@ -126,11 +126,11 @@ async def git_commit(file_name, mone):
 
 CMD_HELP.update(
     {
-        "github": "__**PLUGIN NAME :** Github__\
-    \n\n📌** CMD ➥** `.github` USERNAME\
-    \n**USAGE   ➥  **Shows you the github information about the username you given\
-    \n\n📌** CMD ➥** `.commit` reply to python file to upload to github\
-    \n**USAGE   ➥  **It uploads the given file to your github repo(to userbot/plugins folder)\
-    \n\nTo work commit plugin set `GITHUB_ACCESS_TOKEN` and `GIT_REPO_NAME` Variables in Heroku vars First"
+        "github": "__**NAMA PLUGIN :** Github__\
+    \n\n✅** CMD ➥** `.github` USERNAME\
+    \n**Fungsi   ➥  **Menunjukkan informasi github tentang nama pengguna yang Anda berikan\
+    \n\n✅** CMD ➥** `.commit` balas file python untuk diunggah ke github\
+    \n**Fungsi   ➥  **Itu mengunggah file yang diberikan ke repo github Anda(ke userbot/plugins folder)\
+    \n\nUntuk bekerja set plugin komit `GITHUB_ACCESS_TOKEN` and `GIT_REPO_NAME` di vars heroku"
     }
 )
