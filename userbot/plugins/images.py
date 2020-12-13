@@ -25,9 +25,9 @@ async def img_sampler(event):
         query = str(event.pattern_match.group(2))
     if not query:
         return await edit_or_reply(
-            event, "Reply to a message or pass a query to search!"
+            event, "Balas pesan atau teruskan kueri untuk menelusuri!"
         )
-    cat = await edit_or_reply(event, "`Processing...`")
+    cat = await edit_or_reply(event, "`Harap tunggu beberapa saat...`")
     if event.pattern_match.group(1) != "":
         lim = int(event.pattern_match.group(1))
         if lim > 10:
@@ -59,8 +59,8 @@ async def img_sampler(event):
 
 CMD_HELP.update(
     {
-        "images": "__**PLUGIN NAME :** Images__\
-\n\n📌** CMD ➥** `.img` <count 1-10><Name> or `.img (replied message)`\
-\n**USAGE   ➥  **Search in google and sends your desire number of images\n Default number is 3 images."
+        "images": "__**NAMA PLUGIN :** Images__\
+\n\n✅** CMD ➥** `.img` <pilih 1-10><Nama> atau `.img (membalas pesan)`\
+\n**Fungsi   ➥  **Cari di google dan kirimkan jumlah gambar yang Anda inginkan\n Nomor default adalah 3 gambar."
     }
 )
