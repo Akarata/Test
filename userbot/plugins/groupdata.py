@@ -701,22 +701,22 @@ async def fetch_info(chat, event):
 
 CMD_HELP.update(
     {
-        "groupdata": "__**PLUGIN NAME :** Groupdata__\
-    \n\n📌** CMD ➥** `.kickme`\
-    \n**USAGE   ➥  **__Throws you away from that chat_\
-    \n\n📌** CMD ➥** `.admins` <or> `.admins <username of group >`\
-    \n**USAGE   ➥  **__Retrieves a list of admins in the chat.__\
-    \n\n📌** CMD ➥** `.bots` <or> `.bots <username of group >`\
-    \n**USAGE   ➥  **__Retrieves a list of bots in the chat.__\
-    \n\n📌** CMD ➥** `.users` <or> `.users <name of member>`\
-    \n**USAGE   ➥  **__Retrieves all (or queried) users in the chat.__\
-    \n\n📌** CMD ➥** `.unbanall`\
-    \n**USAGE   ➥  **__Unbans everyone who are blocked in that group __\
-    \n\n📌** CMD ➥** `.ikuck`\
-    \n**USAGE   ➥  **__stats of the group like no of users no of deleted users.__\
-    \n\n📌** CMD ➥** `.chatinfo` <or> `.chatinfo <username of group>`\
-    \n**USAGE   ➥  **__Shows you the total information of the required chat.__\
-    \n\n📌** CMD ➥** `.zombies`\
-    \n**USAGE   ➥  **__Searches for deleted accounts in a group. Use `.zombies clean` to remove deleted accounts from the group.__"
+        "groupdata": "__**NAMA PLUGIN :** Groupdata__\
+    \n\n✅** CMD ➥** `.kickme`\
+    \n**Fungsi   ➥  **__Membuang Anda dari obrolan itu_\
+    \n\n✅** CMD ➥** `.admins` <atau> `.admins <username grup >`\
+    \n**Fungsi   ➥  **__Mengambil daftar admin di obrolan.__\
+    \n\n✅** CMD ➥** `.bots` <atau> `.bots <username  grup >`\
+    \n**Fungsi   ➥  **__Mengambil daftar bot di obrolan.__\
+    \n\n✅** CMD ➥** `.users` <atau> `.users <nama member>`\
+    \n**Fungsi   ➥  **__Mengambil kembali semua (atau menanyakan) pengguna di obrolan.__\
+    \n\n✅** CMD ➥** `.unbanall`\
+    \n**Fungsi   ➥  **__Batalkan pemblokiran semua orang yang diblokir di grup itu __\
+    \n\n✅** CMD ➥** `.ikuck`\
+    \n**Fungsi   ➥  **__statistik grup seperti tidak ada pengguna, tidak ada pengguna yang dihapus.__\
+    \n\n✅** CMD ➥** `.chatinfo` <atau> `.chatinfo <username grup>`\
+    \n**Fungsi   ➥  **__Menunjukkan kepada Anda informasi total dari obrolan yang diperlukan.__\
+    \n\n✅** CMD ➥** `.zombies`\
+    \n**Fungsi   ➥  **__Mencari akun yang dihapus dalam grup.  Gunakan `.zombies clean` untuk menghapus akun yang terhapus dari grup.__"
     }
 )
