@@ -11,12 +11,12 @@ from . import CMD_HELP
 GENIUS = os.environ.get("GENIUS_API_TOKEN", None)
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="lirik ?(.*)"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern="lirik ?(.*)"))
+@bot.on(admin_cmd(outgoing=True, pattern="lyrics ?(.*)"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern="lyrics ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
-    catevent = await edit_or_reply(event, "Sedang mencari lirik....`")
+    catevent = await edit_or_reply(event, "wi8..! I am searching your lyrics....`")
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
@@ -26,7 +26,7 @@ async def _(event):
     elif reply.text:
         query = reply.message
     else:
-        await catevent.edit("`Apa yang Seharusnya saya temukan `")
+        await catevent.edit("`What I am Supposed to find `")
         return
     song = ""
     song = Song.find_song(query)
@@ -34,9 +34,9 @@ async def _(event):
         if song.lyrics:
             reply = song.format()
         else:
-            reply = "Tidak dapat menemukan lirik apa pun untuk lagu itu!  coba dengan nama artis beserta lagunya jika masih tidak berhasil coba `.glyrics`"
+            reply = "Couldn't find any lyrics for that song! try with artist name along with song if still doesnt work try `.glyrics`"
     else:
-        reply = "lirik tidak ditemukan!  coba dengan nama artis beserta lagunya jika masih tidak berhasil coba `.glyrics`"
+        reply = "lyrics not found! try with artist name along with song if still doesnt work try `.glyrics`"
     if len(reply) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(reply)) as out_file:
             out_file.name = "lyrics.text"
@@ -53,27 +53,27 @@ async def _(event):
         await catevent.edit(reply)
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="glirik ?(.*)"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern="glirik ?(.*)"))
+@bot.on(admin_cmd(outgoing=True, pattern="glyrics ?(.*)"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern="glyrics ?(.*)"))
 async def lyrics(lyric):
     if lyric.pattern_match.group(1):
         query = lyric.pattern_match.group(1)
     else:
         await edit_or_reply(
             lyric,
-            "Error: mohon gunakan '-' sebagai pembatas untuk <artis> dan <lagu> \neg: `.glyrics Blackpink - Lovesick Girls`",
+            "Error: please use '-' as divider for <artist> and <song> \neg: `.glyrics Nicki Minaj - Super Bass`",
         )
         return
     if r"-" not in query:
         await edit_or_reply(
             lyric,
-            "Error: mohon gunakan '-' sebagai pembatas untuk <artis> dan <lagu> \neg: `.glyrics Blackpink - Lovesick Girls`",
+            "Error: please use '-' as divider for <artist> and <song> \neg: `.glyrics Nicki Minaj - Super Bass`",
         )
         return
     if GENIUS is None:
         await edit_or_reply(
             lyric,
-            "`Berikan token akses genius ke config.py atau Heroku Var terlebih dahulu`",
+            "`Provide genius access token to config.py or Heroku Var first kthxbye!`",
         )
     else:
         genius = lyricsgenius.Genius(GENIUS)
@@ -85,22 +85,22 @@ async def lyrics(lyric):
             await edit_or_reply(lyric, f"Error:\n`{e}`")
             return
     if len(args) < 1:
-        await edit_or_reply(lyric, "`Sebutkan nama artis dan lagu`")
+        await edit_or_reply(lyric, "`Please provide artist and song names`")
         return
     catevent = await edit_or_reply(
-        lyric, f"`Mencari lirik {artist} - {song}...`"
+        lyric, f"`Searching lyrics for {artist} - {song}...`"
     )
     try:
         songs = genius.search_song(song, artist)
     except TypeError:
         songs = None
     if songs is None:
-        await catevent.edit(f"lagu **{artist} - {song}** tidak ditemukan!")
+        await catevent.edit(f"Song **{artist} - {song}** not found!")
         return
     if len(songs.lyrics) > 4096:
-        await catevent.edit("`Lirik terlalu besar, lihat file untuk melihatnya.`")
+        await catevent.edit("`Lyrics is too big, view the file to see it.`")
         with open("lyrics.txt", "w+") as f:
-            f.write(suran: \n{artist} - {song}\n\n{songs.lyrics}")
+            f.write(f"Search query: \n{artist} - {song}\n\n{songs.lyrics}")
         await lyric.client.send_file(
             lyric.chat_id,
             "lyrics.txt",
@@ -109,7 +109,7 @@ async def lyrics(lyric):
         os.remove("lyrics.txt")
     else:
         await catevent.edit(
-            f"**Kueri penelusuran**: \n`{artist} - {song}`\n\n```{songs.lyrics}```"
+            f"**Search query**: \n`{artist} - {song}`\n\n```{songs.lyrics}```"
         )
     return
 
