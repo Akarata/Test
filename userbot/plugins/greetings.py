@@ -261,10 +261,10 @@ async def sprinkle(event):
 
 CMD_HELP.update(
     {
-        "greetings": "__**PLUGIN NAME :** Greetings__\
-    \n\n📌** CMD ➥** `.hy` | `.baby` | `.hbd` | `.thanks` |`.gmg` | `.gnt` | `.gmg2` | `.gnt2` | `.gnt3` | `.lmoon` | `.city` | `.cheer` | `.getwell` | `.luck` | `.sprinkle`\
-    \n\n**USAGE   ➥  **These are art bruh..Try & check yourself\
-     \n\n📌** CMD ➥** `.hi` or `hi <emoji>`\
-    \n\n**USAGE   ➥  **Send a hi with your custom emoji."
+        "greetings": "__**NAMA PLUGIN :** Greetings__\
+    \n\n✅** CMD ➥** `.hy` | `.baby` | `.hbd` | `.thanks` |`.gmg` | `.gnt` | `.gmg2` | `.gnt2` | `.gnt3` | `.lmoon` | `.city` | `.cheer` | `.getwell` | `.luck` | `.sprinkle`\
+    \n\n**Fungsi   ➥  **Ini adalah seni bruh .. Coba & periksa sendiri\
+     \n\n✅** CMD ➥** `.hi` or `hi <emoji>`\
+    \n\n**Fungsi   ➥  **Kirim salam dengan emoji khusus Anda."
     }
 )
