@@ -202,17 +202,17 @@ def prettyjson(obj, indent=2, maxlinelength=80):
 
 CMD_HELP.update(
     {
-        "heroku": "__**PLUGIN NAME :** Heroku__\
+        "heroku": "__**NAMA PLUGIN :** Heroku__\
   \n\n✅** CMD ➥** `.usage`\
-  \n**Digunakan   ➥  **Mengecek penggunaan dyno bulan ini.\
+  \n**Fungsi   ➥  **Mengecek penggunaan dyno bulan ini.\
   \n\n✅** CMD ➥** `.set var` <NEW VAR> <VALUE>\
-  \n**Digunakan   ➥  **Tambahkan variabel baru atau perbarui variabel nilai yang ada\
-  \n\n✅** CMD ➥** `.get var` or `.get var <VAR>`\
-  \n**Digunakan   ➥  **Dapatkan variabel dan nilai yang ada\
+  \n**Fungsi   ➥  **Tambahkan variabel baru atau perbarui variabel nilai yang ada\
+  \n\n✅** CMD ➥** `.get var` atau `.get var <VAR>`\
+  \n**Fungsi   ➥  **Dapatkan variabel dan nilai yang ada\
   \n\n✅** CMD ➥** `.del var` <VAR>\
-  \n**Digunakan   ➥  **Menghapus Var\
+  \n**Fungsi   ➥  **Menghapus Var\
   \n\n✅** CMD ➥** `.herokulogs`\
-  \n**Digunakan   ➥  **Mengirimi Anda 100 baris log terbaru di heroku\
+  \n**Fungsi   ➥  **Mengirimi Anda 100 baris log terbaru di heroku\
   \n\n\n!!! PERINGATAN !!!, Setelah menambah atau menghapus variabel, bot akan dimulai ulang** \
    \n **Jangan gunakan .get var dalam grup publik. Ini mengembalikan semua informasi pribadi Anda, harap berhati-hati ...** "
     }
