@@ -13,11 +13,7 @@ from ..utils import admin_cmd
 from . import ALIVE_NAME, AUTONAME, CMD_HELP, DEFAULT_BIO
 
 DEFAULTUSER = str(AUTONAME) if AUTONAME else str(ALIVE_NAME)
-DEFAULTUSERBIO = (
-    str(DEFAULT_BIO)
-    if DEFAULT_BIO
-    else "."
-)
+DEFAULTUSERBIO = str(DEFAULT_BIO) if DEFAULT_BIO else "."
 if Config.PRIVATE_GROUP_BOT_API_ID is None:
     BOTLOG = False
 else:
