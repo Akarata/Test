@@ -43,7 +43,8 @@ async def gsearch(q_event):
         except IndexError:
             break
     await catevent.edit(
-        "**Kueri Pencarian:**\n`" + match + "`\n\n**Hasil:**\n" + msg, link_preview=False
+        "**Kueri Pencarian:**\n`" + match + "`\n\n**Hasil:**\n" + msg,
+        link_preview=False,
     )
     if BOTLOG:
         await q_event.client.send_message(
@@ -88,7 +89,9 @@ async def _(event):
             request_url = SEARCH_URL.format(BASE_URL, previous_message_text)
             google_rs_response = requests.get(request_url, allow_redirects=False)
             the_location = google_rs_response.headers.get("Location")
-        await catevent.edit("Menemukan Hasil Google.  Menuangkan sedikit sup di atasnya!")
+        await catevent.edit(
+            "Menemukan Hasil Google.  Menuangkan sedikit sup di atasnya!"
+        )
         headers = {
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0"
         }
