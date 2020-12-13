@@ -167,7 +167,7 @@ async def mega_downloader(megadl):
             return None
     else:
         await megadl.edit(
-            "`Gagal mengunduh, "" periksa Log heroku untuk lebih jelasnya.`"
+            "`Gagal mengunduh, " " periksa Log heroku untuk lebih jelasnya.`"
         )
         for e in downloader.get_errors():
             LOGS.info(str(e))
