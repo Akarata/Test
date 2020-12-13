@@ -8,8 +8,8 @@ from ..utils import admin_cmd, edit_or_reply, errors_handler, sudo_cmd
 from . import BOTLOG, BOTLOG_CHATID, CMD_HELP
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="p$"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern="p$"))
+@bot.on(admin_cmd(outgoing=True, pattern="purge$"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern="purge$"))
 @errors_handler
 async def fastpurger(purg):
     # For .purge command, purge all messages starting from the reply.
@@ -78,8 +78,8 @@ async def purgeme(delme):
     await smsg.delete()
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="d$"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern="d$"))
+@bot.on(admin_cmd(outgoing=True, pattern="del$"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern="del$"))
 @errors_handler
 async def delete_it(delme):
     """ For .del command, delete the replied message. """
