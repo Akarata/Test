@@ -264,29 +264,29 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "letmesearch": "__**PLUGIN NAME :** Letmesearch__\
-\n\n**Functions : **__Searches the given query and shows you the link of that query .\
-\n\n📌** CMD ➥** `.lfy` <query>\
-\n**USAGE   ➥  **let me LMGTFY(lfy)\
-\n\n📌** CMD ➥** `.lmg` <query>\
-\n**USAGE   ➥  **let me google(lmg)\
-\n\n📌** CMD ➥** `.lmy` <query>\
-\n**USAGE   ➥  **let me youtube(lmy)\
-\n\n📌** CMD ➥** `.ddg` <query>\
-\n**USAGE   ➥  **Duck buck go (ddg)\
-\n\n📌** CMD ➥** `.lmalt` <query>\
-\n**USAGE   ➥  **let me altnews(lmalt)\
-\n\n📌** CMD ➥** `.lmvar` <heroku app name>\
-\n**USAGE   ➥  **let me var(lmvar) var from heroku\
-\n\n📌** CMD ➥** `.lmlog` <heroku app name>\
-\n**USAGE   ➥  **let me log(lmlog) logs link for heroku\
-\n\n📌** CMD ➥** `.dyno` <heroku app name>\
-\n**USAGE   ➥  **heroku dyno link (dyno)\
-\n\n📌** CMD ➥** `.lmkp` <query>\
-\n**USAGE   ➥  **indian kanoon (lmkp)\
-\n\n📌** CMD ➥** `.gem` <query>\
-\n**USAGE   ➥  **Government e marketplace(gem)\
-\n\n📌** CMD ➥** `.archive` <query>\
-\n**USAGE   ➥  **web archive (archive)"
+        "biar_akucari": "__**NAMA PLUGIN :** Biar_akucari__\
+\n\n**Fungsi : **__Mencari kueri yang diberikan dan memperlihatkan kepada Anda tautan dari kueri itu .\
+\n\n✅** CMD ➥** `.lfy` <query>\
+\n**Fungsi   ➥  **biarkan aku cari LMGTFY(lfy)\
+\n\n✅** CMD ➥** `.lmg` <query>\
+\n**Fungsi   ➥  **biarkan aku cari google(lmg)\
+\n\n✅** CMD ➥** `.lmy` <query>\
+\n**Fungsi   ➥  **biarkan aku cari youtube(lmy)\
+\n\n✅** CMD ➥** `.ddg` <query>\
+\n**Fungsi   ➥  **Duck buck go (ddg)\
+\n\n✅** CMD ➥** `.lmalt` <query>\
+\n**Fungsi   ➥  **biarkan aku cari altnews(lmalt)\
+\n\n✅** CMD ➥** `.lmvar` <heroku app name>\
+\n**Fungsi   ➥  **biarkan aku cari var(lmvar) var dari heroku\
+\n\n✅** CMD ➥** `.lmlog` <heroku app name>\
+\n**Fungsi   ➥  **biarkan aku cari log(lmlog) log link untuk heroku\
+\n\n✅** CMD ➥** `.dyno` <heroku app name>\
+\n**Fungsi   ➥  **link heroku dyno (dyno)\
+\n\n✅** CMD ➥** `.lmkp` <query>\
+\n**Fungsi   ➥  **indian kanoon (lmkp)\
+\n\n✅** CMD ➥** `.gem` <query>\
+\n**Fungsi   ➥  **Government e marketplace(gem)\
+\n\n✅** CMD ➥** `.archive` <query>\
+\n**Fungsi   ➥  **web archive (archive)"
     }
 )
