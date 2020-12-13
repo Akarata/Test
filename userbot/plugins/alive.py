@@ -14,8 +14,8 @@ JISAN = (
 )
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="alive$"))
-@bot.on(sudo_cmd(pattern="alive$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern=r"(alive|on)"))
+@bot.on(sudo_cmd(pattern=r"(alive|on)", allow_sudo=True))
 async def amireallyalive(alive):
     if alive.fwd_from:
         return
@@ -70,11 +70,11 @@ async def amireallyalive(alive):
     reply_to_id = alive.message
     if alive.reply_to_msg_id:
         reply_to_id = await alive.get_reply_message()
-    cat_caption = f"**Catuserbot is Up and Running**\n"
+    cat_caption = f"**AkaProject Aktif dan Berjalan**\n"
     cat_caption += f"**  -Master :** {mention}\n"
     cat_caption += f"**  -Python Version :** `{python_version()}\n`"
     cat_caption += f"**  -Telethon version :** `{version.__version__}\n`"
-    cat_caption += f"**  -Catuserbot Version :** `{catversion}`\n"
+    cat_caption += f"**  -Aka Version :** `{catversion}`\n"
     results = await bot.inline_query(tgbotusername, cat_caption)  # pylint:disable=E0602
     await results[0].click(alive.chat_id, reply_to=reply_to_id, hide_via=True)
     await alive.delete()
