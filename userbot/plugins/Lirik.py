@@ -11,12 +11,12 @@ from . import CMD_HELP
 GENIUS = os.environ.get("GENIUS_API_TOKEN", None)
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="lyrics ?(.*)"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern="lyrics ?(.*)"))
+@bot.on(admin_cmd(outgoing=True, pattern="lirik ?(.*)"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern="lirik ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
-    catevent = await edit_or_reply(event, "wi8..! I am searching your lyrics....`")
+    catevent = await edit_or_reply(event, "Sedang mencari lirik....`")
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
@@ -26,7 +26,7 @@ async def _(event):
     elif reply.text:
         query = reply.message
     else:
-        await catevent.edit("`What I am Supposed to find `")
+        await catevent.edit("`Apa yang Seharusnya saya temukan `")
         return
     song = ""
     song = Song.find_song(query)
@@ -34,9 +34,9 @@ async def _(event):
         if song.lyrics:
             reply = song.format()
         else:
-            reply = "Couldn't find any lyrics for that song! try with artist name along with song if still doesnt work try `.glyrics`"
+            reply = "Tidak dapat menemukan lirik apa pun untuk lagu itu!  coba dengan nama artis beserta lagunya jika masih tidak berhasil coba `.glyrics`"
     else:
-        reply = "lyrics not found! try with artist name along with song if still doesnt work try `.glyrics`"
+        reply = "lirik tidak ditemukan!  coba dengan nama artis beserta lagunya jika masih tidak berhasil coba `.glyrics`"
     if len(reply) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(reply)) as out_file:
             out_file.name = "lyrics.text"
@@ -53,27 +53,27 @@ async def _(event):
         await catevent.edit(reply)
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="glyrics ?(.*)"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern="glyrics ?(.*)"))
+@bot.on(admin_cmd(outgoing=True, pattern="glirik ?(.*)"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern="glirik ?(.*)"))
 async def lyrics(lyric):
     if lyric.pattern_match.group(1):
         query = lyric.pattern_match.group(1)
     else:
         await edit_or_reply(
             lyric,
-            "Error: please use '-' as divider for <artist> and <song> \neg: `.glyrics Nicki Minaj - Super Bass`",
+            "Error: mohon gunakan '-' sebagai pembatas untuk <artis> dan <lagu> \neg: `.glyrics Blackpink - Lovesick Girls`",
         )
         return
     if r"-" not in query:
         await edit_or_reply(
             lyric,
-            "Error: please use '-' as divider for <artist> and <song> \neg: `.glyrics Nicki Minaj - Super Bass`",
+            "Error: mohon gunakan '-' sebagai pembatas untuk <artis> dan <lagu> \neg: `.glyrics Blackpink - Lovesick Girls`",
         )
         return
     if GENIUS is None:
         await edit_or_reply(
             lyric,
-            "`Provide genius access token to config.py or Heroku Var first kthxbye!`",
+            "`Berikan token akses genius ke config.py atau Heroku Var terlebih dahulu`",
         )
     else:
         genius = lyricsgenius.Genius(GENIUS)
@@ -85,22 +85,22 @@ async def lyrics(lyric):
             await edit_or_reply(lyric, f"Error:\n`{e}`")
             return
     if len(args) < 1:
-        await edit_or_reply(lyric, "`Please provide artist and song names`")
+        await edit_or_reply(lyric, "`Sebutkan nama artis dan lagu`")
         return
     catevent = await edit_or_reply(
-        lyric, f"`Searching lyrics for {artist} - {song}...`"
+        lyric, f"`Mencari lirik {artist} - {song}...`"
     )
     try:
         songs = genius.search_song(song, artist)
     except TypeError:
         songs = None
     if songs is None:
-        await catevent.edit(f"Song **{artist} - {song}** not found!")
+        await catevent.edit(f"lagu **{artist} - {song}** tidak ditemukan!")
         return
     if len(songs.lyrics) > 4096:
-        await catevent.edit("`Lyrics is too big, view the file to see it.`")
+        await catevent.edit("`Lirik terlalu besar, lihat file untuk melihatnya.`")
         with open("lyrics.txt", "w+") as f:
-            f.write(f"Search query: \n{artist} - {song}\n\n{songs.lyrics}")
+            f.write(suran: \n{artist} - {song}\n\n{songs.lyrics}")
         await lyric.client.send_file(
             lyric.chat_id,
             "lyrics.txt",
@@ -109,21 +109,21 @@ async def lyrics(lyric):
         os.remove("lyrics.txt")
     else:
         await catevent.edit(
-            f"**Search query**: \n`{artist} - {song}`\n\n```{songs.lyrics}```"
+            f"**Kueri penelusuran**: \n`{artist} - {song}`\n\n```{songs.lyrics}```"
         )
     return
 
 
 CMD_HELP.update(
     {
-        "lyrics": "__**PLUGIN NAME :** Lyrics__\
-    \n\n📌** CMD ➥** `.lyrics` <aritst name - song nane> or `.lyrics` <song_name>\
-    \n**USAGE   ➥  **Searches a song lyrics and sends you if song name doesnt work try along with artisyt name\
-    \n\n📌** CMD ➥** `.glyrics <artist name> - <song name>`\
-    \n**USAGE   ➥  **Searches a song lyrics and sends you.\
-    \n__**Note**__: **-** is neccessary when searching the lyrics to divided artist and song\
-    \n\n**Genius lyrics plugin**\
-    \nget this value from [Here](https://genius.com/developers)\
-    \nAdd var `GENIUS_API_TOKEN` and token value in heroku app settings."
+        "lirik": "__**NAMA PLUGIN :** Lirik__\
+    \n\n✅** CMD ➥** `.lirik` <nama artis - nama lagu> atau `.lyrics` <nama_lagu>\
+    \n**Fungsi   ➥  **Mencari lirik lagu dan mengirimi Anda jika nama lagu tidak berfungsi, coba bersama dengan nama artis\
+    \n\n✅** CMD ➥** `.glirik <nama artis - nama lagu>`\
+    \n**Fungsi   ➥  **Mencari lirik lagu dan mengirim Anda.\
+    \n__**Note**__: **-** diperlukan saat mencari lirik untuk artis dan lagu yang dibagi\
+    \n\n**Plugin lirik Genius**\
+    \ndapatkan nilai ini dari [Sini](https://genius.com/developers)\
+    \nTambahkan var `GENIUS_API_TOKEN` dan nilai token di setelan aplikasi heroku."
     }
 )
