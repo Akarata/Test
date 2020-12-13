@@ -91,10 +91,10 @@ async def endecrypt(event):
 
 CMD_HELP.update(
     {
-        "hash": "__**PLUGIN NAME :** Hash__\
-\n\n📌** CMD ➥** `.hbase en` or `.hbase de`\
-\n**USAGE   ➥  **Find the base64 encoding of the given string\
-\n\n📌** CMD ➥** `.hash`\
-\n**USAGE   ➥  **Find the md5, sha1, sha256, sha512 of the string when written into a txt file."
+        "hash": "__**NAMA PLUGIN :** Hash__\
+\n\n✅** CMD ➥** `.hbase en` or `.hbase de`\
+\n**Fungsi   ➥  **Temukan pengkodean base64 dari string yang diberikan\
+\n\n✅** CMD ➥** `.hash`\
+\n**Fungsi   ➥  **Temukan md5, sha1, sha256, sha512 dari string tersebut saat ditulis ke dalam file txt."
     }
 )
