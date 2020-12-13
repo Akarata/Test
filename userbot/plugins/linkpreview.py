@@ -12,13 +12,13 @@ async def _(event):
         return
     reply_message = await event.get_reply_message()
     if not reply_message:
-        await edit_or_reply(event, "```Reply to a Link.```")
+        await edit_or_reply(event, "```Balas ke Tautan.```")
         return
     if not reply_message.text:
-        await edit_or_reply(event, "```Reply to a Link```")
+        await edit_or_reply(event, "```Balas ke Tautan```")
         return
     chat = "@chotamreaderbot"
-    catevent = await edit_or_reply(event, "```Processing```")
+    catevent = await edit_or_reply(event, "```Harap tunggu beberapa saat...```")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -41,8 +41,8 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "linkpreview": "__**PLUGIN NAME :** Linkpreview__\
-    \n\n📌** CMD ➥** `.ctg` reply to link\
-    \n\n**USAGE   ➥  **Converts the given link to link preview"
+        "linkpreview": "__**NAMA PLUGIN :** Linkpreview__\
+    \n\n✅** CMD ➥** `.ctg` balas link\
+    \n\n**Fungsi   ➥  **Mengubah tautan yang diberikan menjadi pratinjau tautan"
     }
 )
