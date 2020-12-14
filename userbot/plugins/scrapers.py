@@ -42,9 +42,7 @@ async def wiki(wiki_q):
         if os.path.exists("output.txt"):
             os.remove("output.txt")
         return
-    await edit_or_reply(
-        wiki_q, "**Cari:**\n`" + match + "`\n\n**Hasil:**\n" + result
-    )
+    await edit_or_reply(wiki_q, "**Cari:**\n`" + match + "`\n\n**Hasil:**\n" + result)
     if BOTLOG:
         await wiki_q.client.send_message(
             BOTLOG_CHATID, f"Kueri wiki `{match}` berhasil dieksekusi"
