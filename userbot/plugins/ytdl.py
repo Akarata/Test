@@ -270,15 +270,15 @@ async def kakashi(event):
 
 CMD_HELP.update(
     {
-        "ytdl": "__**PLUGIN NAME :** Ytdl__\
-    \n\n📌** CMD ➥** `.yta` <link>\
-    \n**USAGE   ➥  **Downloads the audio from the given link(Suports the all sites which support youtube-dl)\
-    \n\n📌** CMD ➥** `.ytv` <link>\
-    \n**USAGE   ➥  **Downloads the video from the given link(Suports the all sites which support youtube-dl)\
-    \n\n📌** CMD ➥** `.yts` <query>\
-    \n**USAGE   ➥  **Fetches youtube results you need api token for this\
-    \n\n📌** CMD ➥** `.insta` <link>\
-    \n**USAGE   ➥  **Downloads the video from the given instagram link\
+        "ytdl": "__**NAMA PLUGIN :** Ytdl__\
+    \n\n✅** CMD ➥** `.yta` <tautan>\
+    \n**Fungsi   ➥  **Unduh audio dari tautan yang diberikan (Mendukung semua situs yang mendukung youtube-dl)\
+    \n\n✅** CMD ➥** `.ytv` <tautan>\
+    \n**Fungsi   ➥  **Unduh video dari tautan yang diberikan (Mendukung semua situs yang mendukung youtube-dl)\
+    \n\n✅** CMD ➥** `.yts` <kueri>\
+    \n**Fungsi   ➥  **Ambil hasil youtube Anda memerlukan token api untuk ini\
+    \n\n✅** CMD ➥** `.insta` <tautan>\
+    \n**Fungsi   ➥  **Unduh video dari tautan instagram yang diberikan\
     "
     }
 )
