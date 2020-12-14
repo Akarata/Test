@@ -23,7 +23,7 @@ from . import CMD_HELP, catmemes
 async def source(e):
     await edit_or_reply(
         e,
-        "Click [here](https://github.com/Jisan09/catuserbot) to open this lit af repo.",
+        "[Klik disini](https://github.com/Akarata/Project_Akarata) untuk membuka repo.",
     )
 
 
@@ -1943,41 +1943,41 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "memestext": "__**PLUGIN NAME :** MemesText__\
-\n\n📌** CMD ➥** `.repo`\
-\n**USAGE   ➥  **Send the repo.\
-\n\n📌** CMD ➥** `.noob`\
-\n**USAGE   ➥  **Whadya want to know? Are you a NOOB?\
-\n\n📌** CMD ➥** `.pro`\
-\n**USAGE   ➥  **If you think you're pro, try this.\
-\n\n📌** CMD ➥** `.insult`\
-\n**USAGE   ➥  **Protects you from unwanted peeps.\
-\n\n📌** CMD ➥** `.love`\
-\n**USAGE   ➥  **Spread the love!\
-\n\n📌** CMD ➥** `.dhoka`\
-\n**USAGE   ➥  **Bewafa thi saali!\
-\n\n📌** CMD ➥** `.metoo`\
-\n**USAGE   ➥  **Hahaha mee tooo!\
-\n\n📌** CMD ➥** `.gnoon`\
-\n**USAGE   ➥  **Good noon everyone!\
-\n\n📌** CMD ➥** `.runs`\
-\n**USAGE   ➥  **Run, run, RUNNN! [`.disable runs`: disable | `.enable runs`: enable]\
-\n\n📌** CMD ➥** `.congo`\
-\n**USAGE   ➥  **Congrts bruh!\
-\n\n📌** CMD ➥** `.hey`\
-\n**USAGE   ➥  **Greet everyone!\
-\n\n📌** CMD ➥** `.qbye`\
-\n**USAGE   ➥  **Bye everyone!\
-\n\n📌** CMD ➥** `.gn`\
-\n**USAGE   ➥  **Good night everyone!\
-\n\n📌** CMD ➥** `.gm`\
-\n**USAGE   ➥  **Good morning everyone!\
-\n\n📌** CMD ➥** `.gotm`\
-\n**USAGE   ➥  **Send game of thrones memes!\
-\n\n📌** CMD ➥** | `.tip` | `.bello` | `.logic` |\
-\n**USAGE   ➥  **Give you a life-pro tip!\
-\n\n📌** CMD ➥** `.qt`\
-\n**USAGE   ➥  **Ask a question!\
+        "memestext": "__**NAMA PLUGIN :** MemesText__\
+\n\n✅** CMD ➥** `.repo`\
+\n**Fungsi   ➥  **untuk membuka repo.\
+\n\n✅** CMD ➥** `.noob`\
+\n**Fungsi   ➥  **apakah kau ingin tahu?  Apakah Anda seorang NOOB?\
+\n\n✅** CMD ➥** `.pro`\
+\n**Fungsi   ➥  **Jika Anda pikir Anda pro, coba ini.\
+\n\n✅** CMD ➥** `.insult`\
+\n**Fungsi   ➥  **Melindungi Anda dari orang-orang yang tidak diinginkan.\
+\n\n✅** CMD ➥** `.love`\
+\n**Fungsi   ➥  **Sebarkan cinta!\
+\n\n✅** CMD ➥** `.dhoka`\
+\n**Fungsi   ➥  **kgk tau ini apaan!\
+\n\n✅** CMD ➥** `.metoo`\
+\n**Fungsi   ➥  **Hahaha aku juga!\
+\n\n✅** CMD ➥** `.gnoon`\
+\n**Fungsi   ➥  **Selamat siang semuanya!\
+\n\n✅** CMD ➥** `.runs`\
+\n**Fungsi   ➥  **Lari, Lari, LARI! [`.disable runs`: disable | `.enable runs`: enable]\
+\n\n✅** CMD ➥** `.congo`\
+\n**Fungsi   ➥  **Selamat bruh!\
+\n\n✅** CMD ➥** `.hey`\
+\n**Fungsi   ➥  **Sapa semuanya!\
+\n\n✅** CMD ➥** `.qbye`\
+\n**Fungsi   ➥  **Selamat tinggal semuanya!\
+\n\n✅** CMD ➥** `.gn`\
+\n**Fungsi   ➥  **Selamat malam semuanya!\
+\n\n✅** CMD ➥** `.gm`\
+\n**Fungsi   ➥  **Selamat pagi semuanya!\
+\n\n✅** CMD ➥** `.gotm`\
+\n**Fungsi   ➥  **Kirim meme game of thrones!\
+\n\n✅** CMD ➥** | `.tip` | `.bello` | `.logic` |\
+\n**Fungsi   ➥  **Memberi Anda tip profesional!\
+\n\n✅** CMD ➥** `.qt`\
+\n**Fungsi   ➥  **Berikan pertanyaan!\
 "
     }
 )
