@@ -15,7 +15,7 @@ async def _(event):
         await event.client.send_message(BOTLOG_CHATID, "#RESTART \n" "Bot Restarted")
     await edit_or_reply(
         event,
-        "Restarted. `.ping` me or `.help` to check if I am online, actually it takes 1-2 min for restarting",
+        "Dimulai kembali. `.ping` atau `.help` untuk mengecek apakah aku online, sebenarnya butuh 1-2 menit untuk restart",
     )
     await bot.disconnect()
     execl(sys.executable, sys.executable, *sys.argv)
@@ -52,21 +52,21 @@ async def _(event):
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID,
-            "You put the bot to sleep for " + str(counter) + " seconds",
+            "Anda meletakkan bot untuk tidur " + str(counter) + " detik",
         )
-    event = await edit_or_reply(event, f"`ok, let me sleep for {counter} seconds`")
+    event = await edit_or_reply(event, f"`ok, biarkan aku tidur {counter} detik`")
     sleep(counter)
-    await event.edit("`OK, I'm awake now.`")
+    await event.edit("`Oke, aku sudah bangun sekarang.`")
 
 
 CMD_HELP.update(
     {
         "power_tools": "**Plugin : **`power_tools`\
                 \n\n**Syntax : **`.restart`\
-                \n**Usage : **Restarts the bot !!\
-                \n\n**Syntax : **'.sleep <seconds>\
-                \n**Usage: **Userbots get tired too. Let yours snooze for a few seconds.\
+                \n**Fungsi : **Mulai ulang bot !!\
+                \n\n**Syntax : **'.sleep <detik>\
+                \n**Fungsi: **Userbots juga lelah.  Biarkan punyamu tertidur selama beberapa detik.\
                 \n\n**Syntax : **`.shutdown`\
-                \n**Usage : **To turn off the dyno of heroku. you cant turn on by bot you need to got to heroku and turn on or use @hk_heroku_bot"
+                \n**Fungsi : **Untuk mematikan dyno heroku.  Anda tidak dapat mengaktifkan bot, Anda harus mengakses heroku dan mengaktifkan atau menggunakan @hk_heroku_bot"
     }
 )
