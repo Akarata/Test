@@ -23,7 +23,7 @@ from . import CMD_HELP, catmemes
 async def source(e):
     await edit_or_reply(
         e,
-        "[Klik disini](https://github.com/Akarata/Project_Akarata) untuk membuka repo.",
+        "[Klik disini](https://github.com/Akarata/Neko_Userbot) untuk membuka repo.",
     )
 
 
