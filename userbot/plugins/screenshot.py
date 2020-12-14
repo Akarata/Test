@@ -20,9 +20,9 @@ async def _(event):
     if event.fwd_from:
         return
     if Config.CHROME_BIN is None:
-        await edit_or_reply(event, "Need to install Google Chrome. Module Stopping.")
+        await edit_or_reply(event, "Perlu memasang Google Chrome.  Modul Berhenti.")
         return
-    catevent = await edit_or_reply(event, "`Processing ...`")
+    catevent = await edit_or_reply(event, "`Tunggu beberapa saat ...`")
     start = datetime.now()
     try:
         chrome_options = webdriver.ChromeOptions()
@@ -42,10 +42,10 @@ async def _(event):
             inputstr = "http://" + input_str
             caturl = url(inputstr)
         if not caturl:
-            await catevent.edit("`The given input is not supported url`")
+            await catevent.edit("`Masukan yang diberikan tidak didukung url`")
             return
         driver.get(inputstr)
-        await catevent.edit("`Calculating Page Dimensions`")
+        await catevent.edit("`Menghitung Dimensi Halaman`")
         height = driver.execute_script(
             "return Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);"
         )
@@ -64,7 +64,7 @@ async def _(event):
             message_id = event.reply_to_msg_id
         end = datetime.now()
         ms = (end - start).seconds
-        hmm = f"** ➥ URL : **{input_str} \n**➥ Time :** `{ms} seconds`"
+        hmm = f"** ➥ URL : **{input_str} \n**➥ Waktu :** `{ms} detik`"
         await catevent.delete()
         with io.BytesIO(im_png) as out_file:
             out_file.name = input_str + ".PNG"
@@ -90,10 +90,10 @@ async def _(event):
     if Config.SCREEN_SHOT_LAYER_ACCESS_KEY is None:
         await edit_or_reply(
             event,
-            "`Need to get an API key from https://screenshotlayer.com/product and need to set it SCREEN_SHOT_LAYER_ACCESS_KEY !`",
+            "`Perlu mendapatkan kunci API dari https://screenshotlayer.com/product dan perlu menyetelnya SCREEN_SHOT_LAYER_ACCESS_KEY !`",
         )
         return
-    catevent = await edit_or_reply(event, "`Processing ...`")
+    catevent = await edit_or_reply(event, "`Tunggu beberapa saat ...`")
     sample_url = "https://api.screenshotlayer.com/api/capture?access_key={}&url={}&fullpage={}&viewport={}&format={}&force={}"
     input_str = event.pattern_match.group(1)
     inputstr = input_str
@@ -102,7 +102,7 @@ async def _(event):
         inputstr = "http://" + input_str
         caturl = url(inputstr)
     if not caturl:
-        await catevent.edit("`The given input is not supported url`")
+        await catevent.edit("`Masukan yang diberikan tidak didukung url`")
         return
     response_api = requests.get(
         sample_url.format(
@@ -113,7 +113,7 @@ async def _(event):
     contentType = response_api.headers["content-type"]
     end = datetime.now()
     ms = (end - start).seconds
-    hmm = f"**➥ URL : **{input_str} \n**➥ Time :** `{ms} seconds`"
+    hmm = f"**➥ URL : **{input_str} \n**➥ Waktu :** `{ms} detik`"
     if "image" in contentType:
         with io.BytesIO(response_api.content) as screenshot_image:
             screenshot_image.name = "screencapture.png"
@@ -134,11 +134,11 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "screenshot": "__**PLUGIN NAME :** Screenshot__\
-    \n\n📌** CMD ➥** `.ss` <url>\
-    \n**USAGE   ➥  **Takes a screenshot of a website and sends the screenshot.\
-    \n\n📌** CMD ➥** `.scapture` <url>\
-    \n**USAGE   ➥  **Takes a screenshot of a website and sends the screenshot need to set config var for this.\
-    \n\n**Example of a valid URL :** `www.google.com`"
+        "screenshot": "__**NAMA PLUGIN :** Screenshot__\
+    \n\n✅** CMD ➥** `.ss` <url>\
+    \n**Fungsi   ➥  **Mengambil tangkapan layar dari situs web dan mengirimkan tangkapan layar.\
+    \n\n✅** CMD ➥** `.scapture` <url>\
+    \n**Fungsi   ➥  **Mengambil tangkapan layar dari situs web dan mengirimkan tangkapan layar perlu menyetel config var untuk ini.\
+    \n\n**Contoh URL yang valid :** `www.google.com`"
     }
 )
