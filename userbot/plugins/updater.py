@@ -96,7 +96,8 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 break
         if heroku_app is None:
             await event.edit(
-                f"{txt}\n" "`Kredensial Heroku tidak valid untuk men-deploy dyno userbot.`"
+                f"{txt}\n"
+                "`Kredensial Heroku tidak valid untuk men-deploy dyno userbot.`"
             )
             return repo.__del__()
         await event.edit(
@@ -125,7 +126,9 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             await asyncio.sleep(5)
             return await event.delete()
         else:
-            await event.edit("`Berhasil diterapkan!\n" "Sedang memulai ulang, harap tunggu...`")
+            await event.edit(
+                "`Berhasil diterapkan!\n" "Sedang memulai ulang, harap tunggu...`"
+            )
     else:
         await event.edit(
             "`[HEROKU]`\n" "`Harap siapkan variabel` **HEROKU_API_KEY** `...`"
