@@ -304,9 +304,9 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "animation6": "__**PLUGIN NAME :** Animation6__\
-\n\n📌** CMD ➥** `.unoob` | `.menoob` | `.upro` | `.mepro` | `.quickheal` | `.vquickheal` | `.macos` | `.windows` | `.linux` | `.stock` | `.os` \
-\n\n**USAGE   ➥  **These are animation bruh..Try & check yourself\
+        "animasi6": "__**NAMA PLUGIN :** animasi6__\
+\n\n✅** CMD ➥** `.unoob` | `.menoob` | `.upro` | `.mepro` | `.quickheal` | `.vquickheal` | `.macos` | `.windows` | `.linux` | `.stock` | `.os` \
+\n\n**Fungsi   ➥  **Ini adalah animasi bruh..Coba & periksa sendiri\
 "
     }
 )
