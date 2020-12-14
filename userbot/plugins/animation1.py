@@ -287,9 +287,9 @@ async def timer_blankx(e):
 
 CMD_HELP.update(
     {
-        "animation1": "__**PLUGIN NAME :** Animation1__\
-\n\n**📌 CMD ➥** `.stupid` | `.bombs` | `.call` | `.kill` | `.kell` | `.wtf` | `.ding` | `.hypno` | `.candy` | `.gangasta` | `.charging` \
-\n\n**USAGE   ➥  **These are animation bruh..Try & check yourself\
+        "animation1": "__**NAMA PLUGIN :** Animation1__\
+\n\n**✅ CMD ➥** `.stupid` | `.bombs` | `.call` | `.kill` | `.kell` | `.wtf` | `.ding` | `.hypno` | `.candy` | `.gangasta` | `.charging` \
+\n\n**Fungsi   ➥  **Ini adalah animasi bruh..Coba & periksa sendiri\
 "
     }
 )
