@@ -187,13 +187,13 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "rename": "__**PLUGIN NAME :** Rename__\
-    \n\n📌** CMD ➥** `.rename` <filename>\
-    \n**USAGE   ➥  **__Reply to media with above command to save in your server with that given filename__\
-    \n\n📌** CMD ➥** `.rnup` <filename>\
-    \n**USAGE   ➥  **__Reply to media with above command to rename and upload the file with given name__\
-    \n\n📌** CMD ➥** `.rnupf` <filename>\
-    \n**USAGE   ➥  **__Reply to media with above command to rename and upload the file with given name as file__\
+        "rename": "__**NAMA PLUGIN :** Rename__\
+    \n\n✅** CMD ➥** `.rename` <namafile>\
+    \n**Fungsi   ➥  **__Balas media dengan perintah di atas untuk menyimpan di server Anda dengan nama file yang diberikan__\
+    \n\n✅** CMD ➥** `.rnup` <namafile>\
+    \n**Fungsi   ➥  **__Balas media dengan perintah di atas untuk mengganti nama dan mengunggah file dengan nama yang diberikan__\
+    \n\n✅** CMD ➥** `.rnupf` <namafile>\
+    \n**Fungsi   ➥  **__Balas media dengan perintah di atas untuk mengganti nama dan mengunggah file dengan nama yang diberikan sebagai file__\
     "
     }
 )
