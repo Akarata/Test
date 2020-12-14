@@ -87,16 +87,16 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "mention": """__**PLUGIN NAME :** Mention__
-\n\n📌** CMD ➥** `.all`
-\n**USAGE   ➥  **__Tags recent 100 persons in the group may not work for all__  
-\n\n📌** CMD ➥** `.tagall`
-\n**USAGE   ➥  **__Tags recent 100 persons in the group may not work for all__ 
-\n\n📌** CMD ➥** `.report`
-\n**USAGE   ➥  **__Tags admins in group__  
-\n\n📌** CMD ➥** `.men` <username/userid text>
-\n**USAGE   ➥  **__Tags that person with the given custom text other way for this is __
-\n\n📌** CMD ➥** `Hi @username[custom text]`
+        "mention": """__**NAMA PLUGIN :** Mention__
+\n\n✅** CMD ➥** `.all`
+\n**Fungsi   ➥  **__Tag terbaru 100 orang dalam grup mungkin tidak bekerja untuk semua__  
+\n\n✅** CMD ➥** `.tagall`
+\n**Fungsi   ➥  **__Tag terbaru 100 orang dalam grup mungkin tidak bekerja untuk semua__ 
+\n\n✅** CMD ➥** `.report`
+\n**Fungsi   ➥  **__Memberi tag admin dalam grup__  
+\n\n✅** CMD ➥** `.men` <username/userid teks>
+\n**Fungsi   ➥  **__Memberi tag orang tersebut dengan teks khusus yang diberikan dengan cara lain adalah __
+\n\n✅** CMD ➥** `Hi @username[custom teks]`
 """
     }
 )
