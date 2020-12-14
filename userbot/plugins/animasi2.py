@@ -196,7 +196,7 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "animation2": "__**NAMA PLUGIN :** Animation2__\
+        "animasi2": "__**NAMA PLUGIN :** animasi2__\
 \n\n**✅ CMD ➥** `.think` | `.lmao` | `.nothappy` | `.clock` | `.muah` | `.heart` | `.gym` | `.earth` | `.moon` | `.smoon` | `.tmoon` \
 \n\n**Fungsi   ➥  **Ini adalah animasi bruh..Coba & periksa sendiri\
 "
