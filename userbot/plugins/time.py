@@ -123,7 +123,7 @@ async def _(event):
         return
     reply_msg_id = None
     current_time = dt.now().strftime(
-        f"⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡\n⚡USERBOT TIMEZONE⚡\n⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡\n   {LOCATION}\n  Time: %H:%M:%S \n  Date: %d.%m.%y \n⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡"
+        f"⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡\n⚡ZONA WAKTU USERBOT⚡\n⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡\n   {LOCATION}\n  Waktu: %H:%M:%S \n  Tanggal: %d.%m.%y \n⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡"
     )
     input_str = event.pattern_match.group(1)
     if event.sender_id != bot.uid:
@@ -153,10 +153,10 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "time": "__**PLUGIN NAME :** Time__\
-    \n\n📌** CMD ➥** `.ctime` <[country names](https://telegra.ph/country-names-10-24)/code> <timezone number> \
-    \n**USAGE   ➥  **Get the time of a country. If a country has multiple timezones, it will list all of them and let you select one.\
-    \n\n📌** CMD ➥** `.time` \
-    \n**USAGE   ➥  **Shows current default time you can change by changing TZ in heroku vars"
+        "time": "__**NAMA PLUGIN :** Time__\
+    \n\n✅** CMD ➥** `.ctime` <[nama negara](https://telegra.ph/country-names-10-24)/code> <nomor zona waktu> \
+    \n**Fungsi   ➥  **Dapatkan waktu sebuah negara.  Jika suatu negara memiliki beberapa zona waktu, itu akan mencantumkan semuanya dan membiarkan Anda memilih satu.\
+    \n\n✅** CMD ➥** `.time` \
+    \n**Fungsi   ➥  **Menunjukkan waktu default saat ini yang dapat Anda ubah dengan mengubah TZ di heroku vars"
     }
 )
