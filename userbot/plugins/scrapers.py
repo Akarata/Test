@@ -23,10 +23,10 @@ async def wiki(wiki_q):
     try:
         summary(match)
     except DisambiguationError as error:
-        await edit_or_reply(wiki_q, f"Disambiguated page found.\n\n{error}")
+        await edit_or_reply(wiki_q, f"Ditemukan halaman yang tidak ambigu.\n\n{error}")
         return
     except PageError as pageerror:
-        await edit_or_reply(wiki_q, f"Page not found.\n\n{pageerror}")
+        await edit_or_reply(wiki_q, f"halaman tidak ditemukan.\n\n{pageerror}")
         return
     result = summary(match)
     if len(result) >= 4096:
@@ -36,25 +36,25 @@ async def wiki(wiki_q):
             wiki_q.chat_id,
             "output.txt",
             reply_to=wiki_q.id,
-            caption="`Output too large, sending as file`",
+            caption="`Output terlalu besar, dikirim sebagai file`",
         )
         await wiki_q.delete()
         if os.path.exists("output.txt"):
             os.remove("output.txt")
         return
     await edit_or_reply(
-        wiki_q, "**Search:**\n`" + match + "`\n\n**Result:**\n" + result
+        wiki_q, "**Cari:**\n`" + match + "`\n\n**Hasil:**\n" + result
     )
     if BOTLOG:
         await wiki_q.client.send_message(
-            BOTLOG_CHATID, f"Wiki query `{match}` was executed successfully"
+            BOTLOG_CHATID, f"Kueri wiki `{match}` berhasil dieksekusi"
         )
 
 
 @bot.on(admin_cmd(pattern="imdb (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="imdb (.*)", allow_sudo=True))
 async def imdb(e):
-    catevent = await edit_or_reply(e, "`searching........")
+    catevent = await edit_or_reply(e, "`mencari........")
     try:
         movie_name = e.pattern_match.group(1)
         remove_space = movie_name.split(" ")
@@ -117,40 +117,40 @@ async def imdb(e):
             mov_rating = "Not available"
         await catevent.edit(
             "<a href=" + poster + ">&#8203;</a>"
-            "<b>Title : </b><code>"
+            "<b>Judul : </b><code>"
             + mov_title
             + "</code>\n<code>"
             + mov_details
-            + "</code>\n<b>Rating : </b><code>"
+            + "</code>\n<b>Peringkat : </b><code>"
             + mov_rating
-            + "</code>\n<b>Country : </b><code>"
+            + "</code>\n<b>Negara : </b><code>"
             + mov_country[0]
-            + "</code>\n<b>Language : </b><code>"
+            + "</code>\n<b>Bahasa : </b><code>"
             + mov_language[0]
-            + "</code>\n<b>Director : </b><code>"
+            + "</code>\n<b>Direktur : </b><code>"
             + director
-            + "</code>\n<b>Writer : </b><code>"
+            + "</code>\n<b>Penulis : </b><code>"
             + writer
-            + "</code>\n<b>Stars : </b><code>"
+            + "</code>\n<b>Bintang : </b><code>"
             + stars
-            + "</code>\n<b>IMDB Url : </b>"
+            + "</code>\n<b>Url IMDB : </b>"
             + mov_link
-            + "\n<b>Story Line : </b>"
+            + "\n<b>Alur Cerita : </b>"
             + story_line,
             link_preview=True,
             parse_mode="HTML",
         )
     except IndexError:
-        await catevent.edit("Plox enter **Valid movie name** kthx")
+        await catevent.edit("harap memasukkan **Nama film yang valid**")
 
 
 CMD_HELP.update(
     {
-        "scrapers": """__**PLUGIN NAME :** Scrapers__\
-\n\n📌** CMD ➥** `.wiki` <query>
-\n**USAGE   ➥  **__Fetches given query in wikipedia and shows you__
-\n\n📌** CMD ➥** `.imdb` <query>
-\n**USAGE   ➥  **__Fetches Given movie details from imdb__
+        "scrapers": """__**NAMA PLUGIN :** Scrapers__\
+\n\n✅** CMD ➥** `.wiki` <pertanyaan>
+\n**Fungsi   ➥  **__Ambil kueri yang diberikan di wikipedia dan menunjukkan kepada Anda__
+\n\n✅** CMD ➥** `.imdb` <pertanyaan>
+\n**Fungsi   ➥  **__Fetches Diberikan detail film dari imdb__
 """
     }
 )
