@@ -65,7 +65,8 @@ async def memes(cat):
             bottom = ""
     else:
         await edit_or_reply(
-            cat, "```apa yang harus saya tulis di atas? bahwa kamu bodoh memberikan beberapa teks```"
+            cat,
+            "```apa yang harus saya tulis di atas? bahwa kamu bodoh memberikan beberapa teks```",
         )
         return
     if not os.path.isdir("./temp/"):
