@@ -271,10 +271,10 @@ async def kakashi(event):
     link = event.pattern_match.group(1)
     if ".com" not in link:
         catevent = await edit_or_reply(
-            event, "` I need a link to download something pro.`**(._.)**"
+            event, "` Saya memerlukan tautan untuk mengunduh sesuatu yang pro.`**(._.)**"
         )
     else:
-        catevent = await edit_or_reply(event, "**Initiating Download!**")
+        catevent = await edit_or_reply(event, "**Memulai Download!**")
     chat = "@DeezLoadBot"
     async with event.client.conversation(chat) as conv:
         try:
@@ -287,7 +287,7 @@ async def kakashi(event):
             """ - don't spam notif - """
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await catevent.edit("**Error:** `unblock` @DeezLoadBot `and retry!`")
+            await catevent.edit("**Error:** `buka blokir` @ DeezLoadBot `dan coba lagi!`")
             return
         await catevent.delete()
         await event.client.send_file(event.chat_id, song, caption=details.text)
@@ -298,18 +298,18 @@ async def kakashi(event):
 
 CMD_HELP.update(
     {
-        "songs": "__**PLUGIN NAME :** Songs__\
-        \n\n📌** CMD ➥** `.song` <query>  or `.song reply to song name`\
-        \n**USAGE   ➥  **Searches the song you entered in query and sends it,quality of it is 128k\
-        \n\n📌** CMD ➥** `.song320` <query> or `.song320 reply to song name`\
-        \n**USAGE   ➥  **Searches the song you entered in query and sends it,quality of it is 320k\
-        \n\n📌** CMD ➥** `.vsong` <query> or `.vsong reply to song name`\
-        \n**USAGE   ➥  **Searches the video song you entered in query and sends it\
-        \n\n📌** CMD ➥** `.song2` <query>\
-        \n**USAGE   ➥  **Searches the song you entered in query and sends it.\
-        \n\n📌** CMD ➥** `.music` <Artist - Song Title>\
-        \n**USAGE   ➥  **Download your music by just name.\
-        \n\n📌** CMD ➥** `.dzd` <Spotify/Deezer Link>\
-        \n**USAGE   ➥  **Download music from Spotify or Deezer."
+        "songs": "__**NAMA PLUGIN :** Songs__\
+        \n\n✅** CMD ➥** `.song` <kueri>  atau `.song balas nama lagu`\
+        \n**Fungsi   ➥  **Mencari lagu yang Anda masukkan dalam kueri dan mengirimkannya, kualitasnya 128k\
+        \n\n✅** CMD ➥** `.song320` <kueri> atau `.song320 balas nama lagu`\
+        \n**Fungsi   ➥  **Mencari lagu yang Anda masukkan dalam kueri dan mengirimkannya, kualitasnya 320k\
+        \n\n✅** CMD ➥** `.vsong` <kueri> atau `.vsong balas nama lagu`\
+        \n**Fungsi   ➥  **Mencari lagu video yang Anda masukkan dalam kueri dan mengirimkannya\
+        \n\n✅** CMD ➥** `.song2` <kueri>\
+        \n**Fungsi   ➥  **Mencari lagu yang Anda masukkan dalam kueri dan mengirimkannya.\
+        \n\n✅** CMD ➥** `.music` <Artis - Judul Lagu>\
+        \n**Fungsi   ➥  **Unduh musik Anda hanya dengan nama.\
+        \n\n✅** CMD ➥** `.dzd` <tautan Spotify/Deezer>\
+        \n**Fungsi   ➥  **Unduh musik dari Spotify atau Deezer."
     }
 )
