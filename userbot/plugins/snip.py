@@ -62,18 +62,18 @@ async def add_snip(fltr):
         else:
             await edit_or_reply(
                 fltr,
-                "Saving media as data for the note requires the `PRIVATE_GROUP_BOT_API_ID` to be set.",
+                "Menyimpan media sebagai data untuk catatan membutuhkan `PRIVATE_GROUP_BOT_API_ID` disetel.",
             )
             return
     elif fltr.reply_to_msg_id and not string:
         rep_msg = await fltr.get_reply_message()
         string = rep_msg.text
-    success = "Note {}  is successfully saved. Use` #{} `to get it"
+    success = "Catatan {}  berhasil disimpan. Use` #{} `to get it"
     if add_note(keyword, string, msg_id) is False:
         rm_note(keyword)
         if add_note(keyword, string, msg_id) is False:
             return await edit_or_reply(
-                fltr, f"Error in saving the given snip {keyword}"
+                fltr, f"Kesalahan dalam menyimpan snip yang diberikan {keyword}"
             )
         return await edit_or_reply(fltr, success.format("updated", keyword))
     return await edit_or_reply(fltr, success.format("added", keyword))
@@ -82,11 +82,11 @@ async def add_snip(fltr):
 @bot.on(admin_cmd(pattern="snipl$"))
 @bot.on(sudo_cmd(pattern=r"snipl$", allow_sudo=True))
 async def on_snip_list(event):
-    message = "There are no saved notes in this chat"
+    message = "Tidak ada catatan yang disimpan dalam obrolan ini"
     notes = get_notes()
     for note in notes:
-        if message == "There are no saved notes in this chat":
-            message = "Notes saved in this chat:\n"
+        if message == "Tidak ada catatan yang disimpan dalam obrolan ini":
+            message = "Catatan disimpan dalam obrolan ini:\n"
         message += "👉 `#{}`\n".format(note.keyword)
     if len(message) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(message)) as out_file:
@@ -96,7 +96,7 @@ async def on_snip_list(event):
                 out_file,
                 force_document=True,
                 allow_cache=False,
-                caption="Available Snips",
+                caption="Catatan Tersedia",
                 reply_to=event,
             )
             await event.delete()
@@ -120,15 +120,15 @@ async def on_snip_delete(event):
 
 CMD_HELP.update(
     {
-        "snip": "__**PLUGIN NAME :** Snip__\
-\n\n📌** CMD ➥**  #<snipname>\
-\n**USAGE   ➥  **Gets the specified note.\
-\n\n📌** CMD ➥** `.snips`: reply to a message with `.snips <notename>`\
-\n**USAGE   ➥  **Saves the replied message as a note with the notename. (Works with pics, docs, and stickers too!)\
-\n\n📌** CMD ➥** `.snipl`\
-\n**USAGE   ➥  **Gets all saved notes in a chat.\
-\n\n📌** CMD ➥** `.snipd <notename>`\
-\n**USAGE   ➥  **Deletes the specified note.\
+        "snip": "__**NAMA PLUGIN :** Snip__\
+\n\n✅** CMD ➥**  #<nama catatan>\
+\n**Fungsi   ➥  **Mendapat catatan tertentu.\
+\n\n✅** CMD ➥** `.snips`: membalas pesan dengan `.snips <nama catatan>`\
+\n**Fungsi   ➥  **Menyimpan pesan yang dibalas sebagai catatan dengan notename.(Bekerja dengan foto, dokumen, dan stiker juga!)\
+\n\n✅** CMD ➥** `.snipl`\
+\n**Fungsi   ➥  **Mendapat semua catatan yang disimpan dalam obrolan.\
+\n\n✅** CMD ➥** `.snipd <nama catatan>`\
+\n**Fungsi   ➥  **Menghapus catatan tertentu.\
 "
     }
 )
