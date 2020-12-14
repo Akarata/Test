@@ -134,16 +134,16 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "troll": "__**PLUGIN NAME :** Troll__\
-\n\n📌** CMD ➥** `.fox` <your text>\
-\n**USAGE   ➥  **Send sneeky fox troll \
-\n\n📌** CMD ➥** `.talkme` <your text>\
-\n**USAGE   ➥  **Send you a hardcore meme.\
-\n\n📌** CMD ➥** `.brnsay` <your text>\
-\n**USAGE   ➥  **Send you a sleeping brain meme.\
-\n\n📌** CMD ➥** `.sbob` <your text>\
-\n**USAGE   ➥  **Send you spongebob meme.\
-\n\n📌** CMD ➥** `.child` <your text>\
-\n**USAGE   ➥  **Send you child in trash meme."
+        "troll": "__**NAMA PLUGIN :** Troll__\
+\n\n✅** CMD ➥** `.fox` <teks Anda>\
+\n**Fungsi   ➥  **Kirim troll rubah licik \
+\n\n✅** CMD ➥** `.talkme` <teks Anda>\
+\n**Fungsi   ➥  **Mengirimi Anda meme hardcore.\
+\n\n✅** CMD ➥** `.brnsay` <teks Anda>\
+\n**Fungsi   ➥  **Mengirimi Anda meme otak yang sedang tidur.\
+\n\n✅** CMD ➥** `.sbob` <teks Anda>\
+\n**Fungsi   ➥  **Kirimi Anda meme spongebob.\
+\n\n✅** CMD ➥** `.child` <teks Anda>\
+\n**Fungsi   ➥  **Kirimkan Anda anak dalam meme sampah."
     }
 )
