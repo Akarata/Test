@@ -145,15 +145,15 @@ async def show_welcome(event):
 
 CMD_HELP.update(
     {
-        "privatewelcome": "__**PLUGIN NAME :** Privatewelcome__\
-\n\n📌** CMD ➥** `.savepwel` <welcome message> or reply to a message with `.savepwel\
-\n**USAGE   ➥  **Saves the message as a welcome note in the chat.\
-\n\nAvailable variables for formatting welcome messages :\
+        "privatewelcome": "__**NAMA PLUGIN :** Privatewelcome__\
+\n\n✅** CMD ➥** `.savepwel` <welcome message> or reply to a message with `.savepwel\
+\n**Fungsi   ➥  **Menyimpan pesan sebagai catatan selamat datang di obrolan.\
+\n\nVariabel yang tersedia untuk memformat pesan selamat datang :\
 \n`{mention}`, `{title}`, `{count}`, `{first}`, `{last}`, `{fullname}`, `{userid}`, `{username}`, `{my_first}`, `{my_fullname}`, `{my_last}`, `{my_mention}`, `{my_username}`\
-\n\n📌** CMD ➥** `.listpwel`\
-\n**USAGE   ➥  **Check whether you have a welcome note in the chat.\
-\n\n📌** CMD ➥** `.clearpwel`\
-\n**USAGE   ➥  **Deletes the welcome note for the current chat.\
+\n\n✅** CMD ➥** `.listpwel`\
+\n**Fungsi   ➥  **Periksa apakah Anda memiliki catatan selamat datang di obrolan.\
+\n\n✅** CMD ➥** `.clearpwel`\
+\n**Fungsi   ➥  **Menghapus catatan selamat datang untuk obrolan saat ini.\
 "
     }
 )
