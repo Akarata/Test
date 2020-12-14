@@ -40,10 +40,10 @@ async def gen_chlog(repo, diff):
 
 async def print_changelogs(event, ac_br, changelog):
     changelog_str = (
-        f"**Pembaruan tersedia untuk [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`"
+        f"**Pembaruan tersedia untuk [{ac_br}]:\n\nLog Perubahan:**\n`{changelog}`"
     )
     if len(changelog_str) > 4096:
-        await event.edit("`Changelog is too big, view the file to see it.`")
+        await event.edit("`Log perubahan terlalu besar, lihat file untuk melihatnya.`")
         file = open("output.txt", "w+")
         file.write(changelog_str)
         file.close()
@@ -96,11 +96,11 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 break
         if heroku_app is None:
             await event.edit(
-                f"{txt}\n" "`Invalid Heroku credentials for deploying userbot dyno.`"
+                f"{txt}\n" "`Kredensial Heroku tidak valid untuk men-deploy dyno userbot.`"
             )
             return repo.__del__()
         await event.edit(
-            "`[HEROKU]`" "\n`Userbot dyno build in progress, please wait...`"
+            "`[HEROKU]`" "\n`Userbot dyno sedang dalam proses, harap tunggu...`"
         )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -125,10 +125,10 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             await asyncio.sleep(5)
             return await event.delete()
         else:
-            await event.edit("`Successfully deployed!\n" "Restarting, please wait...`")
+            await event.edit("`Berhasil diterapkan!\n" "Sedang memulai ulang, harap tunggu...`")
     else:
         await event.edit(
-            "`[HEROKU]`\n" "`Please set up`  **HEROKU_API_KEY**  `variable...`"
+            "`[HEROKU]`\n" "`Harap siapkan variabel` **HEROKU_API_KEY** `...`"
         )
     return
 
@@ -140,7 +140,7 @@ async def update(event, repo, ups_rem, ac_br):
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
     await event.edit(
-        "`AkaProject berhasil diupdate!\n"
+        "`Userbot berhasil diperbarui!\n"
         "Sedang memulai ulang... Harap tunggu beberapa saat!`"
     )
     # Spin a new instance of bot
@@ -224,7 +224,7 @@ async def upstream(event):
             "`Force-Syncing to latest stable userbot code, please wait...`"
         )
     if conf == "now":
-        await event.edit("`Sedang mengupdate AkaProject, tunggu beberapa saat....`")
+        await event.edit("`Sedang memperbarui userbot, tunggu beberapa saat....`")
         await update(event, repo, ups_rem, ac_br)
     return
 
@@ -269,17 +269,17 @@ async def upstream(event):
 
 CMD_HELP.update(
     {
-        "updater": "__**Nama Plugin :** Updater__\
+        "updater": "__**NAMA PLUGIN :** Updater__\
         \n\n✅** CMD ➥** `.update`\
-        \n**Digunakan :** untuk mengecek  jika ada userbot ada update terbaru\
+        \n**Fungsi :** untuk mengecek  jika ada userbot ada update terbaru\
         \ndan menunjukan changelog.\
         \n\n✅** CMD ➥** `.update now`\
-        \n**Digunakan   ➥  **Untuk mengupdate userbot,\
+        \n**Fungsi   ➥  **Untuk mengupdate userbot,\
         \njika ada pembaruan dalam repositori userbot kamu. jika kamu memulai ulang, ini kembali ke waktu terakhir saat kamu menerapkan\
         \n\n✅** CMD ➥** `.update deploy`\
-        \n**Digunakan   ➥  **untuk menDeploy userbot kamu\
+        \n**Fungsi   ➥  **untuk menDeploy userbot kamu\
         \n\n✅** CMD ➥** `.goodcat`\
-        \n**Digunakan   ➥  **Swich to jisan's unoffical repo to official cat repo.\
+        \n**Fungsi   ➥  **Swich to jisan's unoffical repo to official cat repo.\
         \nThis will triggered deploy always, even no updates."
     }
 )
