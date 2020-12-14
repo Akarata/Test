@@ -70,7 +70,7 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "ping": "__**Nama Plugin :** Ping__\
+        "ping": "__**NAMA PLUGIN :** Ping__\
     \n\n✅** CMD ➥** `.fping`\
     \n**Fungsi   ➥  **Animasi ping\
     \n\n✅** CMD ➥** `.ping`\
