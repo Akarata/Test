@@ -125,14 +125,14 @@ async def lastfm(event):
 
 CMD_HELP.update(
     {
-        "randomsticker": "__**PLUGIN NAME :** Randomsticker__\
-      \n\n📌** CMD ➥** `.cat`\
-      \n**USAGE   ➥**  Random cat stickers\
-      \n\n📌** CMD ➥** `.dab`\
-      \n**USAGE   ➥**  Random dab stickers\
-      \n\n📌** CMD ➥** `.brain`\
-      \n**USAGE   ➥**  Random brain stickers\
-      \n\n📌** CMD ➥** `.pat`\
-      \n**USAGE   ➥**  Random pat stickers"
+        "randomsticker": "__**NAMA PLUGIN :** Randomsticker__\
+      \n\n✅** CMD ➥** `.cat`\
+      \n**Fungsi   ➥**  Stiker kucing acak\
+      \n\n✅** CMD ➥** `.dab`\
+      \n**Fungsi   ➥**  Stiker dab acak\
+      \n\n✅** CMD ➥** `.brain`\
+      \n**Fungsi   ➥**  Stiker otak acak\
+      \n\n✅** CMD ➥** `.pat`\
+      \n**Fungsi   ➥**  Stiker tepuk acak"
     }
 )
