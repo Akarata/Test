@@ -1,4 +1,4 @@
-# Akarata_Project Userbot
+# Neko_Userbot
 
 <p align="center">
 <a href="https://github.com/Akarata/Project_Akarata/actions" > <img src="https://img.shields.io/github/workflow/status/Akarata/Project_Akarata/AkaChecker/master?label=Build&style=flat-square&logo=github-actions&logoColor=white&color=F10070" alt="FailedChecker" /></a>
