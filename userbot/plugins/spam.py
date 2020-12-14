@@ -375,17 +375,17 @@ async def spammer(e):
 
 CMD_HELP.update(
     {
-        "spam": "__**PLUGIN NAME :** Spam__\
-\n\n📌** CMD ➥** `.cspam` <text>\
-\n**USAGE   ➥  **Spam the text letter by letter.\
-\n\n📌** CMD ➥** `.spam` <count> <text>\
-\n**USAGE   ➥  **Floods text in the chat !!\
-\n\n📌** CMD ➥** `.spam` <count> replay to media\
-\n**USAGE   ➥  **Floods text in the media !!\
-\n\n📌** CMD ➥** `.wspam` <text>\
-\n**USAGE   ➥  **Spam the text word by word.\
-\n\n📌** CMD ➥** `.delayspam` <delay> <count> <text>\
-\n**USAGE   ➥  **Delayspam with custom delay.\
-\n\n\n**NOTE : Spam at your own risk !!**"
+        "spam": "__**NAMA PLUGIN :** Spam__\
+\n\n✅** CMD ➥** `.cspam` <text>\
+\n**Fungsi   ➥  **Spam teks huruf demi huruf.\
+\n\n✅** CMD ➥** `.spam` <count> <text>\
+\n**Fungsi   ➥  **Membanjiri teks dalam obrolan !!\
+\n\n✅** CMD ➥** `.spam` <count> membalas media\
+\n**Fungsi   ➥  **Membanjiri teks di media !!\
+\n\n✅** CMD ➥** `.wspam` <text>\
+\n**Fungsi   ➥  **Spam teks kata demi kata.\
+\n\n✅** CMD ➥** `.delayspam` <delay> <count> <text>\
+\n**Fungsi   ➥  **Delayspam dengan custom delay.\
+\n\n\n**NOTE : Risiko Anda tanggung sendiri !!**"
     }
 )
