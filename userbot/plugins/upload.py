@@ -153,9 +153,7 @@ async def uploadir(event):
         await upload(path, event, udir_event)
         end = datetime.now()
         ms = (end - start).seconds
-        await udir_event.edit(
-            f"`Unggah {uploaded} file berhasil dalam {ms} detik. `"
-        )
+        await udir_event.edit(f"`Unggah {uploaded} file berhasil dalam {ms} detik. `")
     else:
         await edit_or_reply(udir_event, f"`Uploading.....`")
         uploaded = 0
@@ -184,14 +182,14 @@ async def uploadir(event):
         return
     udir_event = await edit_or_reply(event, "Mengunggah....")
     if os.path.isdir(path):
-        await edit_or_reply(udir_event, f"`Mengumpulkan detail file dalam direktori {path}`")
+        await edit_or_reply(
+            udir_event, f"`Mengumpulkan detail file dalam direktori {path}`"
+        )
         uploaded = 0
         await upload(path, event, udir_event, catflag=True)
         end = datetime.now()
         ms = (end - start).seconds
-        await udir_event.edit(
-            f"`Unggah {uploaded} file berhasil dalam {ms} detik. `"
-        )
+        await udir_event.edit(f"`Unggah {uploaded} file berhasil dalam {ms} detik. `")
     else:
         await edit_or_reply(udir_event, f"`Uploading.....`")
         uploaded = 0
