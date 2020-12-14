@@ -26,9 +26,9 @@ async def stickerchat(catquotes):
     fetchmsg = reply.message
     repliedreply = await reply.get_reply_message()
     if reply.media and reply.media.document.mime_type in ("mp4"):
-        await edit_or_reply(catquotes, "`this format is not supported now`")
+        await edit_or_reply(catquotes, "`format ini tidak didukung sekarang`")
         return
-    catevent = await edit_or_reply(catquotes, "`Making quote...`")
+    catevent = await edit_or_reply(catquotes, "`Membuat kutipan...`")
     user = (
         await event.client.get_entity(reply.forward.sender)
         if reply.fwd_from
@@ -51,14 +51,14 @@ async def _(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await edit_or_reply(event, "```Reply to any user message.```")
+        await edit_or_reply(event, "```Balas pesan pengguna mana pun.```")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.text:
-        await edit_or_reply(event, "```Reply to text message```")
+        await edit_or_reply(event, "```Balas pesan teks```")
         return
     chat = "@QuotLyBot"
-    catevent = await edit_or_reply(event, "```Making a Quote```")
+    catevent = await edit_or_reply(event, "```Membuat Kutipan```")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -67,12 +67,12 @@ async def _(event):
             await event.client.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await catevent.edit("```Please unblock me (@QuotLyBot) u Nigga```")
+            await catevent.edit("```Tolong buka blokir saya (@QuotLyot)```")
             return
         await event.client.send_read_acknowledge(conv.chat_id)
         if response.text.startswith("Hi!"):
             await catevent.edit(
-                "```Can you kindly disable your forward privacy settings for good?```"
+                "```Bisakah Anda menonaktifkan pengaturan privasi penerusan untuk selamanya?```"
             )
         else:
             await catevent.delete()
@@ -81,11 +81,11 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "quotly": "__**PLUGIN NAME :** Quotly__\
-        \n\n📌** CMD ➥** `.q` <reply to messge>`\
-        \n**USAGE   ➥  **__Makes your message as sticker quote__\
-        \n\n📌** CMD ➥** `.qbot` <reply to messge>\
-        \n**USAGE   ➥  **__Makes your message as sticker quote by @quotlybot__\
+        "quotly": "__**NAMA PLUGIN :** Quotly__\
+        \n\n✅** CMD ➥** `.q` <membalas pesan>`\
+        \n**Fungsi   ➥  **__Jadikan pesan Anda sebagai kutipan stikere__\
+        \n\n✅** CMD ➥** `.qbot` <membalas pesan>\
+        \n**Fungsi   ➥  **__Jadikan pesan Anda sebagai kutipan stiker by @quotlybot__\
         "
     }
 )
