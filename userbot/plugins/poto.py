@@ -93,9 +93,9 @@ async def potocmd(event):
 
 CMD_HELP.update(
     {
-        "poto": "__**PLUGIN NAME :** Poto__\
-\n\n📌** CMD ➥** `.poto` <reply to msg>\
-\n**USAGE   ➥  **__Reply to user to get his profile pic use command along \
-with profile pic number to get desired pic else use `.poto all` to get all if you don't reply then gets group pics__"
+        "poto": "__**NAMA PLUGIN :** Poto__\
+\n\n✅** CMD ➥** `.poto` <reply to msg>\
+\n**Fungsi   ➥  **__Balas ke pengguna untuk mendapatkan perintah penggunaan foto profilnya \
+dengan nomor gambar profil untuk mendapatkan gambar lain yang diinginkan `.poto all` untuk mendapatkan semua jika Anda tidak membalas maka dapatkan foto grup__"
     }
 )
