@@ -194,20 +194,20 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "profile": "__**PLUGIN NAME :** Profile__\
-\n\n📌** CMD ➥** `.username` <new_username>\
-\n**USAGE   ➥  **Changes your Telegram username.\
-\n\n📌** CMD ➥** `.pname` <firstname> or `.pname <firstname> <lastname>`\
-\n**USAGE   ➥  **Changes your Telegram name.(First and last name will get split by the first space)\
-\n\n📌** CMD ➥** `.setpfp` or `.ppic`\
-\n**USAGE   ➥  **Reply with .setpfp or .ppic to an image to change your Telegram profie picture.\
-\n\n📌** CMD ➥** `.pbio` <new_bio>\
-\n**USAGE   ➥  **Changes your Telegram bio.\
-\n\n📌** CMD ➥** `.delpfp` or `.delpfp <number>/<all>`\
-\n**USAGE   ➥  **Deletes your Telegram profile picture(s).\
-\n\n📌** CMD ➥** `.myusernames`\
-\n**USAGE   ➥  **Shows usernames reserved by you.that is created by you channels or groups\
-\n\n📌** CMD ➥** `.count`\
-\n**USAGE   ➥  **Counts your groups, chats, bots etc..."
+        "profile": "__**NAMA PLUGIN :** Profile__\
+\n\n✅** CMD ➥** `.username` <username baru>\
+\n**Fungsi   ➥  **Ubah nama pengguna Telegram Anda.\
+\n\n✅** CMD ➥** `.pname` <nama awal> atau `.pname <nama awal> <nama akhir>`\
+\n**Fungsi   ➥  **Ubah nama Telegram Anda.(Nama depan dan belakang akan dipisahkan oleh spasi pertama)\
+\n\n✅** CMD ➥** `.setpfp` or `.ppic`\
+\n**Fungsi   ➥  **Balas dengan .setpfp atau .ppic ke gambar untuk mengubah gambar profil Telegram Anda.\
+\n\n✅** CMD ➥** `.pbio` <new_bio>\
+\n**Fungsi   ➥  **Mengubah bio Telegram Anda.\
+\n\n✅** CMD ➥** `.delpfp` atau `.delpfp <nomor>/<all>`\
+\n**Fungsi   ➥  **Menghapus gambar profil Telegram Anda.\
+\n\n✅** CMD ➥** `.myusernames`\
+\n**Fungsi   ➥  **Menunjukkan nama pengguna yang dipesan oleh Anda. Yang dibuat oleh saluran atau grup Anda\
+\n\n✅** CMD ➥** `.count`\
+\n**Fungsi   ➥  **Menghitung grup, obrolan, bot, dll...."
     }
 )
