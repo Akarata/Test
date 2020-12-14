@@ -424,10 +424,10 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "animation4": "__**PLUGIN NAME :** Animation4__\
-\n\n📌** CMD ➥** `.kilr` <text>\
-\n**USAGE   ➥  **Be a warrior & kill enimes.\
-\n\n📌** CMD ➥** `.acarry` | `.eye` | `.bigoof` | `.uff` | `.hm` | `.snake` | `.idot` | `.human` | `.mc` | `.virus` | `.music` | `.squ` \
-\n\n**USAGE   ➥  **These are animation bruh..Try & check yourself"
+        "animasi4": "__**NAMA PLUGIN :** animasi4__\
+\n\n✅** CMD ➥** `.kilr` <teks>\
+\n**Fungsi   ➥  **Jadilah pejuang & bunuh musuh.\
+\n\n✅** CMD ➥** `.acarry` | `.eye` | `.bigoof` | `.uff` | `.hm` | `.snake` | `.idot` | `.human` | `.mc` | `.virus` | `.music` | `.squ` \
+\n\n**Fungsi   ➥  **Ini adalah animasi bruh..Coba & periksa sendiri"
     }
 )
