@@ -35,7 +35,7 @@ async def amireallyalive(alive):
         )
         cat_caption += f"<b> ✘   [   ⚙️   ]  ➥  Telethon :</b> <code>{version.__version__}</code>\n"
         cat_caption += (
-            f"<b> ✘   [   🤖   ]  ➥  Neko Version :</b> <code>{catversion}</code>\n"
+            f"<b> ✘   [   🤖   ]  ➥  Version :</b> <code>{catversion}</code>\n"
         )
         cat_caption += f"<b> ✘   [   ⚔️   ]  ➥  Running on :</b> <code>Master</code>\n"
 
@@ -57,7 +57,7 @@ async def amireallyalive(alive):
             f"<b> ✘  [🕒] ➥ Uptime :</b> <code>{uptime}</code>\n"
             f"<b> ✘  [🐍] ➥ Python :</b> <code>{python_version()}</code>\n"
             f"<b> ✘  [⚙️] ➥ Telethon :</b> <code>{version.__version__}</code>\n"
-            f"<b> ✘  [🤖] ➥ Neko Version :</b> <code>{catversion}</code>\n",
+            f"<b> ✘  [🤖] ➥ Version :</b> <code>{catversion}</code>\n",
         )
 
 
@@ -74,7 +74,7 @@ async def amireallyalive(alive):
     cat_caption += f"**  -Master :** {mention}\n"
     cat_caption += f"**  -Python Version :** `{python_version()}\n`"
     cat_caption += f"**  -Telethon version :** `{version.__version__}\n`"
-    cat_caption += f"**  -Neko Version :** `{catversion}`\n"
+    cat_caption += f"**  -Version :** `{catversion}`\n"
     results = await bot.inline_query(tgbotusername, cat_caption)  # pylint:disable=E0602
     await results[0].click(alive.chat_id, reply_to=reply_to_id, hide_via=True)
     await alive.delete()
