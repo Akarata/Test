@@ -59,11 +59,11 @@ async def _(event):
         nurl = f"https://del.dog/v/{r['key']}"
         rawurl = f"https://del.dog/raw/{r['key']}"
         await catevent.edit(
-            f"**Pasted to dogbin : **[dog]({nurl}).\n**Raw url :** [raw link]({rawurl})\n**GoTo Original URL: **[link]({url})"
+            f"**Ditempelkan ke dogbin : **[disini]({nurl}).\n**URL mentah :** [tautan mentah]({rawurl})\n**Buka URL Asli: **[link]({url})"
         )
     else:
         await catevent.edit(
-            f"**Pasted to dogbin : **[dog]({url})\n**Raw url :** [raw link](https://del.dog/raw/{r['key']})"
+            f"**Ditempelkan ke dogbin : **[disini]({url})\n**URL mentah :** [tautan mentah](https://del.dog/raw/{r['key']})"
         )
 
 
@@ -121,7 +121,7 @@ async def _(event):
             .get("key")
         )
         url = f"https://nekobin.com/{key}"
-    reply_text = f"**Pasted to Nekobin : **[neko]({url})\n**Raw url : **[Raw](https://nekobin.com/raw/{key})"
+    reply_text = f"**Ditempelkan ke nekobin : **[neko]({url})\n**URL mentah : **[tautan](https://nekobin.com/raw/{key})"
     await catevent.edit(reply_text)
 
 
@@ -263,17 +263,17 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "pastebin": "__**PLUGIN NAME :** Pastebin__\
-\n\n📌** CMD ➥** `.paste` <text/reply>\
-\n**USAGE   ➥  **Create a paste or a shortened url using dogbin (https://del.dog/)\
-\n\n📌** CMD ➥** `.getpaste`\
-\n**USAGE   ➥  **Gets the content of a paste or shortened url from dogbin (https://del.dog/)\
-\n\n📌** CMD ➥** `.neko` <reply>\
-\n**USAGE   ➥  **Create a paste or a shortened url using nekobin (https://nekobin.com)\
-\n\n📌** CMD ➥** `.iffuci` <text/reply>\
-\n**USAGE   ➥  **Create a paste or a shortened url using iffuci (https://www.iffuci.tk)\
-\n\n📌** CMD ➥** `.paster` <text/reply>\
-\n**USAGE   ➥  **Create a instant view or a paste it in telegraph file\
+        "pastebin": "__**NAMA PLUGIN :** Pastebin__\
+\n\n✅** CMD ➥** `.paste` <teks/balasan>\
+\n**Fungsi   ➥  **Buat tempelan atau url yang dipersingkat menggunakan dogbin (https://del.dog/)\
+\n\n✅** CMD ➥** `.getpaste`\
+\n**Fungsi   ➥  **Mendapat konten tempelan atau url yang dipersingkat dari dogbin (https://del.dog/)\
+\n\n✅** CMD ➥** `.neko` <balasan>\
+\n**Fungsi   ➥  **Buat tempelan atau url singkat menggunakan nekobin (https://nekobin.com)\
+\n\n✅** CMD ➥** `.iffuci` <teks/balasan>\
+\n**Fungsi   ➥  **Buat tempelan atau url yang dipersingkat menggunakan iffuci (https://www.iffuci.tk)\
+\n\n✅** CMD ➥** `.paster` <teks/balasan>\
+\n**Fungsi   ➥  **Buat tampilan instan atau tempel di file telegraf\
   "
     }
 )
