@@ -1,7 +1,7 @@
 FROM sandy1709/catuserbot:latest
 
 #clonning repo 
-RUN git clone https://github.com/Akarata/Project_Akarata.git /root/userbot
+RUN git clone https://github.com/Akarata/Jichu_Userbot.git /root/userbot
 #working directory 
 WORKDIR /root/userbot
 
