@@ -334,12 +334,12 @@ async def get_pack_info(event):
         if document_sticker.emoticon not in pack_emojis:
             pack_emojis.append(document_sticker.emoticon)
     OUTPUT = (
-        f"**Sticker Title:** `{get_stickerset.set.title}\n`"
-        f"**Sticker Short Name:** `{get_stickerset.set.short_name}`\n"
-        f"**Official:** `{get_stickerset.set.official}`\n"
-        f"**Archived:** `{get_stickerset.set.archived}`\n"
-        f"**Stickers In Pack:** `{len(get_stickerset.packs)}`\n"
-        f"**Emojis In Pack:**\n{' '.join(pack_emojis)}"
+        f"**Judul stiker:** `{get_stickerset.set.title}\n`"
+        f"**Nama Pendek Stiker:** `{get_stickerset.set.short_name}`\n"
+        f"**Resmi:** `{get_stickerset.set.official}`\n"
+        f"**Diarsipkan:** `{get_stickerset.set.archived}`\n"
+        f"**Stiker Dalam Kemasan:** `{len(get_stickerset.packs)}`\n"
+        f"**Emoji Dalam Paket:**\n{' '.join(pack_emojis)}"
     )
     await catevent.edit(OUTPUT)
 
@@ -398,18 +398,18 @@ def char_is_emoji(character):
 
 CMD_HELP.update(
     {
-        "stickers": "__**PLUGIN NAME :** Stickers__\
-\n\n📌** CMD ➥** `.curi`\
-\n**USAGE   ➥  **Reply .kang to a sticker or an image to kang it to your userbot pack.\
-\n\n📌** CMD ➥** `.curi [emoji('s)]`\
-\n**USAGE   ➥  **Works just like .kang but uses the emoji('s) you picked.\
-\n\n📌** CMD ➥** `.curi [number]`\
-\n**USAGE   ➥  **Kang's the sticker/image to the specified pack but uses 🤔 as emoji.\
-\n\n📌** CMD ➥** `.curi [emoji('s)] [number]`\
-\n**USAGE   ➥  **Kang's the sticker/image to the specified pack and uses the emoji('s) you picked.\
-\n\n📌** CMD ➥** `.stickers name`\
-\n**USAGE   ➥  **Shows you the list of non-animated sticker packs with that name.\
-\n\n📌** CMD ➥** `.stkrinfo`\
-\n**USAGE   ➥  **Gets info about the sticker pack."
+        "stickers": "__**NAMA PLUGIN :** Stickers__\
+\n\n✅** CMD ➥** `.curi`\
+\n**Fungsi   ➥  **Balas .curi ke stiker atau gambar untuk dikirim ke paket userbot Anda.\
+\n\n✅** CMD ➥** `.curi [emoji]`\
+\n**Fungsi   ➥  **Bekerja seperti .curi tetapi menggunakan emoji yang Anda pilih.\
+\n\n✅** CMD ➥** `.curi [nomor]`\
+\n**Fungsi   ➥  **Kang adalah stiker/gambar ke paket yang ditentukan tetapi menggunakan 🤔 sebagai emoji.\
+\n\n✅** CMD ➥** `.curi [emoji] [nomor]`\
+\n**Fungsi   ➥  **Kang stiker/gambar ke paket yang ditentukan dan menggunakan emoji yang Anda pilih.\
+\n\n✅** CMD ➥** `.stickers nama`\
+\n**Fungsi   ➥  **Menampilkan daftar paket stiker non-animasi dengan nama itu.\
+\n\n✅** CMD ➥** `.stkrinfo`\
+\n**Fungsi   ➥  **Mendapat info tentang paket stiker."
     }
 )
