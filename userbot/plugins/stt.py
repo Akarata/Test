@@ -76,8 +76,8 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "stt": "__**PLUGIN NAME :** Stt\
-    \n\n📌** CMD ➥** `.stt en` reply this to voice message\
-    \n**USAGE   ➥  **speech to text module"
+        "stt": "__**NAMA PLUGIN :** Stt\
+    \n\n✅** CMD ➥** `.stt en` balas ini ke pesan suara\
+    \n**Fungsi   ➥  **modul pidato ke teks"
     }
 )
