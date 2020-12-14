@@ -179,21 +179,21 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "xiaomi": "__**PLUGIN NAME :** Xiaomi__\
-        \n\n__**For Xiaomeme devices only!**__\
-\n\n📌** CMD ➥** `.firmware` (codename)\
-\n**USAGE   ➥  **Get lastest Firmware\
-\n\n📌** CMD ➥** `.vendor` (codename)\
-\n**USAGE   ➥  **Get lastest Vendor\
-\n\n📌** CMD ➥** `.pb` (codename)\
-\n**USAGE   ➥  **Get latest PBRP\
-\n\n📌** CMD ➥** `.specs` (codename)\
-\n**USAGE   ➥  **Get quick spec information about device\
-\n\n📌** CMD ➥** `.fastboot` (codename)\
-\n**USAGE   ➥  **Get latest fastboot MIUI\
-\n\n📌** CMD ➥** `.recovery` (codename)\
-\n**USAGE   ➥  **Get latest recovery MIUI\
-\n\n📌** CMD ➥** `.of` (codename)\
-\n**USAGE   ➥  **Get latest ORangeFox Recovery"
+        "xiaomi": "__**NAMA PLUGIN :** Xiaomi__\
+        \n\n__**hanya untuk perangkat xiaomi !**__\
+\n\n✅** CMD ➥** `.firmware` (nama kode)\
+\n**Fungsi   ➥  **Dapatkan Firmware terbaru\
+\n\n✅** CMD ➥** `.vendor` (nama kode)\
+\n**Fungsi   ➥  **Dapatkan Vendor terbaru\
+\n\n✅** CMD ➥** `.pb` (nama kode)\
+\n**Fungsi   ➥  **Dapatkan PBRP terbaru\
+\n\n✅** CMD ➥** `.specs` (nama kode)\
+\n**Fungsi   ➥  **Dapatkan informasi spesifikasi cepat tentang perangkat\
+\n\n✅** CMD ➥** `.fastboot` (nama kode)\
+\n**Fungsi   ➥  **Dapatkan MIUI fastboot terbaru\
+\n\n✅** CMD ➥** `.recovery` (nama kode)\
+\n**Fungsi   ➥  **Dapatkan MIUI pemulihan terbaru\
+\n\n✅** CMD ➥** `.of` (nama kode)\
+\n**Fungsi   ➥  **Dapatkan Pemulihan ORangeFox terbaru"
     }
 )
