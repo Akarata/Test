@@ -37,7 +37,7 @@ async def _(event):
         # https://pillow.readthedocs.io/en/3.1.x/reference/Image.html#create-thumbnails
         os.remove(downloaded_file_name)
         await catevent.edit(
-            "Custom video/file thumbnail saved. This image will be used in the upload, till `.clearthumb`."
+            "Thumbnail video / file kustom disimpan.  Gambar ini akan digunakan dalam unggahan, sampai `.clearthumb`."
         )
     else:
         await catevent.edit("Reply to a photo to save custom thumbnail")
@@ -52,7 +52,7 @@ async def _(event):
         os.remove(thumb_image_path)
     else:
         await edit_or_reply(event, "No thumbnail is setted to clear")
-    await edit_or_reply(event, "✅ Custom thumbnail cleared succesfully.")
+    await edit_or_reply(event, "✅ Thumbnail kustom berhasil dihapus.")
 
 
 @bot.on(admin_cmd(pattern="getthumb$"))
@@ -96,13 +96,13 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "thumbnail": "__**PLUGIN NAME :** Thumbnail__\
-    \n\n📌** CMD ➥** `.savethumb`\
-    \n**USAGE   ➥  **Reply to file or video to save it as temporary thumbimage\
-    \n\n📌** CMD ➥** `.clearthumb`\
-    \n**USAGE   ➥  **To clear Thumbnail no longer you uploads uses custom thumbanail\
-    \n\n📌** CMD ➥** `.getthumb`\
-    \n**USAGE   ➥  **To get thumbnail of given video or gives your present thumbnail\
+        "thumbnail": "__**NAMA PLUGIN :** Thumbnail__\
+    \n\n✅** CMD ➥** `.savethumb`\
+    \n**Fungsi   ➥  **Balas file atau video untuk menyimpannya sebagai thumbnail sementara\
+    \n\n✅** CMD ➥** `.clearthumb`\
+    \n**Fungsi   ➥  **Untuk menghapus Thumbnail, Anda tidak lagi mengupload menggunakan thumbnail kustom\
+    \n\n✅** CMD ➥** `.getthumb`\
+    \n**Fungsi   ➥  **Untuk mendapatkan thumbnail dari video tertentu atau memberikan thumbnail Anda saat ini\
     "
     }
 )
