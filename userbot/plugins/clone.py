@@ -85,7 +85,7 @@ async def _(event):
     await event.client(functions.account.UpdateProfileRequest(about=bio))
     await event.client(functions.account.UpdateProfileRequest(first_name=name))
     await event.client(functions.account.UpdateProfileRequest(last_name=blank))
-    await event.edit("succesfully reverted to your account back")
+    await event.edit("Berhasil dikembalikan ke akun Anda kembali")
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID, f"#REVERT\nBerhasil dikembalikan ke profil Anda"
