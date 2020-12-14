@@ -107,12 +107,12 @@ async def save_welcome(event):
     elif event.reply_to_msg_id and not string:
         rep_msg = await event.get_reply_message()
         string = rep_msg.text
-    success = "`Welcome note {} for this chat.`"
+    success = "`Pesan selamat datang {} untuk obrolan ini.`"
     if add_welcome_setting(event.chat_id, 0, string, msg_id) is True:
-        return await edit_or_reply(event, success.format("saved"))
+        return await edit_or_reply(event, success.format("disimpan"))
     rm_welcome_setting(event.chat_id)
     if add_welcome_setting(event.chat_id, 0, string, msg_id) is True:
-        return await edit_or_reply(event, success.format("updated"))
+        return await edit_or_reply(event, success.format("diperbarui"))
     await edit_or_reply("Error while setting welcome in this group")
 
 
@@ -122,9 +122,9 @@ async def del_welcome(event):
     if event.fwd_from:
         return
     if rm_welcome_setting(event.chat_id) is True:
-        await edit_or_reply(event, "`Welcome note deleted for this chat.`")
+        await edit_or_reply(event, "`Catatan selamat datang dihapus untuk obrolan ini.`")
     else:
-        await edit_or_reply(event, "`Do I have a welcome note here ?`")
+        await edit_or_reply(event, "`Apakah saya punya pesan selamat datang di sini ?`")
 
 
 @bot.on(admin_cmd(pattern="listwelcome$"))
@@ -134,32 +134,32 @@ async def show_welcome(event):
         return
     cws = get_current_welcome_settings(event.chat_id)
     if not cws:
-        await edit_or_reply(event, "`No welcome message saved here.`")
+        await edit_or_reply(event, "`Tidak ada pesan selamat datang yang disimpan di sini.`")
         return
     if cws.f_mesg_id:
         msg_o = await bot.get_messages(entity=BOTLOG_CHATID, ids=int(cws.f_mesg_id))
         await edit_or_reply(
-            event, "`I am currently welcoming new users with this welcome note.`"
+            event, "`Saya saat ini menyambut pengguna baru dengan catatan selamat datang ini.`"
         )
         await event.reply(msg_o.message, file=msg_o.media)
     elif cws.reply:
         await edit_or_reply(
-            event, "`I am currently welcoming new users with this welcome note.`"
+            event, "`Saya saat ini menyambut pengguna baru dengan catatan selamat datang ini.`"
         )
         await event.reply(cws.reply)
 
 
 CMD_HELP.update(
     {
-        "welcome": "__**PLUGIN NAME :** Welcome__\
-\n\n📌** CMD ➥** `.savewelcome` <welcome message> or reply to a message with `.savewelcome`\
-\n**USAGE   ➥  **Saves the message as a welcome note in the chat.\
-\n\nAvailable variables for formatting welcome messages :\
+        "welcome": "__**NAMA PLUGIN :** Welcome__\
+\n\n✅** CMD ➥** `.savewelcome` <welcome message> or reply to a message with `.savewelcome`\
+\n**Fungsi   ➥  **Menyimpan pesan sebagai catatan selamat datang di obrolan.\
+\n\nVariabel yang tersedia untuk memformat pesan selamat datang :\
 \n`{mention}`, `{title}`, `{count}`, `{first}`, `{last}`, `{fullname}`, `{userid}`, `{username}`, `{my_first}`, `{my_fullname}`, `{my_last}`, `{my_mention}`, `{my_username}`\
-\n\n📌** CMD ➥** `.listwelcome`\
-\n**USAGE   ➥  **Check whether you have a welcome note in the chat.\
-\n\n📌** CMD ➥** `.clearwelcome`\
-\n**USAGE   ➥  **Deletes the welcome note for the current chat.\
-\n\n***Note:** Type text in html format"
+\n\n✅** CMD ➥** `.listwelcome`\
+\n**Fungsi   ➥  **Periksa apakah Anda memiliki catatan selamat datang di obrolan.\
+\n\n✅** CMD ➥** `.clearwelcome`\
+\n**Fungsi   ➥  **Menghapus catatan selamat datang untuk obrolan saat ini.\
+\n\n***Note:** Ketik teks dalam format html"
     }
 )
