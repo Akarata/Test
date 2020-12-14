@@ -99,8 +99,8 @@ def convert_from_bytes(size):
 
 CMD_HELP.update(
     {
-        "speedtest": "__**PLUGIN NAME :** Speedtest__\
-      \n\n📌** CMD ➥** `.speedtest` <text/image/file>\
-      \n**USAGE   ➥  **__Shows your server speed in the given format if nothing is given then shows as image__"
+        "speedtest": "__**NAMA PLUGIN :** Speedtest__\
+      \n\n✅** CMD ➥** `.speedtest` <text/image/file>\
+      \n**Fungsi   ➥  **__Menunjukkan kecepatan server Anda dalam format yang diberikan jika tidak ada yang diberikan kemudian ditampilkan sebagai gambar__"
     }
 )
