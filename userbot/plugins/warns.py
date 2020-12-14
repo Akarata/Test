@@ -81,12 +81,12 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "warns": "__**PLUGIN NAME :** Warns__\
-      \n\n📌** CMD ➥** `.warn` <reason> <reply to user>\
-      \n**USAGE   ➥  **__Warns the given user in the chat you used__\
-      \n\n📌** CMD ➥** `.warns` <reply>\
-      \n**USAGE   ➥  **__Gets the warns of the given user in the chat you used__\
-      \n\n📌** CMD ➥** `.resetwarns` <reply>\
-      \n**USAGE   ➥  **__Resets the warns of the replied users in the chat where u used command__"
+        "warns": "__**NAMA PLUGIN :** Warns__\
+      \n\n✅** CMD ➥** `.warn` <alasan> <balas ke pengguna>\
+      \n**Fungsi   ➥  **__Memperingatkan pengguna tertentu dalam obrolan yang Anda gunakan__\
+      \n\n✅** CMD ➥** `.warns` <balas>\
+      \n**Fungsi   ➥  **__Mendapat peringatan dari pengguna tertentu dalam obrolan yang Anda gunakan__\
+      \n\n✅** CMD ➥** `.resetwarns` <balas>\
+      \n**Fungsi   ➥  **__Menyetel ulang peringatan dari pengguna yang menjawab di obrolan tempat Anda menggunakan perintah__"
     }
 )
