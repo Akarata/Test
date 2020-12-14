@@ -20,7 +20,7 @@ from . import runcmd
 HEROKU_APP_NAME = Config.HEROKU_APP_NAME
 HEROKU_API_KEY = Config.HEROKU_API_KEY
 UPSTREAM_REPO_BRANCH = "master"
-UPSTREAM_REPO_URL = "https://github.com/Akarata/Neko_Userbot"
+UPSTREAM_REPO_URL = "https://github.com/Akarata/Jichu_Userbot"
 
 requirements_path = path.join(
     path.dirname(path.dirname(path.dirname(__file__))), "requirements.txt"
@@ -211,7 +211,7 @@ async def upstream(event):
         return
     if changelog == "" and not force_update:
         await event.edit(
-            "\n`Neko_Userbot  sudah`  **diperbarui**  `oleh`  "
+            "\n`Userbot kamu  sudah`  **diperbarui**  `oleh`  "
             f"**[{UPSTREAM_REPO_BRANCH}]**\n"
         )
         return repo.__del__()
