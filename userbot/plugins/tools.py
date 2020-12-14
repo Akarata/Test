@@ -361,28 +361,28 @@ Year: {}""".format(
 
 CMD_HELP.update(
     {
-        "tools": "__**PLUGIN NAME :** Tools__\
-\n\n📌** CMD ➥** `.scan` reply to media or file\
-\n**USAGE   ➥  **It scans the media or file and checks either any virus is in the file or media\
-\n\n📌** CMD ➥** `.makeqr` <content>\
-\n**USAGE   ➥  **Make a QR Code from the given content.\
-\n**Example:** `.makeqr www.google.com`\
-\n\n📌** CMD ➥** `.barcode `<content>\
-\n**USAGE   ➥  **Make a BarCode from the given content.\
-\n**Example:** `.barcode www.google.com`\
-\n\n📌** CMD ➥** `.decode` <reply to barcode/qrcode> \
-\n**USAGE   ➥  **To get decoded content of those codes.\
-\n\n📌** CMD ➥** `.currency` amount (from currency) (to currency)\
-\n**USAGE   ➥  **Currency converter for userbot **Example :** `.currency 10 usd inr`\
-\n\n📌** CMD ➥** `cal year ; month`\
-\n**USAGE   ➥  **Shows you the calendar of given month and year.\
-\n\n📌** CMD ➥** `.currencies`\
-\n**USAGE   ➥  **Shows you the some list of currencies\
-\n\n📌** CMD ➥** `.ifsc` <IFSC code>\
-\n**USAGE   ➥  **To get details of the relevant bank or branch **Example :** `.ifsc SBIN0016086`\
-\n\n📌** CMD ➥** `.color` <color_code> \
-\n**USAGE   ➥  **Sends you a plain image of the color example :`.color #ff0000`\
-\n\n📌** CMD ➥** `.xkcd` <query>\
-\n**USAGE   ➥  **Searches for the query for the relevant XKCD comic "
+        "tools": "__**NAMA PLUGIN :** Tools__\
+\n\n✅** CMD ➥** `.scan` membalas media atau file\
+\n**Fungsi   ➥  **Ini memindai media atau file dan memeriksa apakah ada virus di dalam file atau media tersebut\
+\n\n✅** CMD ➥** `.makeqr` <content>\
+\n**Fungsi   ➥  **Buat Kode QR dari konten yang diberikan.\
+\n**Contoh:** `.makeqr www.google.com`\
+\n\n✅** CMD ➥** `.barcode `<content>\
+\n**Fungsi   ➥  **Buat Kode Batang dari konten yang diberikan.\
+\n**Contoh:** `.barcode www.google.com`\
+\n\n✅** CMD ➥** `.decode` <balas ke barcode/qrcode> \
+\n**Fungsi   ➥  **Untuk mendapatkan konten yang diterjemahkan dari kode-kode tersebut.\
+\n\n✅** CMD ➥** `.currency` amount (dari mata uang) (untuk mata uang)\
+\n**Fungsi   ➥  **Konverter mata uang untuk userbot **Contoh :** `.currency 10 usd inr`\
+\n\nn✅* CMD ➥** `cal year ; month`\
+\n**Fungsi   ➥  **Menunjukkan kalender bulan dan tahun tertentu.\
+\n\n✅** CMD ➥** `.currencies`\
+\n**Fungsi   ➥  **Menunjukkan beberapa daftar mata uang\
+\n\n✅** CMD ➥** `.ifsc` <IFSC code>\
+\n**Fungsi   ➥  **Untuk mendapatkan detail bank atau cabang terkait **Contoh :** `.ifsc SBIN0016086`\
+\n\n✅** CMD ➥** `.color` <kode warna> \
+\n**Fungsi   ➥  **Mengirimi Anda gambar biasa dari contoh warna :`.color #ff0000`\
+\n\n✅** CMD ➥** `.xkcd` <query>\
+\n**Fungsi   ➥  **Menelusuri kueri yang relevan XKCD comic "
     }
 )
