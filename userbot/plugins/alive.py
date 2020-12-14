@@ -35,7 +35,7 @@ async def amireallyalive(alive):
         )
         cat_caption += f"<b> ✘   [   ⚙️   ]  ➥  Telethon :</b> <code>{version.__version__}</code>\n"
         cat_caption += (
-            f"<b> ✘   [   🤖   ]  ➥  Aka Version :</b> <code>{catversion}</code>\n"
+            f"<b> ✘   [   🤖   ]  ➥  Neko Version :</b> <code>{catversion}</code>\n"
         )
         cat_caption += f"<b> ✘   [   ⚔️   ]  ➥  Running on :</b> <code>Master</code>\n"
 
@@ -53,11 +53,11 @@ async def amireallyalive(alive):
         await edit_or_reply(
             alive,
             f"<b>{JISAN}</b>\n\n"
-            f"<b> »» [👤] ➥ My Master : {hmention}</b>\n"
-            f"<b> »» [🕒] ➥ Uptime :</b> <code>{uptime}</code>\n"
-            f"<b> »» [🐍] ➥ Python :</b> <code>{python_version()}</code>\n"
-            f"<b> »» [⚙️] ➥ Telethon :</b> <code>{version.__version__}</code>\n"
-            f"<b> »» [🤖] ➥ Bot :</b> <code>{catversion}</code>\n",
+            f"<b> ✘  [👤] ➥ My Master : {hmention}</b>\n"
+            f"<b> ✘  [🕒] ➥ Uptime :</b> <code>{uptime}</code>\n"
+            f"<b> ✘  [🐍] ➥ Python :</b> <code>{python_version()}</code>\n"
+            f"<b> ✘  [⚙️] ➥ Telethon :</b> <code>{version.__version__}</code>\n"
+            f"<b> ✘  [🤖] ➥ Neko Version :</b> <code>{catversion}</code>\n",
         )
 
 
@@ -70,11 +70,11 @@ async def amireallyalive(alive):
     reply_to_id = alive.message
     if alive.reply_to_msg_id:
         reply_to_id = await alive.get_reply_message()
-    cat_caption = f"**AkaProject Aktif dan Berjalan**\n"
+    cat_caption = f"**Neko_Userbot Aktif dan Berjalan**\n"
     cat_caption += f"**  -Master :** {mention}\n"
     cat_caption += f"**  -Python Version :** `{python_version()}\n`"
     cat_caption += f"**  -Telethon version :** `{version.__version__}\n`"
-    cat_caption += f"**  -Aka Version :** `{catversion}`\n"
+    cat_caption += f"**  -Neko Version :** `{catversion}`\n"
     results = await bot.inline_query(tgbotusername, cat_caption)  # pylint:disable=E0602
     await results[0].click(alive.chat_id, reply_to=reply_to_id, hide_via=True)
     await alive.delete()
