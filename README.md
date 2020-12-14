@@ -13,7 +13,7 @@
     <a href="https://hub.docker.com/repository/docker/akarata/project/tags"> <img src="https://img.shields.io/docker/v/akarata/project/latest?label=Docker%20Version&style=flat-square&logo=docker&logoColor=white&color=F10070" alt="Docker Version" /></a><br>
 </p>
 
-[![ logo](https://telegra.ph/file/3e712650d6b40736f6a71.jpg)](t.me/Akarata)
+[![ logo](https://telegra.ph/file/3e712650d6b40736f6a71.jpg)](https://t.me/Akarata)
 
 
 ```
