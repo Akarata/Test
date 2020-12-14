@@ -5,7 +5,7 @@ from googletrans import LANGUAGES, Translator
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from . import BOTLOG, BOTLOG_CHATID, CMD_HELP, deEmojify
 
-TRT_LANG = "en"
+TRT_LANG = "id"
 
 
 @bot.on(admin_cmd(pattern="tl (.*)"))
@@ -32,7 +32,7 @@ async def _(event):
     try:
         translated = await getTranslate(text, dest=lan)
         after_tr_text = translated.text
-        output_str = f"**TRANSLATED from {LANGUAGES[translated.src].title()} to {LANGUAGES[lan].title()}**\
+        output_str = f"**Diterjemahkan dari {LANGUAGES[translated.src].title()} ke {LANGUAGES[lan].title()}**\
                 \n`{after_tr_text}`"
         await edit_or_reply(event, output_str)
     except Exception as exc:
@@ -83,10 +83,10 @@ async def lang(value):
     else:
         await edit_or_reply(
             value,
-            f"`Invalid Language code !!`\n`Available language codes for TRT`:\n\n`{LANGUAGES}`",
+            f"`Kode Bahasa Tidak Valid !!`\n`Kode bahasa yang tersedia untuk TRT`:\n\n`{LANGUAGES}`",
         )
         return
-    await edit_or_reply(value, f"`Language for {scraper} changed to {LANG.title()}.`")
+    await edit_or_reply(value, f"`Bahasa untuk {scraper} ✅jadi {LANG.title()}.`")
     if BOTLOG:
         await value.client.send_message(
             BOTLOG_CHATID, f"`Language for {scraper} changed to {LANG.title()}.`"
@@ -108,14 +108,14 @@ async def getTranslate(text, **kwargs):
 
 CMD_HELP.update(
     {
-        "translate": "__**PLUGIN NAME :** Translate__\
-         \n\n📌** CMD ➥** `.tl` < [LanguageCode](https://telegra.ph/Jisan-10-13-6) > as reply to a message\
-         \n**USAGE   ➥  **.tl LangaugeCode | text to translate\
-         \n**Example :** `.tl hi`\
-         \n\n📌** CMD ➥** `.trt` Reply to a message\
-         \n**USAGE   ➥  **It will translate your messege\
-         \n\n📌** CMD ➥** `.lang trt` < [LanguageCode](https://telegra.ph/Jisan-10-13-6) >\
-         \n**USAGE   ➥  **It will set default langaugeCode for **trt**\
+        "translate": "__**NAMA PLUGIN :** Translate__\
+         \n\n✅** CMD ➥** `.tl` < [Kode Bahasa](https://telegra.ph/Jisan-10-13-6) > sebagai balasan pesan\
+         \n**Fungsi   ➥  **.tl Kode bahasa | teks untuk diterjemahkan\
+         \n**Contoh :** `.tl hi`\
+         \n\n✅** CMD ➥** `.trt` Balas pesan\
+         \n**Fungsi   ➥  **Ini akan menerjemahkan pesan Anda\
+         \n\n✅** CMD ➥** `.lang trt` < [Kode Bahasa](https://telegra.ph/Jisan-10-13-6) >\
+         \n**Fungsi   ➥  **Ini akan mengatur Kode bahasa default untuk **trt**\
         "
     }
 )
