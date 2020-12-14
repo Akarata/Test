@@ -34,9 +34,9 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "undlt": "__**PLUGIN NAME :** Undlt__\
-        \n\n📌** CMD ➥** `.undlt` <count>\
-        \n**USAGE   ➥  ***Fetches last <count> number of deleted messages and sends you(you must be admin in that group)  \
+        "undlt": "__**NAMA PLUGIN :** Undlt__\
+        \n\n✅** CMD ➥** `.undlt` <count>\
+        \n**Fungsi   ➥  ***Mengambil <count> jumlah terakhir dari pesan yang dihapus dan mengirimi Anda (Anda harus menjadi admin di grup itu)  \
 "
     }
 )
