@@ -15,7 +15,7 @@ async def remove_background(event):
     if Config.REM_BG_API_KEY is None:
         return await edit_delete(
             event,
-            "`You have to set REM_BG_API_KEY in Config vars with API token from remove.bg to use this plugin .`",
+            "`Anda harus menyetel REM_BG_API_KEY di Config vars dengan token API dari remove.bg untuk menggunakan plugin ini .`",
             5,
         )
     cmd = event.pattern_match.group(1)
@@ -23,7 +23,7 @@ async def remove_background(event):
     message_id = await reply_id(event)
     if event.reply_to_msg_id and not input_str:
         reply_message = await event.get_reply_message()
-        catevent = await edit_or_reply(event, "`Analysing this Image/Sticker...`")
+        catevent = await edit_or_reply(event, "`Menganalisis Gambar/Stiker ini...`")
         file_name = os.path.join(Config.TEMP_DIR, "rmbg.png")
         try:
             await event.client.download_media(reply_message, file_name)
@@ -31,17 +31,17 @@ async def remove_background(event):
             await edit_delete(catevent, f"`{str(e)}`", 5)
             return
         else:
-            await catevent.edit("`Removing Background of this media`")
+            await catevent.edit("`Menghapus Latar Belakang media ini`")
             file_name = convert_toimage(file_name)
             response = ReTrieveFile(file_name)
             os.remove(file_name)
     elif input_str:
-        catevent = await edit_or_reply(event, "`Removing Background of this media`")
+        catevent = await edit_or_reply(event, "`Menghapus Latar Belakang media ini`")
         response = ReTrieveURL(input_str)
     else:
         await edit_delete(
             event,
-            "`Reply to any image or sticker with rmbg/srmbg to get background less png file or webp format or provide image link along with command`",
+            "`Balas gambar atau stiker apa pun dengan rmbg / srmbg untuk mendapatkan latar belakang lebih sedikit file png atau format webp atau berikan tautan gambar bersama dengan perintah`",
             5,
         )
         return
@@ -114,10 +114,10 @@ def convert_to_webp(file_name, response):
 
 CMD_HELP.update(
     {
-        "removebg": "__**PLUGIN NAME :** Removebg__\
-\n\n📌** CMD ➥** `.rmbg` <Link to Image> or reply to any image \
-\n**USAGE   ➥  **Removes the background of images and send as png format\
-\n\n📌** CMD ➥** `.srmbg` <reply to any image>\
-\n**USAGE   ➥  **Removes the background of images & send as a sticker format"
+        "removebg": "__**NAMA PLUGIN :** Removebg__\
+\n\n✅** CMD ➥** `.rmbg` <Tautan ke Gambar> atau membalas gambar apapun \
+\n**Fungsi   ➥  **Menghapus latar belakang gambar dan mengirim sebagai format png\
+\n\n✅** CMD ➥** `.srmbg` <membalas gambar apapun>\
+\n**Fungsi   ➥  **Hapus latar belakang gambar & kirim sebagai format stiker"
     }
 )
