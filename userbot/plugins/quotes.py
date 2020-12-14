@@ -12,7 +12,7 @@ from . import CMD_HELP
 async def quote_search(event):
     if event.fwd_from:
         return
-    catevent = await edit_or_reply(event, "`Processing...`")
+    catevent = await edit_or_reply(event, "`Tunggu beberapa saat...`")
     input_str = event.pattern_match.group(1)
     if not input_str:
         api_url = "https://quotes.cwprojects.live/random"
@@ -29,14 +29,14 @@ async def quote_search(event):
     if response is not None:
         await catevent.edit(f"`{response['text']}`")
     else:
-        await edit_delete(catevent, "`Sorry Zero results found`", 5)
+        await edit_delete(catevent, "`Maaf Tidak ada hasil yang ditemukan`", 5)
 
 
 CMD_HELP.update(
     {
-        "quotes": "__**PLUGIN NAME :** Quotes__\
-    \n\n📌** CMD ➥** `.quote` <category>\
-    \n**USAGE   ➥  **__An api that Fetchs random Quote from `goodreads.com`__\
+        "quotes": "__**NAMA PLUGIN :** Quotes__\
+    \n\n✅** CMD ➥** `.quote` <category>\
+    \n**Fungsi   ➥  **__Api yang Mengambil Kutipan acak dari `goodreads.com`__\
     "
     }
 )
