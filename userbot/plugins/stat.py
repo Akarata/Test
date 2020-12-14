@@ -64,23 +64,23 @@ async def stats(
         unread += dialog.unread_count
     stop_time = time.time() - start_time
     full_name = inline_mention(await event.client.get_me())
-    response = f"📌 **Stats for {full_name}** \n\n"
+    response = f"✅ **Statistik untuk {full_name}** \n\n"
     response += f"**Private Chats:** {private_chats} \n"
     response += f"   ★ `Users: {private_chats - bots}` \n"
     response += f"   ★ `Bots: {bots}` \n"
-    response += f"**Groups:** {groups} \n"
-    response += f"**Channels:** {broadcast_channels} \n"
-    response += f"**Admin in Groups:** {admin_in_groups} \n"
-    response += f"   ★ `Creator: {creator_in_groups}` \n"
-    response += f"   ★ `Admin Rights: {admin_in_groups - creator_in_groups}` \n"
-    response += f"**Admin in Channels:** {admin_in_broadcast_channels} \n"
-    response += f"   ★ `Creator: {creator_in_channels}` \n"
+    response += f"**Grup:** {groups} \n"
+    response += f"**Channel:** {broadcast_channels} \n"
+    response += f"**Admin di Grup:** {admin_in_groups} \n"
+    response += f"   ★ `Pencipta: {creator_in_groups}` \n"
+    response += f"   ★ `Hak Admin: {admin_in_groups - creator_in_groups}` \n"
+    response += f"**Admin di Channel:** {admin_in_broadcast_channels} \n"
+    response += f"   ★ `Pencipta: {creator_in_channels}` \n"
     response += (
-        f"   ★ `Admin Rights: {admin_in_broadcast_channels - creator_in_channels}` \n"
+        f"   ★ `Hak Admin: {admin_in_broadcast_channels - creator_in_channels}` \n"
     )
-    response += f"**Unread:** {unread} \n"
-    response += f"**Unread Mentions:** {unread_mentions} \n\n"
-    response += f"📌 __It Took:__ {stop_time:.02f}s \n"
+    response += f"**Belum dibaca:** {unread} \n"
+    response += f"**Sebutan Belum Dibaca:** {unread_mentions} \n\n"
+    response += f"✅ __Butuh:__ {stop_time:.02f}s \n"
     await cat.edit(response)
 
 
@@ -103,8 +103,8 @@ def user_full_name(user):
 
 CMD_HELP.update(
     {
-        "stat": "__**PLUGIN NAME :** Stat__\
-    \n\n📌** CMD ➥** `.stat`\
-    \n**USAGE   ➥  **Shows you the count of  your groups, channels, private chats...etc"
+        "stat": "__**NAMA PLUGIN :** Stat__\
+    \n\n✅** CMD ➥** `.stat`\
+    \n**Fungsi   ➥  **Menunjukkan jumlah grup, saluran, obrolan pribadi ... dll"
     }
 )
