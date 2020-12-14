@@ -54,7 +54,7 @@ async def memes(cat):
     catinput = cat.pattern_match.group(2)
     reply = await cat.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(cat, "`Reply to supported Media...`")
+        await edit_or_reply(cat, "`kung...`")
         return
     catid = cat.reply_to_msg_id
     if catinput:
@@ -65,25 +65,25 @@ async def memes(cat):
             bottom = ""
     else:
         await edit_or_reply(
-            cat, "```what should i write on that u idiot give some text```"
+            cat, "```apa yang harus saya tulis di atas? bahwa kamu bodoh memberikan beberapa teks```"
         )
         return
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    cat = await edit_or_reply(cat, "`Downloading media......`")
+    cat = await edit_or_reply(cat, "`Mendownload media......`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
     catsticker = await reply.download_media(file="./temp/")
     if not catsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
         os.remove(catsticker)
-        await edit_or_reply(cat, "```Supported Media not found...```")
+        await edit_or_reply(cat, "```Media yang Didukung tidak ditemukan...```")
         return
     import base64
 
     if catsticker.endswith(".tgs"):
         await cat.edit(
-            "```Transfiguration Time! Mwahaha memifying this animated sticker! (」ﾟﾛﾟ)｣```"
+            "```Waktu Transfigurasi!  Mwahaha memperingati stiker animasi ini! (」ﾟﾛﾟ)｣```"
         )
         catfile = os.path.join("./temp/", "meme.png")
         catcmd = (
@@ -96,27 +96,27 @@ async def memes(cat):
         meme_file = catfile
     elif catsticker.endswith(".webp"):
         await cat.edit(
-            "```Transfiguration Time! Mwahaha memifying this sticker! (」ﾟﾛﾟ)｣```"
+            "```Waktu Transfigurasi!  Mwahaha memifying stiker ini! (」ﾟﾛﾟ)｣```"
         )
         catfile = os.path.join("./temp/", "memes.jpg")
         os.rename(catsticker, catfile)
         if not os.path.lexists(catfile):
-            await cat.edit("`Template not found... `")
+            await cat.edit("`Template tidak ditemukan... `")
             return
         meme_file = catfile
     elif catsticker.endswith((".mp4", ".mov")):
         await cat.edit(
-            "```Transfiguration Time! Mwahaha memifying this video! (」ﾟﾛﾟ)｣```"
+            "```Waktu Transfigurasi!  Mwahaha memifying video ini! (」ﾟﾛﾟ)｣```"
         )
         catfile = os.path.join("./temp/", "memes.jpg")
         await take_screen_shot(catsticker, 0, catfile)
         if not os.path.lexists(catfile):
-            await cat.edit("```Template not found...```")
+            await cat.edit("```Template tidak ditemukan...```")
             return
         meme_file = catfile
     else:
         await cat.edit(
-            "```Transfiguration Time! Mwahaha memifying this image! (」ﾟﾛﾟ)｣```"
+            "```Waktu Transfigurasi!  Mwahaha memifying gambar ini! (」ﾟﾛﾟ)｣```"
         )
         meme_file = catsticker
     try:
@@ -828,30 +828,30 @@ async def memes(cat):
 
 CMD_HELP.update(
     {
-        "memify": "__**PLUGIN NAME :** Memify__\
-    \n\n📌** CMD ➥** `.mmf toptext ; bottomtext`\
-    \n**USAGE   ➥  **Creates a image meme with give text at specific locations and sends\
-    \n\n📌** CMD ➥** `.mms toptext ; bottomtext`\
-    \n**USAGE   ➥  **Creates a sticker meme with give text at specific locations and sends\
-    \n\n📌** CMD ➥** `.cfont` <Font Name>\
-    \n**USAGE   ➥  **Change the font style use for memify,\nTo get fonts name use this cmd (`.ls userbot/helpers/styles`)\
-    \n\n📌** CMD ➥** `.ascii`\
-    \n**USAGE   ➥  **Reply to media file to get ascii image of that media\
-    \n\n📌** CMD ➥** `.invert`\
-    \n**USAGE   ➥  **Inverts the colors in media file\
-    \n\n📌** CMD ➥** `.solarize`\
-    \n**USAGE   ➥  **Watch sun buring ur media file\
-    \n\n📌** CMD ➥** `.mirror`\
-    \n**USAGE   ➥  **Shows you the reflection of the media file\
-    \n\n📌** CMD ➥** `.flip`\
-    \n**USAGE   ➥  **Shows you the upside down image of the given media file\
-    \n\n📌** CMD ➥** `.gray`\
-    \n**USAGE   ➥  **Makes your media file to black and white\
-    \n\n📌** CMD ➥** `.zoom` or `.zoom range`\
-    \n**USAGE   ➥  **Zooms your media file\
-    \n\n📌** CMD ➥** `.frame` or `.frame range` or `.frame range ; fill`\
-    \n**USAGE   ➥  **Make a frame for your media file\
-    \n**Fill:** This defines the pixel fill value or color value to be applied. The default value is 0 which means the color is black.\
+        "memify": "__**NAMA PLUGIN :** Memify__\
+    \n\n✅** CMD ➥** `.mmf toptext ; bottomtext`\
+    \n**Fungsi   ➥  **Membuat meme gambar dengan memberi teks di lokasi dan pengiriman tertentu\
+    \n\n✅** CMD ➥** `.mms toptext ; bottomtext`\
+    \n**Fungsi   ➥  **Membuat meme stiker dengan teks give di lokasi dan pengiriman tertentu\
+    \n\n✅** CMD ➥** `.cfont` <Font Name>\
+    \n**Fungsi   ➥  **Ubah gaya font yang digunakan untuk memori, \ Untuk mendapatkan nama font gunakan cmd ini (`.ls userbot/helpers/styles`)\
+    \n\n✅** CMD ➥** `.ascii`\
+    \n**Fungsi   ➥  **Balas file media untuk mendapatkan gambar ascii dari media itu\
+    \n\n✅** CMD ➥** `.invert`\
+    \n**Fungsi   ➥  **Membalik warna di file media\
+    \n\n✅** CMD ➥** `.solarize`\
+    \n**Fungsi   ➥  **Saksikan matahari membakar file media Anda\
+    \n\n✅** CMD ➥** `.mirror`\
+    \n**Fungsi   ➥  **Menunjukkan refleksi dari file media\
+    \n\n✅** CMD ➥** `.flip`\
+    \n**Fungsi   ➥  **Menampilkan gambar terbalik dari file media yang diberikan\
+    \n\n✅** CMD ➥** `.gray`\
+    \n**Fungsi   ➥  **Menjadikan file media Anda hitam putih\
+    \n\n✅** CMD ➥** `.zoom` or `.zoom range`\
+    \n**Fungsi   ➥  **Memperbesar file media Anda\
+    \n\n✅** CMD ➥** `.frame` atau `.frame range` atau `.frame range ; fill`\
+    \n**Fungsi   ➥  **Buat bingkai untuk file media Anda\
+    \n**Isi:** Ini menentukan nilai isian piksel atau nilai warna yang akan diterapkan.  Nilai defaultnya adalah 0 yang artinya warnanya hitam.\
     "
     }
 )
