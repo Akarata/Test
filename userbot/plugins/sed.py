@@ -113,10 +113,10 @@ async def on_regex(event):
 
 CMD_HELP.update(
     {
-        "sed": "__**PLUGIN NAME :** Sed__\
-    \n\n📌** CMD ➥** `.s<delimiter><old word(s)><delimiter><new word(s)>`\
-    \n**USAGE   ➥  **Replaces a word or words using sed.tag any sentence and type s/a/b. where is required word to replace and b is correct word.\
-    \n\n**Delimiters:** `/, :, |, _`\
+        "sed": "__**NAMA PLUGIN :** Sed__\
+    \n\n✅** CMD ➥** `.s<delimiter><kata lama><delimiter><kata baru>`\
+    \n**Fungsi   ➥  **Mengganti satu kata atau kata menggunakan sed.tag sembarang kalimat dan ketik s/a/b.  dimana diperlukan kata untuk menggantikan dan b adalah kata yang benar.\
+    \n\n**Delimiter:** `/, :, |, _`\
     "
     }
 )
