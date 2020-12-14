@@ -271,7 +271,8 @@ async def kakashi(event):
     link = event.pattern_match.group(1)
     if ".com" not in link:
         catevent = await edit_or_reply(
-            event, "` Saya memerlukan tautan untuk mengunduh sesuatu yang pro.`**(._.)**"
+            event,
+            "` Saya memerlukan tautan untuk mengunduh sesuatu yang pro.`**(._.)**",
         )
     else:
         catevent = await edit_or_reply(event, "**Memulai Download!**")
@@ -287,7 +288,9 @@ async def kakashi(event):
             """ - don't spam notif - """
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await catevent.edit("**Error:** `buka blokir` @ DeezLoadBot `dan coba lagi!`")
+            await catevent.edit(
+                "**Error:** `buka blokir` @ DeezLoadBot `dan coba lagi!`"
+            )
             return
         await catevent.delete()
         await event.client.send_file(event.chat_id, song, caption=details.text)
