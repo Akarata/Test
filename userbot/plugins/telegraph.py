@@ -58,8 +58,8 @@ async def _(event):
                 ms_two = (end - start).seconds
                 os.remove(downloaded_file_name)
                 await catevent.edit(
-                    "**link : **[telegraph](https://telegra.ph{})\
-                    \n**Time Taken : **`{} seconds.`".format(
+                    "**tautan : **[telegraph](https://telegra.ph{})\
+                    \n**Waktu yang dibutuhkan : **`{} detik.`".format(
                         media_urls[0], (ms + ms_two)
                     ),
                     link_preview=True,
@@ -89,13 +89,13 @@ async def _(event):
             ms = (end - start).seconds
             cat = f"https://telegra.ph/{response['path']}"
             await catevent.edit(
-                f"**link : ** [telegraph]({cat})\
-                 \n**Time Taken : **`{ms} seconds.`",
+                f"**tautan : ** [telegraph]({cat})\
+                 \n**Waktu yang dibutuhkan : **`{ms} detik.`",
                 link_preview=True,
             )
     else:
         await catevent.edit(
-            "`Reply to a message to get a permanent telegra.ph link. (Inspired by @ControllerBot)`",
+            "`Balas pesan untuk mendapatkan tautan telegra.ph permanen.  (Terinspirasi oleh @ControllerBot)`",
         )
 
 
