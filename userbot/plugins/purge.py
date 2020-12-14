@@ -8,8 +8,8 @@ from ..utils import admin_cmd, edit_or_reply, errors_handler, sudo_cmd
 from . import BOTLOG, BOTLOG_CHATID, CMD_HELP
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="purge$"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern="purge$"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"(purge|p)"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern=r"(purge|p)"))
 @errors_handler
 async def fastpurger(purg):
     # For .purge command, purge all messages starting from the reply.
@@ -78,8 +78,8 @@ async def purgeme(delme):
     await smsg.delete()
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="del$"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern="del$"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"(del|d)"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern=r"(del|d)"))
 @errors_handler
 async def delete_it(delme):
     """ For .del command, delete the replied message. """
@@ -101,12 +101,12 @@ async def delete_it(delme):
 
 CMD_HELP.update(
     {
-        "purge": "__**Nama Plugin :** Purge__\
-    \n\n✅** CMD ➥** `.p`\
+        "purge": "__**NAMA PLUGIN :** Purge__\
+    \n\n✅** CMD ➥** `.purge atau .p`\
     \n**Fungsi   ➥  **Untuk membersihkan pesan, balas untuk menggunakannya.\
     \n\n✅** CMD ➥** `.purgeme` <x>\
     \n**Fungsi   ➥  **Hapus x total pesan baru.\
-    \n\n✅** CMD ➥** `.d`\
+    \n\n✅** CMD ➥** `.del atau .d`\
     \n**Fungsi   ➥  **Hapus pesan yang kamu balas.\
     \n\n✅** CMD ➥** `.edit` <pesanbaru>\
     \n**Fungsi   ➥  **Timpa pesan, balas pesan untuk mengedit <pesanbaru>."
