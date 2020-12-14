@@ -154,12 +154,12 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "webupload": "__**PLUGIN NAME :** Web Upload__\
-    \n\n📌** CMD ➥** `.webupload` --(`fileio`|`oload`|`anonfiles`|`transfer`|`filebin`|`anonymousfiles`|`vshare`|`bayfiles`) or \
-    \n         `.webuplod` (path of file) --(`fileio`|`oload`|`anonfiles`|`transfer`|`filebin`|`anonymousfiles`|`vshare`|`bayfiles`)\
-    \n**USAGE   ➥  **Upload the file to web according to your choice\
-    \nExample: `.webupload --anonfiles` tag this to a file\
-    \n\n📌** CMD ➥** `.labstack` Reply to a media file or provide a directory\
-    \n**USAGE   ➥  **Upload the file to labstack for 7 days."
+        "webupload": "__**NAMA PLUGIN :** Web Upload__\
+    \n\n✅** CMD ➥** `.webupload` --(`fileio`|`oload`|`anonfiles`|`transfer`|`filebin`|`anonymousfiles`|`vshare`|`bayfiles`) or \
+    \n         `.webuplod` (jalur file) --(`fileio`|`oload`|`anonfiles`|`transfer`|`filebin`|`anonymousfiles`|`vshare`|`bayfiles`)\
+    \n**Fungsi   ➥  **Unggah file ke web sesuai pilihan Anda\
+    \nContoh: `.webupload --anonfiles` beri tag ini ke file\
+    \n\n✅** CMD ➥** `.labstack` Membalas file media atau memberikan direktori\
+    \n**Contoh   ➥  **Unggah file ke labstack selama 7 hari."
     }
 )
