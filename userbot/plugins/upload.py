@@ -90,12 +90,12 @@ async def upload(path, event, udir_event, catflag=None):
             await event.client.send_file(
                 event.chat_id,
                 path,
-                caption=f"**File Name : **`{caption_rts}`",
+                caption=f"**Nama file : **`{caption_rts}`",
                 force_document=catflag,
                 thumb=thumb,
                 reply_to=reply_to_id,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                    progress(d, t, udir_event, c_time, "Uploading...", caption_rts)
+                    progress(d, t, udir_event, c_time, "Mengunggah...", caption_rts)
                 ),
             )
         else:
@@ -112,7 +112,7 @@ async def upload(path, event, udir_event, catflag=None):
             await event.client.send_file(
                 event.chat_id,
                 path,
-                caption=f"**File Name : **`{caption_rts}`",
+                caption=f"**Nama file : **`{caption_rts}`",
                 thumb=thumb,
                 force_document=catflag,
                 reply_to=reply_to_id,
@@ -143,10 +143,10 @@ async def uploadir(event):
     if not os.path.exists(path):
         await edit_or_reply(
             event,
-            f"`there is no such directory/file with the name {path} to upload`",
+            f"`tidak ada direktori/file dengan nama {path} untuk diunggah`",
         )
         return
-    udir_event = await edit_or_reply(event, "Uploading....")
+    udir_event = await edit_or_reply(event, "Mengunggah....")
     if os.path.isdir(path):
         await edit_or_reply(udir_event, f"`Gathering file details in directory {path}`")
         uploaded = 0
@@ -154,7 +154,7 @@ async def uploadir(event):
         end = datetime.now()
         ms = (end - start).seconds
         await udir_event.edit(
-            f"`Uploaded {uploaded} files successfully in {ms} seconds. `"
+            f"`Unggah {uploaded} file berhasil dalam {ms} detik. `"
         )
     else:
         await edit_or_reply(udir_event, f"`Uploading.....`")
@@ -182,15 +182,15 @@ async def uploadir(event):
             f"`there is no such directory/file with the name {path} to upload`",
         )
         return
-    udir_event = await edit_or_reply(event, "Uploading....")
+    udir_event = await edit_or_reply(event, "Mengunggah....")
     if os.path.isdir(path):
-        await edit_or_reply(udir_event, f"`Gathering file details in directory {path}`")
+        await edit_or_reply(udir_event, f"`Mengumpulkan detail file dalam direktori {path}`")
         uploaded = 0
         await upload(path, event, udir_event, catflag=True)
         end = datetime.now()
         ms = (end - start).seconds
         await udir_event.edit(
-            f"`Uploaded {uploaded} files successfully in {ms} seconds. `"
+            f"`Unggah {uploaded} file berhasil dalam {ms} detik. `"
         )
     else:
         await edit_or_reply(udir_event, f"`Uploading.....`")
@@ -215,7 +215,7 @@ async def video_catfile(event):
         if not os.path.exists(path):
             await edit_or_reply(
                 event,
-                f"`there is no such directory/file with the name {path} to upload`",
+                f"`tidak ada direktori/file dengan nama {path} untuk diunggah`",
             )
             return
         catevent = await edit_or_reply(event, "`Converting to video note..........`")
@@ -304,7 +304,7 @@ async def video_catfile(event):
                 )
             ],
             progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                progress(d, t, catevent, c_time, "Uploading...", PATH)
+                progress(d, t, catevent, c_time, "Mengunggah...", PATH)
             ),
         )
         os.remove(PATH)
@@ -313,12 +313,12 @@ async def video_catfile(event):
 
 CMD_HELP.update(
     {
-        "upload": "__**PLUGIN NAME :** Upload__\
-    \n\n📌** CMD ➥** `.upload` <path of file/folder>\
-    \n**USAGE   ➥  **__Uploads the file from the server or list of files from that folder__\
-    \n\n📌** CMD ➥** `.uploadf` <path of file/folder>\
-    \n**USAGE   ➥  **__Uploads the file from the server or list of files from that folder as a file__\
-    \n\n📌** CMD ➥** `.circle` <reply to media or path of media>\
-    \n**USAGE   ➥  **__Uploads video/audio as streamable from the server__"
+        "upload": "__**NAMA PLUGIN :** Upload__\
+    \n\n✅** CMD ➥** `.upload` <jalur file/folder>\
+    \n**Fungsi   ➥  **__Mengunggah file dari server atau daftar file dari folder itu__\
+    \n\n✅** CMD ➥** `.uploadf` <jalur file/folder>\
+    \n**Fungsi   ➥  **__Mengunggah file dari server atau daftar file dari folder itu sebagai file__\
+    \n\n✅** CMD ➥** `.circle` <membalas media atau jalur media>\
+    \n**Fungsi   ➥  **__Mengupload video/audio sebagai streaming dari server__"
     }
 )
