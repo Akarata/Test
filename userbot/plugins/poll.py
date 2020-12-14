@@ -74,11 +74,11 @@ async def pollcreator(catpoll):
 
 CMD_HELP.update(
     {
-        "poll": "__**PLUGIN NAME :** Poll__\
-        \n\n📌** CMD ➥** `.poll`\
-        \n**USAGE   ➥  **If you doesnt give any input it sends a default poll. if you like customize it then use this syntax :\
-        \n\n***Example:-** `.poll question ; option 1; option2 ;`\
-        \n ';' this seperates the each option and question \
+        "poll": "__**NAMA PLUGIN :** Poll__\
+        \n\n✅** CMD ➥** `.poll`\
+        \n**Fungsi   ➥  **Jika Anda tidak memberikan input apa pun, polling default akan dikirim.  jika Anda suka menyesuaikannya, gunakan sintaks ini :\
+        \n\n***Contoh:-** `.poll pertanyaan ; opsi1; opsi2 ;`\
+        \n ';' ini memisahkan setiap opsi dan pertanyaan \
         "
     }
 )
