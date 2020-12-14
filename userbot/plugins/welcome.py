@@ -122,7 +122,9 @@ async def del_welcome(event):
     if event.fwd_from:
         return
     if rm_welcome_setting(event.chat_id) is True:
-        await edit_or_reply(event, "`Catatan selamat datang dihapus untuk obrolan ini.`")
+        await edit_or_reply(
+            event, "`Catatan selamat datang dihapus untuk obrolan ini.`"
+        )
     else:
         await edit_or_reply(event, "`Apakah saya punya pesan selamat datang di sini ?`")
 
@@ -134,17 +136,21 @@ async def show_welcome(event):
         return
     cws = get_current_welcome_settings(event.chat_id)
     if not cws:
-        await edit_or_reply(event, "`Tidak ada pesan selamat datang yang disimpan di sini.`")
+        await edit_or_reply(
+            event, "`Tidak ada pesan selamat datang yang disimpan di sini.`"
+        )
         return
     if cws.f_mesg_id:
         msg_o = await bot.get_messages(entity=BOTLOG_CHATID, ids=int(cws.f_mesg_id))
         await edit_or_reply(
-            event, "`Saya saat ini menyambut pengguna baru dengan catatan selamat datang ini.`"
+            event,
+            "`Saya saat ini menyambut pengguna baru dengan catatan selamat datang ini.`",
         )
         await event.reply(msg_o.message, file=msg_o.media)
     elif cws.reply:
         await edit_or_reply(
-            event, "`Saya saat ini menyambut pengguna baru dengan catatan selamat datang ini.`"
+            event,
+            "`Saya saat ini menyambut pengguna baru dengan catatan selamat datang ini.`",
         )
         await event.reply(cws.reply)
 
