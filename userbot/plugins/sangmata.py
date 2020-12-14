@@ -17,7 +17,7 @@ async def _(event):
     if not input_str and not reply_message:
         catevent = await edit_or_reply(
             event,
-            "`reply to  user's text message to get name/username history or give userid`",
+            "`balas pesan teks pengguna untuk mendapatkan nama/nama pengguna sejarah atau berikan id pengguna`",
         )
         await asyncio.sleep(5)
         return await catevent.delete()
@@ -37,12 +37,12 @@ async def _(event):
     else:
         uid = reply_message.sender_id
     chat = "@SangMataInfo_bot"
-    catevent = await edit_or_reply(event, "`Processing...`")
+    catevent = await edit_or_reply(event, "`Tunggu beberapa saat...`")
     async with event.client.conversation(chat) as conv:
         try:
             await conv.send_message(f"/search_id {uid}")
         except YouBlockedUserError:
-            await catevent.edit("`unblock @Sangmatainfo_bot and then try`")
+            await catevent.edit("`buka blokir @Sangmatainfo_bot lalu coba`")
             await asyncio.sleep(5)
             return await catevent.delete()
         responses = []
@@ -54,11 +54,11 @@ async def _(event):
             responses.append(response.text)
         await event.client.send_read_acknowledge(conv.chat_id)
     if not responses:
-        await catevent.edit("`bot can't fetch results`")
+        await catevent.edit("`bot tidak dapat mengambil hasil`")
         await asyncio.sleep(5)
         return await catevent.delete()
     if "No records found" in responses:
-        await catevent.edit("`The user doesn't have any record`")
+        await catevent.edit("`Pengguna tidak memiliki catatan apa pun`")
         await asyncio.sleep(5)
         return await catevent.delete()
     names, usernames = await sanga_seperator(responses)
@@ -83,11 +83,11 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "sangmata": "__**PLUGIN NAME :** Sangmata__\
-    \n\n📌** CMD ➥** `.sg` <username/userid/reply>\
-    \n**USAGE   ➥  **Shows you the previous name history of user.\
-    \n\n📌** CMD ➥** `.sgu` <username/userid/reply>\
-    \n**USAGE   ➥  **Shows you the previous username history of user.\
+        "sangmata": "__**NAMA PLUGIN :** Sangmata__\
+    \n\n✅** CMD ➥** `.sg` <username/userid/reply>\
+    \n**Fungsi   ➥  **Menampilkan riwayat nama pengguna sebelumnya.\
+    \n\n✅** CMD ➥** `.sgu` <username/userid/reply>\
+    \n**Fungsi   ➥  **Menunjukkan riwayat nama pengguna pengguna sebelumnya.\
     "
     }
 )
