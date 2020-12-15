@@ -274,5 +274,8 @@ CMD_HELP.update(
         \njika ada pembaruan dalam repositori userbot Anda. jika Anda memulai ulang, ini kembali ke waktu terakhir saat Anda menerapkan\
         \n\n✅** CMD ➥** `.update deploy`\
         \n**Fungsi   ➥  **Terapkan bot pengguna Anda. Jadi, meskipun Anda memulai ulang, itu tidak akan kembali ke versi sebelumnya\
+
+
+   
     }
 )
