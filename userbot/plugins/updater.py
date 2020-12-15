@@ -199,7 +199,7 @@ async def upstream(event):
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
     # Special case for deploy
     if conf == "deploy":
-        await event.edit("`Deploying userbot, please wait....`")
+        await event.edit("`Menerapkan userbot, harap tunggu....`")
         await deploy(event, repo, ups_rem, ac_br, txt)
         return
     if changelog == "" and not force_update:
@@ -212,7 +212,7 @@ async def upstream(event):
         await print_changelogs(event, ac_br, changelog)
         await event.delete()
         return await event.respond(
-            'do "[`.update now`] or [`.update deploy`]" to update.Check `.info updater` for details'
+            'Lakukan "[`.update now`] atau [`.update deploy`]" untuk melihat pembaruan `.info updater` untuk detailnya'
         )
 
     if force_update:
@@ -220,7 +220,7 @@ async def upstream(event):
             "`Force-Syncing to latest stable userbot code, please wait...`"
         )
     if conf == "now":
-        await event.edit("`bnggu....`")
+        await event.edit("`memperbarui userbot tunggu beberapa saat....`")
         await update(event, repo, ups_rem, ac_br)
     return
 
