@@ -88,12 +88,12 @@ async def cmd_list(event):
 async def info(event):
     input_str = event.pattern_match.group(1)
     if input_str == "text":
-        string = "Total {count} commands found in {plugincount} sudo plugins of catuserbot\n\n"
+        string = "Total {count} perintah ditemukan di {plugincount} sudo plugin dari userbot\n\n"
         catcount = 0
         plugincount = 0
         for i in sorted(SUDO_LIST):
             plugincount += 1
-            string += f"{plugincount}) Commands found in Plugin " + i + " are \n"
+            string += f"{plugincount}) Perintah ditemukan di Plugin " + i + " adalah \n"
             for iter_list in SUDO_LIST[i]:
                 string += "    " + str(iter_list)
                 string += "\n"
@@ -110,7 +110,7 @@ async def info(event):
                 .get("key")
             )
             url = f"https://nekobin.com/{key}"
-            reply_text = f"All commands of the catuserbot are [here]({url})"
+            reply_text = f"Semua perintah userbot adalah [here]({url})"
             await event.reply(reply_text, link_preview=False)
             return
         await event.reply(
@@ -119,7 +119,7 @@ async def info(event):
         return
     if input_str:
         if input_str in SUDO_LIST:
-            string = "<b>{count} Commands found in plugin {input_str}:</b>\n\n"
+            string = "<b>{count} Perintah ditemukan di plugin {input_str}:</b>\n\n"
             catcount = 0
             for i in SUDO_LIST[input_str]:
                 string += f"  •  <code>{i}</code>"
@@ -134,12 +134,12 @@ async def info(event):
             await event.delete()
             await reply.delete()
     else:
-        string = "<b>Please specify which plugin do you want help for !!\
-            \nNumber of plugins : </b><code>{count}</code>\
-            \n<b>Usage:</b> <code>.help plugin name</code>\n\n"
+        string = "<b> tentukan plugin mana yang Kamu inginkan bantuannya !!\
+            \nJumlah plugin : </b><code>{count}</code>\
+            \n<b>Gunakan:</b> <code>.help nama plugin</code>\n\n"
         catcount = 0
         for i in sorted(SUDO_LIST):
-            string += "◆ " + f"<code>{str(i)}</code>"
+            string += "• " + f"<code>{str(i)}</code>"
             string += " "
             catcount += 1
         await event.reply(string.format(count=catcount), parse_mode="HTML")
