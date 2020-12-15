@@ -211,7 +211,7 @@ async def upstream(event):
         return
     if changelog == "" and not force_update:
         await event.edit(
-            "\n`Userbot kamu  sudah`  **diperbarui**  `oleh`  "
+            "\n`Userbot  sudah`  **diperbarui**  `oleh`  "
             f"**[{UPSTREAM_REPO_BRANCH}]**\n"
         )
         return repo.__del__()
@@ -232,44 +232,6 @@ async def upstream(event):
     return
 
 
-@bot.on(admin_cmd(outgoing=True, pattern=r"goodcat$"))
-@bot.on(sudo_cmd(pattern="goodcat$", allow_sudo=True))
-async def upstream(event):
-    event = await edit_or_reply(event, "`Pulling the good cat repo wait a sec ....`")
-    off_repo = "https://github.com/sandy1709/catuserbot"
-    catcmd = f"rm -rf .git"
-    try:
-        await runcmd(catcmd)
-    except BaseException:
-        pass
-    try:
-        txt = "`Oops.. Updater cannot continue due to "
-        txt += "some problems occured`\n\n**LOGTRACE:**\n"
-        repo = Repo()
-    except NoSuchPathError as error:
-        await event.edit(f"{txt}\n`directory {error} is not found`")
-        return repo.__del__()
-    except GitCommandError as error:
-        await event.edit(f"{txt}\n`Early failure! {error}`")
-        return repo.__del__()
-    except InvalidGitRepositoryError:
-        repo = Repo.init()
-        origin = repo.create_remote("upstream", off_repo)
-        origin.fetch()
-        repo.create_head("master", origin.refs.master)
-        repo.heads.master.set_tracking_branch(origin.refs.master)
-        repo.heads.master.checkout(True)
-    try:
-        repo.create_remote("upstream", off_repo)
-    except BaseException:
-        pass
-    ac_br = repo.active_branch.name
-    ups_rem = repo.remote("upstream")
-    ups_rem.fetch(ac_br)
-    await event.edit("`Deploying userbot, please wait....`")
-    await deploy(event, repo, ups_rem, ac_br, txt)
-
-
 CMD_HELP.update(
     {
         "updater": "__**NAMA PLUGIN :** Updater__\
@@ -281,8 +243,6 @@ CMD_HELP.update(
         \njika ada pembaruan dalam repositori userbot kamu. jika kamu memulai ulang, ini kembali ke waktu terakhir saat kamu menerapkan\
         \n\n✅** CMD ➥** `.update deploy`\
         \n**Fungsi   ➥  **untuk menDeploy userbot kamu\
-        \n\n✅** CMD ➥** `.goodcat`\
-        \n**Fungsi   ➥  **Swich to jisan's unoffical repo to official cat repo.\
-        \nThis will triggered deploy always, even no updates."
+
     }
 )
