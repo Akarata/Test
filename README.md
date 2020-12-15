@@ -9,8 +9,8 @@
     <a href="https://github.com/Akarata/Jichu_Userbot/stargazers"><img src="https://img.shields.io/github/stars/Akarata/Project_Akarata?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
     <a href="https://github.com/Akarata/Jichu_Userbot/network/members"><img src="https://img.shields.io/github/forks/Akarata/Project_Akarata?label=Fork&style=flat-square&logo=github&color=F10070" alt="Fork" /></a>
     <a href="https://www.codacy.com/gh/Akarata/Project_Akarata/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Akarata/Project_Akarata&amp;utmcampaign=Badge_Grade"><img src="https://img.shields.io/codacy/grade/a3a19d2b551641039ec7edc3aa7b8c5d?style=flat-square&logo=codacy&color=F10070" alt="codacy badge"/></a>
-    <a href="https://hub.docker.com/repository/docker/akarata/project"> <img src="https://img.shields.io/docker/image-size/akarata/project/latest?label=Docker%20Size&style=flat-square&logo=docker&logoColor=white&color=F10070" alt="Docker Image" /></a><br>
-    <a href="https://hub.docker.com/repository/docker/akarata/project/tags"> <img src="https://img.shields.io/docker/v/akarata/project/latest?label=Docker%20Version&style=flat-square&logo=docker&logoColor=white&color=F10070" alt="Docker Version" /></a><br>
+    <a href="https://hub.docker.com/repository/docker/akarata/jichu"> <img src="https://img.shields.io/docker/image-size/akarata/project/latest?label=Docker%20Size&style=flat-square&logo=docker&logoColor=white&color=F10070" alt="Docker Image" /></a><br>
+    <a href="https://hub.docker.com/repository/docker/akarata/jichu/tags"> <img src="https://img.shields.io/docker/v/akarata/project/latest?label=Docker%20Version&style=flat-square&logo=docker&logoColor=white&color=F10070" alt="Docker Version" /></a><br>
 </p>
 
 [![ logo](https://telegra.ph/file/3e712650d6b40736f6a71.jpg)](https://t.me/Akarata)
