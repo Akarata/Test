@@ -228,7 +228,7 @@ async def upstream(event):
 @bot.on(admin_cmd(outgoing=True, pattern=r"goodcat$"))
 @bot.on(sudo_cmd(pattern="goodcat$", allow_sudo=True))
 async def upstream(event):
-    event = await edit_or_reply(event, "`Pulling the good cat repo wait a sec ....`")
+    event = await edit_or_reply(event, "`memperbarui ke repo catuserbot resmi ....`")
     off_repo = "https://github.com/sandy1709/catuserbot"
     catcmd = f"rm -rf .git"
     try:
@@ -259,7 +259,7 @@ async def upstream(event):
     ac_br = repo.active_branch.name
     ups_rem = repo.remote("upstream")
     ups_rem.fetch(ac_br)
-    await event.edit("`Deploying userbot, please wait....`")
+    await event.edit("`Menerapkan userbot, harap tunggu....`")
     await deploy(event, repo, ups_rem, ac_br, txt)
 
 
@@ -274,8 +274,7 @@ CMD_HELP.update(
         \njika ada pembaruan dalam repositori userbot Anda. jika Anda memulai ulang, ini kembali ke waktu terakhir saat Anda menerapkan\
         \n\n✅** CMD ➥** `.update deploy`\
         \n**Fungsi   ➥  **Terapkan bot pengguna Anda. Jadi, meskipun Anda memulai ulang, itu tidak akan kembali ke versi sebelumnya\
-
-
-   
+        \n\n✅** CMD ➥** `.goodcat`\
+        \n**Fungsi   ➥  **Alihkan ke repo catuserbot resmi. \ \nIni akan selalu memicu penerapan, bahkan tidak ada pembaruan."
     }
 )
