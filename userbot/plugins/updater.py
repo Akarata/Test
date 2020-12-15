@@ -150,11 +150,11 @@ async def update(event, repo, ups_rem, ac_br):
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     conf = event.pattern_match.group(1).strip()
-    event = await edit_or_reply(event, "`Checking for updates, please wait....`")
+    event = await edit_or_reply(event, "`Memeriksa pembaruan, harap tunggu....`")
     off_repo = UPSTREAM_REPO_URL
     force_update = False
     # if HEROKU_API_KEY or HEROKU_APP_NAME is None:
-    # return await edit_or_reply(event, "`Set the required vars first to update the bot`")
+    # return await edit_or_reply(event, "`Setel vars yang diperlukan terlebih dahulu untuk memperbarui bot`")
     try:
         txt = "`Oops.. Updater cannot continue due to "
         txt += "some problems occured`\n\n**LOGTRACE:**\n"
