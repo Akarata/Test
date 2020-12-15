@@ -154,16 +154,16 @@ async def info(event):
         if args in CMD_HELP:
             await edit_or_reply(event, str(CMD_HELP[args]))
         else:
-            event = await edit_or_reply(event, "Please specify a valid plugin name.")
+            event = await edit_or_reply(event, "Tentukan nama plugin yang valid.")
             await asyncio.sleep(3)
             await event.delete()
     else:
-        string = "<b>Please specify which plugin do you want help for !!\
-            \nNumber of plugins : </b><code>{count}</code>\
-            \n<b>Usage : </b><code>.info plugin name</code>\n\n"
+        string = "<b>tentukan plugin mana yang Kamu inginkan bantuannya !!\
+            \nJumlah plugin : </b><code>{count}</code>\
+            \n<b>Gunakan : </b><code>.info nama plugin</code>\n\n"
         catcount = 0
         for i in sorted(CMD_HELP):
-            string += "◆ " + f"<code>{str(i)}</code>"
+            string += "• " + f"<code>{str(i)}</code>"
             string += " "
             catcount += 1
         if event.sender_id in Config.SUDO_USERS:
@@ -180,7 +180,7 @@ async def _(event):
     result = await bot(functions.help.GetNearestDcRequest())
     result = (
         yaml_format(result)
-        + "\n\n**List Of Telegram Data Centres:**\
+        + "\n\n**Daftar Pusat Data Telegram:**\
                 \nDC1 : Miami FL, USA\
                 \nDC2 : Amsterdam, NL\
                 \nDC3 : Miami FL, USA\
@@ -217,14 +217,14 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "help": "__**PLUGIN NAME :** Help__\
-    \n\n📌** CMD ➥** `.help` <plugin name>\
-    \n**USAGE   ➥  **Get commands of a specific plugin.\
-    \n\n📌** CMD ➥** `.info` <plugin name>\
-    \n**USAGE   ➥  **To get commands and usage of a specific plugin.\
-    \n\n📌** CMD ➥** `.dc`\
-    \n**USAGE   ➥  **To get info list of telegram data centres.\
-    \n\n📌** CMD ➥** `.setinline true` <or> `.setinline false`\
-    \n**USAGE   ➥  **To enable or disable inline mode of help menu."
+        "help": "__**NAMA PLUGIN :** Help__\
+    \n\n✅** CMD ➥** `.help` <plugin name>\
+    \n**Fungsi   ➥  **Dapatkan perintah dari plugin tertentu.\
+    \n\n✅** CMD ➥** `.info` <plugin name>\
+    \n**Fungsi   ➥  **Untuk mendapatkan perintah dan penggunaan plugin tertentu.\
+    \n\n✅** CMD ➥** `.dc`\
+    \n**Fungsi   ➥  **Untuk mendapatkan daftar info pusat data telegram.\
+    \n\n✅** CMD ➥** `.setinline true` <or> `.setinline false`\
+    \n**Fungsi   ➥  **Untuk mengaktifkan atau menonaktifkan mode bantuan menu."
     }
 )
