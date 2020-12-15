@@ -136,7 +136,8 @@ async def update(event, repo, ups_rem, ac_br):
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
     await event.edit(
-        "`Userbot berhasil diperbarui!\n" "Bot sedang memulai ulang ... Tunggu sebentar!`"
+        "`Userbot berhasil diperbarui!\n"
+        "Bot sedang memulai ulang ... Tunggu sebentar!`"
     )
     # Spin a new instance of bot
     args = [sys.executable, "-m", "userbot"]
