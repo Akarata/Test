@@ -17,9 +17,7 @@ async def cmd_list(event):
         reply_to_id = event.reply_to_msg_id
     input_str = event.pattern_match.group(1)
     if input_str == "text":
-        string = (
-            "Total {count} perintah ditemukan di {plugincount} plugin dari jichu_userbot\n\n"
-        )
+        string = "Total {count} perintah ditemukan di {plugincount} plugin dari jichu_userbot\n\n"
         catcount = 0
         plugincount = 0
         for i in sorted(CMD_LIST):
@@ -41,7 +39,9 @@ async def cmd_list(event):
                 .get("key")
             )
             url = f"https://nekobin.com/{key}"
-            reply_text = f"**Semua perintah jichu userbot dapat dilihat [disini]({url})**"
+            reply_text = (
+                f"**Semua perintah jichu userbot dapat dilihat [disini]({url})**"
+            )
             await event.edit(reply_text)
             return
         await event.edit(string.format(count=catcount, plugincount=plugincount))
